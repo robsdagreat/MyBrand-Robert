@@ -1,0 +1,192 @@
+
+*{
+margin: 0;
+font-family: sans-serif;
+}
+.home{
+    background-color: rgb(44, 44, 44);
+    width: 100%vw;    
+}
+
+.left{
+    width: 55%;
+}
+
+.right{
+    background-color: rgb(253, 183, 53);  
+    height: 700px;
+    width: 45%;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.header{
+    display: flex;
+    
+}
+
+.burger img{
+    height: 30px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.logo{
+    margin-left: 450px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo .txt1{
+    color: white;
+}
+
+.logo .txt2{
+    color: rgb(253, 183, 53);
+}
+
+.login{
+    margin-left: 330px;
+    margin-top: 20px;
+}
+
+
+.login button{
+    padding: 10px;
+    width: 90px;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(44, 44, 44);
+    border: 2px solid rgb(253, 183, 53);
+    color: rgb(253, 183, 53);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.hello, .name, .moto, .descript, .qheader{
+    margin-left: 200px;
+}
+
+.hello{
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 150px;
+    font-size: 30px;
+}
+
+.name{
+    color: rgb(253, 183, 53);;
+    margin-top: 150px; 
+    font-size: 40px ;
+    font-weight: bold;
+}
+
+.moto{
+    margin-bottom: 50px;
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.descript{
+    font-size: 20px;
+    max-width: 50ch;
+    color: rgba(255, 255, 255,0.6);
+}
+
+.middle{
+    position: absolute;
+    left: 850px;
+    top: 170px;
+    z-index: 1;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.middle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.hire{
+    margin-left: 380px;
+    margin-top: 30px;
+    padding: 10px;
+    width: 90px;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(44, 44, 44);
+    border: 2px solid rgb(253, 183, 53);
+    color: rgb(253, 183, 53);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.qheader{
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 150px;
+    font-size: 30px;
+    /* border-bottom: 2px solid rgb(253, 183, 53); */
+}
+
+.border{
+    margin-left: 205px;
+    margin-top: -20px;
+    width: 150px;
+    border-bottom: 5px solid rgb(253, 183, 53);  
+    
+}
+.headers{
+    margin-bottom: 50px;
+    margin-left: 200px;
+    color: white;
+    font-size: 20px;
+}
+
+.flex{
+    margin-top: 50px;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    
+}
+
+.educate .card:nth-child(2){
+  margin-bottom: 50px;
+}
+
+.experience .card:nth-child(2){
+    margin-bottom: 50px;
+}
+
+.card{
+    border: 2px solid rgb(253, 183, 53);
+    width: 500px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.flex .card h5{
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: white;
+}
+
+.flex .card p{
+    color: rgba(255, 255, 255,0.6);
+}
+
