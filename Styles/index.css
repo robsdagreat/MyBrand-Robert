@@ -3,13 +3,10 @@
 margin: 0;
 font-family: sans-serif;
 }
+/* styling home page */
 .home{
     background-color: rgb(44, 44, 44);
     width: 100%vw;    
-}
-
-.left{
-    width: 55%;
 }
 
 .right{
@@ -131,6 +128,10 @@ font-family: sans-serif;
     cursor: pointer;
 }
 
+.qualify{
+    padding-bottom: 70px;
+}
+
 .qheader{
     color: white;
     margin-bottom: 30px;
@@ -190,3 +191,129 @@ font-family: sans-serif;
     color: rgba(255, 255, 255,0.6);
 }
 
+/* styling about page */
+
+.about{
+    background: #404040;
+    margin-top: -150px;
+    width: 100%;
+    height: 900px;
+}
+
+
+.qheader2{
+    padding-top: 80px;
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 150px;
+    margin-left: 200px;
+    font-size: 30px;
+}
+
+.border2{
+    margin-left: 205px;
+    margin-top: -20px;
+    width: 90px;
+    border-bottom: 5px solid rgb(253, 183, 53);  
+    
+}
+
+.cover{
+    height: 400px;
+    width: 400px;
+    border: 2px solid rgb(253, 183, 53);
+    border-radius: 50%;
+    margin-top: 120px;
+    margin-left: 190px;
+    background: rgb(44, 44, 44);
+}
+
+.profile{
+    margin-top: 80px;
+    position: absolute;
+    z-index: 1;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 1520px;
+    left: 240px;
+}
+
+.profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.right2{
+    float: right;
+    margin-right: 500px;
+    margin-top: -550px;
+    max-width: 50ch;
+    
+}
+
+.right2 h5{
+  color:white;
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+
+.right2 p{
+    color:rgba(255, 255, 255,0.6);
+    font-size: 20px;
+  }
+
+.cards{
+    display: flex;
+    float: right;
+    margin-right: 70px;
+    margin-top: -150px;
+}
+
+.card2{
+    border: 2px solid rgb(253, 183, 53);
+    border-radius: 8px;
+    background: rgb(44, 44, 44);
+    width: 200px;
+    padding: 30px;
+    margin-right: 30px;
+}  
+
+.card2 h6{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.card2 span{
+    color: rgba(255, 255, 255,0.6);;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.card2 p{
+    color: rgba(255, 255, 255,0.6);
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.btn button{
+    padding: 10px;
+    width: 180px;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(44, 44, 44);
+    border: 2px solid rgb(253, 183, 53);
+    color: rgb(253, 183, 53);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1250px;
+    margin-top: 80px;
+}
