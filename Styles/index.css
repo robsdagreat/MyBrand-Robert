@@ -4,7 +4,7 @@ margin: 0;
 font-family: sans-serif;
 }
 /* styling home page */
-.home{
+#home{
     background-color: rgb(44, 44, 44);
     width: 100%vw;    
 }
@@ -193,7 +193,7 @@ font-family: sans-serif;
 
 /* styling about page */
 
-.about{
+#about{
     background: #404040;
     margin-top: -150px;
     width: 100%;
@@ -319,7 +319,7 @@ font-family: sans-serif;
 /* styling contact page */
 
 /* stying contact page */
-.contact{
+#contact{
     background: rgb(44, 44, 44);
     margin-top: -150px;
 }

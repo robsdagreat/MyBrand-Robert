@@ -74,8 +74,84 @@ ul li{
     
 } 
 
+*{
+    margin: 0;
+}
+
+body{
+    background: #2C2C2C;
+
+}
+
+nav{
+    z-index: 1;
+}
+
+.logo{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo .txt1{
+    color: white;
+}
+
+.logo .txt2{
+    color: rgb(253, 183, 53);
+}
+
+ul a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    display: flex;
+    margin-left: 150px;
+    margin-top: -50px;
+    font-size: 20px;
+    list-style: none;
+    float: right;
+    margin-right: 100px;
+    margin-bottom: 100px;
+}
+
+ul li{
+    margin-right: 100px;
+}
+
+.active{
+    color: rgb(253, 183, 53);
+}
+
+.border{
+    margin-top: 10px;
+    width: 100%;
+    border-bottom: 2px solid rgb(253, 183, 53);  
+    
+}
+
+#header{
+    width: 180px;
+    height: 15px;
+    border: 1px solid rgb(253, 183, 53);
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 120px;
+}
+
+#header span{
+    font-size: 20px;
+    color: white;
+    
+} 
+
 #blog{
-    height: 680px;
+    height: 1300px;
     width: 500px;
     border: 1px solid rgb(253, 183, 53);
     margin: auto;
@@ -172,7 +248,7 @@ ul li{
 
 .like{
     margin-right: 50px;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .like img{
@@ -180,59 +256,22 @@ ul li{
 }
 
 .comment{
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .comment img{
     height: 35px;
 }
 
-.news{
-    margin-left: -70px;
-    color: rgba(255, 255, 255, 0.6);
+
+#comment{
+    margin-left: 50px;
 }
 
-.letter{
-    margin: auto;
-    text-align: center;
-    background: #404040;
-    margin-top: 80px;
-    height: 300px;
-    width: 500px;
-    border: 1px solid rgb(253, 183, 53);
-}
-
-.sub{
+.reply{
+    margin-left: 90px;
     margin-top: 30px;
-    padding: 10px;
-    width: 150px;
-    font-size: 15px;
-    font-weight: bold;
-    background: rgb(44, 44, 44);
-    border: 1px solid rgb(253, 183, 53);
-    color: rgb(253, 183, 53);
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-}
-
-input[type="text"]{
-    width: 400px;
-    padding: 15px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #2C2C2C;
-    box-sizing: border-box;
     color: white;
-}
-input[type="text"]::placeholder{   
-    padding-left: 20px;
-    color: white;
-}
-
-.letter h4, input, button{
-    padding-top: 100px;
 }
 
 footer{
