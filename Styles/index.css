@@ -355,6 +355,7 @@ font-family: sans-serif;
     width: 240px;
     padding: 40px;
     margin-left: 50px;
+    text-align: center;
 }
 
 .talk{
@@ -365,7 +366,6 @@ font-family: sans-serif;
 }
 
 .card3 img{
-    margin-left: 80px;
     margin-bottom: 20px;
 }
 
@@ -454,4 +454,44 @@ input[type="text"]:focus{
     border-radius: 5px;
     cursor: pointer; 
     margin-top: 50px;
+}
+
+/* styling my footer */
+
+footer{
+    background-color: rgb(44, 44, 44);
+    text-align: center;
+}
+
+.fline{
+    padding-top: 150px;
+    border-bottom: 5px solid rgb(253, 183, 53);
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+}
+
+.brand h2{
+    margin-top: 80px;
+    color: white;
+}
+
+.brand .links{
+    margin-top: 50px;
+    font-size: 20px;
+    margin-left: 550px;
+}
+
+.brand a{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 50px;
+    margin-inline: 100px;
+}
+
+.copy{
+    color: white;
+    font-size: 17px;
 }
