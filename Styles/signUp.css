@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: #2C2C2C;
+
+}
+
+nav{
+    z-index: 1;
+}
+
+.logo{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo .txt1{
+    color: white;
+}
+
+.logo .txt2{
+    color: rgb(253, 183, 53);
+}
+
+ul a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 150px;
+    margin-top: -35px;
+    font-size: 30px;
+    list-style: none;
+}
+
+.active{
+    color: rgb(253, 183, 53);
+}
+
+.border{
+    margin-top: 30px;
+    width: 100%;
+    border-bottom: 2px solid rgb(253, 183, 53);  
+    
+}

@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: #2C2C2C;
+
+}
+
+nav{
+    z-index: 1;
+}
+
+.logo{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo .txt1{
+    color: white;
+}
+
+.logo .txt2{
+    color: rgb(253, 183, 53);
+}
+
+ul a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    display: flex;
+    margin-left: 150px;
+    margin-top: -50px;
+    font-size: 20px;
+    list-style: none;
+    float: right;
+    margin-right: 100px;
+    margin-bottom: 100px;
+}
+
+ul li{
+    margin-right: 100px;
+}
+
+.active{
+    color: rgb(253, 183, 53);
+}
+
+.border{
+    margin-top: 10px;
+    width: 100%;
+    border-bottom: 2px solid rgb(253, 183, 53);  
+    
+}
+
+
+#header{
+    width: 180px;
+    height: 15px;
+    border: 1px solid rgb(253, 183, 53);
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 120px;
+}
+
+#header span{
+    font-size: 20px;
+    color: white;
+    
+} 
+
+.tech{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.front{
+    text-align: center;
+}
+
+.front h2{
+    margin-top: 100px;
+    color: white;
+    font-size: 15px;
+}
+
+#html{
+    display: flex;
+    flex-direction: row;
+}
+
+.img span{
+    font-size: 15px;
+    margin-left: 50px;
+    color: white;
+    margin-right: 200px;
+}
+
+.img img{
+    height: 20px;
+    margin-left: 500px;
+}
+
+
+.white{
+    width: 530px;
+    height: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+.yellow{
+    height: 10px;
+    width: 480px;
+    background: rgb(253, 183, 53);
+    border-radius: 5px;
+}
+
+.yellow2{
+    height: 10px;
+    width: 380px;
+    background: rgb(253, 183, 53);
+    border-radius: 5px;
+}
+
+.yellow3{
+    height: 10px;
+    width: 380px;
+    background: rgb(253, 183, 53);
+    border-radius: 5px;
+}
+
+.yellow4{
+    height: 10px;
+    width: 290px;
+    background: rgb(253, 183, 53);
+    border-radius: 5px;
+}
+
+.yellow6{
+    height: 10px;
+    width: 450px;
+    background: rgb(253, 183, 53);
+    border-radius: 5px;
+}
+
+.yellow5{
+    height: 10px;
+    width: 250px;
+    background: rgb(253, 183, 53);
+    border-radius: 5px;
+}
+
+.white, .yellow, .img, .percent, .skill{
+    margin-top: 50px;
+}
+
+.percent{
+    font-size: 15px;
+    color: white; 
+    margin-left: 50px;
+}
+
+.back{
+    text-align: center;
+}
+
+.back h2{
+    margin-top: 100px;
+    color: white;
+    font-size: 15px;
+}
+
+footer{
+    background-color: rgb(44, 44, 44);
+    text-align: center;
+}
+
+.fline{
+    padding-top: 150px;
+    border-bottom: 2px solid rgb(253, 183, 53);
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+}
+
+.brand h2{
+    margin-top: 80px;
+    color: white;
+    font-size: 20px;
+}
+
+.brand .links{
+    margin-top: 50px;
+    font-size: 20px;
+    margin-left: 550px;
+}
+
+.brand a{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 50px;
+    margin-inline: 100px;
+}
+
+.copy{
+    color: white;
+    font-size: 17px;
+    padding-bottom: 30px;
+}
