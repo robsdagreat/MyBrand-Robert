@@ -468,10 +468,6 @@ footer{
     border-bottom: 5px solid rgb(253, 183, 53);
 }
 
-.brand{
-        
-}
-
 .links{
     display: flex;
     flex-direction: row;
