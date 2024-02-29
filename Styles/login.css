@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: #2C2C2C;
+
+}
+
+nav{
+    z-index: 1;
+}
+
+.logo{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo .txt1{
+    color: white;
+}
+
+.logo .txt2{
+    color: rgb(253, 183, 53);
+}
+
+ul a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 150px;
+    margin-top: -35px;
+    font-size: 30px;
+    list-style: none;
+}
+
+.active{
+    color: rgb(253, 183, 53);
+}
+
+.border{
+    margin-top: 30px;
+    width: 100%;
+    border-bottom: 2px solid rgb(253, 183, 53);  
+    
+}
+
+#header{
+    text-align: center;
+    margin-top: 150px;
+    padding: 30px;
+}
+
+#header span{
+    font-size: 30px;
+    color: white;
+    border: 1px solid rgb(253, 183, 53);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#form{
+    margin: auto;
+    background-color: #404040;
+    height: 700px;
+    width: 800px;
+    margin-top: 50px;
+    border-radius: 15px;
+    border: 1px solid rgb(253, 183, 53);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+input[type='email']{
+    padding: 15px;
+    margin-bottom: 50px;
+    background-color: #2C2C2C;
+    color: white;
+    width: 400px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+input[type='password']{
+    padding: 15px;
+    margin-bottom: 50px;
+    background-color: #2C2C2C;
+    color: white;
+    width: 400px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+input[type='password']::placeholder, input[type='email']::placeholder{
+    color: white;
+    padding: 30px;
+}
+
+#form .login{
+    padding: 10px;
+    width: 90px;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(44, 44, 44);
+    border: 1px solid rgb(253, 183, 53);
+    color: rgb(253, 183, 53);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#form button:hover{
+    opacity: 0.5;
+}
+
+.forget{
+    text-align: center;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    margin-top: -80px;
+}
+
+.sign p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.sign span{
+    color: rgb(253, 183, 53);
+    cursor: pointer;  
+}
+
+.subs{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.subs h3{
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 30px;
+}
+
+.form input[type="email"], button{
+    margin: auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form .sub{
+    margin-top: 30px;
+    padding: 10px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(44, 44, 44);
+    border: 1px solid rgb(253, 183, 53);
+    color: rgb(253, 183, 53);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer{
+    background-color: rgb(44, 44, 44);
+    text-align: center;
+}
+
+.fline{
+    padding-top: 150px;
+    border-bottom: 2px solid rgb(253, 183, 53);
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+}
+
+.brand h2{
+    margin-top: 80px;
+    color: white;
+}
+
+.brand .links{
+    margin-top: 50px;
+    font-size: 20px;
+    margin-left: 550px;
+}
+
+.brand a{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 50px;
+    margin-inline: 100px;
+}
+
+.copy{
+    color: white;
+    font-size: 17px;
+    padding-bottom: 30px;
+}
