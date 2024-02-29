@@ -57,7 +57,7 @@ font-family: sans-serif;
     font-size: 15px;
     font-weight: bold;
     background: rgb(44, 44, 44);
-    border: 2px solid rgb(253, 183, 53);
+    border: 1px solid rgb(253, 183, 53);
     color: rgb(253, 183, 53);
     border-radius: 5px;
     cursor: pointer;
@@ -122,7 +122,7 @@ font-family: sans-serif;
     font-size: 15px;
     font-weight: bold;
     background: rgb(44, 44, 44);
-    border: 2px solid rgb(253, 183, 53);
+    border: 1px solid rgb(253, 183, 53);
     color: rgb(253, 183, 53);
     border-radius: 5px;
     cursor: pointer;
@@ -171,7 +171,7 @@ font-family: sans-serif;
 }
 
 .card{
-    border: 2px solid rgb(253, 183, 53);
+    border: 1px solid rgb(253, 183, 53);
     width: 500px;
     padding: 30px;
     display: flex;
@@ -221,7 +221,7 @@ font-family: sans-serif;
 .cover{
     height: 400px;
     width: 400px;
-    border: 2px solid rgb(253, 183, 53);
+    border: 1px solid rgb(253, 183, 53);
     border-radius: 50%;
     margin-top: 120px;
     margin-left: 190px;
@@ -275,7 +275,7 @@ font-family: sans-serif;
 }
 
 .card2{
-    border: 2px solid rgb(253, 183, 53);
+    border: 1px solid rgb(253, 183, 53);
     border-radius: 8px;
     background: rgb(44, 44, 44);
     width: 200px;
@@ -308,7 +308,7 @@ font-family: sans-serif;
     font-size: 15px;
     font-weight: bold;
     background: rgb(44, 44, 44);
-    border: 2px solid rgb(253, 183, 53);
+    border: 1px solid rgb(253, 183, 53);
     color: rgb(253, 183, 53);
     border-radius: 5px;
     cursor: pointer;
@@ -347,7 +347,7 @@ font-family: sans-serif;
 }
 
 .card3{
-    border: 2px solid rgb(253, 183, 53);
+    border: 1px solid rgb(253, 183, 53);
     border-radius: 8px;
     background: rgb(44, 44, 44);
     width: 240px;
@@ -396,7 +396,7 @@ font-family: sans-serif;
     margin-bottom: 50px;
     width: 300px;
     background-color: rgb(44, 44, 44);
-    border: 2px solid rgb(253, 183, 53);
+    border: 1px solid rgb(253, 183, 53);
     border-radius: 5px;
     padding: 15px;
     color: white;
@@ -406,7 +406,7 @@ font-family: sans-serif;
     margin-bottom: 50px;
     width: 300px;
     background-color: rgb(44, 44, 44);
-    border: 2px solid rgb(253, 183, 53);
+    border: 1px solid rgb(253, 183, 53);
     border-radius: 5px;
     padding: 15px;
     color: white;
@@ -416,7 +416,7 @@ font-family: sans-serif;
 .form textarea{
      width: 320px;
     background-color: rgb(44, 44, 44);
-    border: 2px solid rgb(253, 183, 53);
+    border: 1px solid rgb(253, 183, 53);
     border-radius: 5px;
     color: white;
 }
@@ -437,7 +437,7 @@ input[type="email"]::placeholder{
    }
 
 input[type="text"]:focus{
-    border: 2px solid rgb(253, 183, 53);
+    border: 1px solid rgb(253, 183, 53);
     color: white;
 }  
 
@@ -447,7 +447,7 @@ input[type="text"]:focus{
     font-size: 15px;
     font-weight: bold;
     background: rgb(44, 44, 44);
-    border: 2px solid rgb(253, 183, 53);
+    border: 1px solid rgb(253, 183, 53);
     color: rgb(253, 183, 53);
     border-radius: 5px;
     cursor: pointer; 
@@ -463,7 +463,7 @@ footer{
 
 .fline{
     padding-top: 150px;
-    border-bottom: 5px solid rgb(253, 183, 53);
+    border-bottom: 2px solid rgb(253, 183, 53);
 }
 
 .links{
@@ -492,4 +492,5 @@ footer{
 .copy{
     color: white;
     font-size: 17px;
+    padding-bottom: 30px;
 }
