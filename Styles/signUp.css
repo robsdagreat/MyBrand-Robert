@@ -4,7 +4,6 @@
 
 body{
     background: #2C2C2C;
-
 }
 
 nav{
@@ -33,11 +32,17 @@ ul a{
 
 ul{
     display: flex;
-    justify-content: space-around;
     margin-left: 150px;
-    margin-top: -35px;
-    font-size: 30px;
+    margin-top: -50px;
+    font-size: 20px;
     list-style: none;
+    float: right;
+    margin-right: 100px;
+    margin-bottom: 100px;
+}
+
+ul li{
+    margin-right: 100px;
 }
 
 .active{
@@ -45,8 +50,133 @@ ul{
 }
 
 .border{
-    margin-top: 30px;
+    margin-top: 10px;
     width: 100%;
     border-bottom: 2px solid rgb(253, 183, 53);  
     
+}
+
+#header{
+    width: 180px;
+    height: 15px;
+    border: 1px solid rgb(253, 183, 53);
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 120px;
+}
+
+#header span{
+    font-size: 20px;
+    color: white;
+    
+} 
+
+
+#header{
+    width: 180px;
+    height: 15px;
+    border: 1px solid rgb(253, 183, 53);
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 120px;
+}
+
+#header span{
+    font-size: 20px;
+    color: white;
+    
+} 
+
+.signup-form {
+    background-color: #404040;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    padding-left: 10%;
+    padding-right: 10%;
+    border: 1px solid #FFB633;
+    margin: auto;
+    margin-top:50px;
+    height: 800px;
+}
+
+.sub{
+    margin-top: 30px;
+    padding: 10px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(44, 44, 44);
+    border: 1px solid rgb(253, 183, 53);
+    color: rgb(253, 183, 53);
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.signup-form .pass{
+    color: rgba(255, 255, 255, 0.6);
+    margin-left: 20px;
+}
+
+.pass img{
+    height: 15px;
+}
+
+.signup-form .log{
+    color: rgba(255, 255, 255, 0.6);
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: 20px ;
+}
+
+ h4{
+    text-align: center;
+    color: aliceblue;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+ }
+.signup-form input[type="text"],
+.signup-form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2C2C2C;
+    box-sizing: border-box;
+}
+.signup-form input[type="text"]::placeholder,
+.signup-form input[type="password"]::placeholder {   
+    padding-left: 20px;
+    color: white;
+}
+
+.signup-form input[type="submit"] {
+    width: 30%;
+    background-color: #2C2C2C;
+    color: #FFB633;
+    padding: 10px 0;
+    margin: 40px 20%;
+    border: 1px solid #FFB633;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.signup-form input[type="submit"]:hover {
+    background-color: #919090;
+}
+a{
+    color: #FFB633;
+    text-decoration: none;
+    
+}
+
+.news{
+    margin-left: -70px;
+    color: rgba(255, 255, 255, 0.6);
 }
