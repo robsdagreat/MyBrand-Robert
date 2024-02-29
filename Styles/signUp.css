@@ -150,6 +150,7 @@ ul li{
     border-radius: 4px;
     background-color: #2C2C2C;
     box-sizing: border-box;
+    color: white;
 }
 .signup-form input[type="text"]::placeholder,
 .signup-form input[type="password"]::placeholder {   
