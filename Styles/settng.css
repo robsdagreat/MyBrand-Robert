@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: #2C2C2C;
+}
+
+header img{
+    margin-left: 400px;
+    margin-bottom: -80px;
+}
+
+#setting{
+    display: flex;
+    flex-direction: row;
+}
+
+#header{
+    width: 180px;
+    height: 15px;
+    border: 1px solid rgb(253, 183, 53);
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 120px;
+    margin-left: 400px;
+}
+
+#header span{
+    font-size: 20px;
+    color: white;
+    
+} 
+
+.option{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
+.chosen{
+    color: rgb(253, 183, 53);
+    margin-bottom: 30px;
+}
+
+.user{
+    margin-bottom: 30px;
+    color: white;
+}
+
+.picture{
+    color: white;
+}
+
+#current{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    float: right;
+    position: absolute;
+    top: 170px;
+    right: 600px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.one .title{
+    margin-bottom: 70px;
+    font-size: 20px;
+}
+
+.img{
+    border: 2px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+}
+
+
+.profile .img img{
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    color: white;
+    margin-right: 30px;
+}
+
+#text{
+    font-size: 20px;
+    margin-top: 150px;
+    margin-left: 80px;
+}
+#username{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+#username span{
+    color: white;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+
+
+#username input[type="text"]{
+    width: 300px;
+    padding: 15px;
+    background-color: #2C2C2C;
+    border: 1px solid rgb(253, 183, 53);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#username input[type="text"]::placeholder{
+    color: white;
+    padding: 20px;
+}
+
+#username button{
+    padding: 10px;
+    width: 100px;
+    background: #2C2C2C;
+    color: white;
+    border: 2px solid rgb(253, 183, 53);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#username button:hover{
+    opacity: 0.5;
+}
+
+#password{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+#password span{
+    color: white;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+
+
+#password input[type="text"]{
+    width: 300px;
+    padding: 15px;
+    background-color: #2C2C2C;
+    border: 1px solid rgb(253, 183, 53);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#password input[type="text"]::placeholder{
+    color: white;
+    padding: 20px;
+}
+
+#password button{
+    padding: 10px;
+    width: 100px;
+    background: #2C2C2C;
+    color: white;
+    border: 2px solid rgb(253, 183, 53);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#password button:hover{
+    opacity: 0.5;
+}
+
+#picture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+#picture span{
+    color: white;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+
+
+#picture input[type="text"]{
+    width: 300px;
+    padding: 15px;
+    background-color: #2C2C2C;
+    border: 1px solid rgb(253, 183, 53);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#picture input[type="text"]::placeholder{
+    color: white;
+    padding: 20px;
+}
+
+#picture button{
+    padding: 10px;
+    width: 100px;
+    background: #2C2C2C;
+    color: white;
+    border: 2px solid rgb(253, 183, 53);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#picture button:hover{
+    opacity: 0.5;
+}
+
+
+.img2{
+    border: 2px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+    margin-bottom: 30px;
+
+}
+
+
+.profile2 .img2 img{
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    color: white;
+}
+
+footer{
+    background-color: rgb(44, 44, 44);
+    text-align: center;
+}
+
+.fline{
+    padding-top: 150px;
+    border-bottom: 2px solid rgb(253, 183, 53);
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+}
+
+.brand h2{
+    margin-top: 80px;
+    color: white;
+    font-size: 20px;
+}
+
+.brand .links{
+    margin-top: 50px;
+    font-size: 20px;
+    margin-left: 550px;
+}
+
+.brand a{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 50px;
+    margin-inline: 100px;
+}
+
+.copy{
+    color: white;
+    font-size: 17px;
+    padding-bottom: 30px;
+}
