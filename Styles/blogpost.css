@@ -1,315 +1,310 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 
-body{
-    background: #2C2C2C;
-
+body {
+  background: #2c2c2c;
 }
 
-nav{
-    z-index: 1;
+nav {
+  z-index: 1;
 }
 
-.logo{
-    margin-left: 50px;
-    margin-top: 20px;
-    font-size: 30px;
-    font-weight: bold;
+.logo {
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.logo .txt1{
-    color: white;
+.logo .txt1 {
+  color: white;
 }
 
-.logo .txt2{
-    color: rgb(253, 183, 53);
+.logo .txt2 {
+  color: rgb(253, 183, 53);
 }
 
-ul a{
-    text-decoration: none;
-    color: white;
+ul a {
+  text-decoration: none;
+  color: white;
 }
 
-ul{
-    display: flex;
-    margin-left: 150px;
-    margin-top: -50px;
-    font-size: 20px;
-    list-style: none;
-    float: right;
-    margin-right: 100px;
-    margin-bottom: 100px;
+ul {
+  display: flex;
+  margin-left: 150px;
+  margin-top: -50px;
+  font-size: 20px;
+  list-style: none;
+  float: right;
+  margin-right: 100px;
+  margin-bottom: 100px;
 }
 
-ul li{
-    margin-right: 100px;
+ul li {
+  margin-right: 100px;
 }
 
-.active{
-    color: rgb(253, 183, 53);
+.active {
+  color: rgb(253, 183, 53);
 }
 
-.border{
-    margin-top: 10px;
-    width: 100%;
-    border-bottom: 2px solid rgb(253, 183, 53);  
-    
+.border {
+  margin-top: 10px;
+  width: 100%;
+  border-bottom: 2px solid rgb(253, 183, 53);
 }
 
-#header{
-    width: 180px;
-    height: 15px;
-    border: 1px solid rgb(253, 183, 53);
-    text-align: center;
-    margin: auto;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 120px;
+#header {
+  width: 180px;
+  height: 15px;
+  border: 1px solid rgb(253, 183, 53);
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 120px;
 }
 
-#header span{
-    font-size: 20px;
-    color: white;
-    
-} 
-
-*{
-    margin: 0;
+#header span {
+  font-size: 20px;
+  color: white;
 }
 
-body{
-    background: #2C2C2C;
-
+* {
+  margin: 0;
 }
 
-nav{
-    z-index: 1;
+body {
+  background: #2c2c2c;
 }
 
-.logo{
-    margin-left: 50px;
-    margin-top: 20px;
-    font-size: 30px;
-    font-weight: bold;
+nav {
+  z-index: 1;
 }
 
-.logo .txt1{
-    color: white;
+.logo {
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.logo .txt2{
-    color: rgb(253, 183, 53);
+.logo .txt1 {
+  color: white;
 }
 
-ul a{
-    text-decoration: none;
-    color: white;
+.logo .txt2 {
+  color: rgb(253, 183, 53);
 }
 
-ul{
-    display: flex;
-    margin-left: 150px;
-    margin-top: -50px;
-    font-size: 20px;
-    list-style: none;
-    float: right;
-    margin-right: 100px;
-    margin-bottom: 100px;
+ul a {
+  text-decoration: none;
+  color: white;
 }
 
-ul li{
-    margin-right: 100px;
+ul {
+  display: flex;
+  margin-left: 150px;
+  margin-top: -50px;
+  font-size: 20px;
+  list-style: none;
+  float: right;
+  margin-right: 100px;
+  margin-bottom: 100px;
 }
 
-.active{
-    color: rgb(253, 183, 53);
+ul li {
+  margin-right: 100px;
 }
 
-.border{
-    margin-top: 10px;
-    width: 100%;
-    border-bottom: 2px solid rgb(253, 183, 53);  
-    
+.active {
+  color: rgb(253, 183, 53);
 }
 
-#header{
-    width: 180px;
-    height: 15px;
-    border: 1px solid rgb(253, 183, 53);
-    text-align: center;
-    margin: auto;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 120px;
+.border {
+  margin-top: 10px;
+  width: 100%;
+  border-bottom: 2px solid rgb(253, 183, 53);
 }
 
-#header span{
-    font-size: 20px;
-    color: white;
-    
-} 
-
-#blog{
-    height: 1300px;
-    width: 500px;
-    border: 1px solid rgb(253, 183, 53);
-    margin: auto;
-    margin-top: 150px;
-    border-radius: 8px;
+#header {
+  width: 180px;
+  height: 15px;
+  border: 1px solid rgb(253, 183, 53);
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 120px;
 }
 
-.profile{
-    display: flex;
-    flex-direction: row;
-    padding: 20px 20px;
+#header span {
+  font-size: 20px;
+  color: white;
 }
 
-.cover img{
-    height: 150px;
-    margin-left: 86px;
-    margin-top: 30px;
+#blog {
+  height: 1300px;
+  width: 500px;
+  border: 1px solid rgb(253, 183, 53);
+  margin: auto;
+  margin-top: 150px;
+  border-radius: 8px;
 }
 
-.img{
-    border: 2px solid white;
-    border-radius: 50%;
-    overflow: hidden;
-    background: white;
+.profile {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 20px;
 }
 
-.profile .img img{
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    color: white;
+.cover img {
+  height: 150px;
+  margin-left: 86px;
+  margin-top: 30px;
 }
 
-.profile .name, .separate, .date{
-    color: rgba(255, 255, 255, 0.9);
-    margin-top: 20px;
-    margin-left: 10px;
+.img {
+  border: 2px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
 }
 
-.separate{
-    font-weight: bold;
+.profile .img img {
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  color: white;
 }
 
-.profile .name{
-    font-weight: bold;
+.profile .name,
+.separate,
+.date {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
-.story p{
-    color: rgba(255, 255, 255, 0.9);
-    margin-left: 90px;
-    margin-top: -20px;
-    max-width: 35ch;
+.separate {
+  font-weight: bold;
 }
 
-.story p{
-    color: rgba(255, 255, 255, 0.9);
-    margin-left: 90px;
-    margin-top: -20px;
-    max-width: 35ch;
-    font-size: 20px;
+.profile .name {
+  font-weight: bold;
 }
 
-.line{
-    border-bottom: 1px solid rgb(253, 183, 53);
-    margin-top: 30px;
-    margin-left: 90px;
-    margin-right: 40px;
+.story p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-left: 90px;
+  margin-top: -20px;
+  max-width: 35ch;
 }
 
-.time{
-    display: flex;
-    flex-direction: row;
-    color: white;
-    margin-left: 90px;
-    margin-top: 15px;
+.story p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-left: 90px;
+  margin-top: -20px;
+  max-width: 35ch;
+  font-size: 20px;
 }
 
-.date3{
-    margin-left: 20px;
+.line {
+  border-bottom: 1px solid rgb(253, 183, 53);
+  margin-top: 30px;
+  margin-left: 90px;
+  margin-right: 40px;
 }
 
-.separate2{
-    margin-left: 20px;
-    font-weight: bold;
+.time {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin-left: 90px;
+  margin-top: 15px;
 }
 
-.react{
-    display: flex;
-    flex-direction: row;
-    color: white;
-    margin-left: 90px;
-    margin-top: 20px;
+.date3 {
+  margin-left: 20px;
 }
 
-.like{
-    margin-right: 50px;
-    font-size: 15px;
+.separate2 {
+  margin-left: 20px;
+  font-weight: bold;
 }
 
-.like img{
-    height: 25px;
+.react {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin-left: 90px;
+  margin-top: 20px;
 }
 
-.comment{
-    font-size: 15px;
+.like {
+  margin-right: 50px;
+  font-size: 15px;
 }
 
-.comment img{
-    height: 35px;
+.like img {
+  height: 25px;
 }
 
-
-#comment{
-    margin-left: 50px;
+.comment {
+  font-size: 15px;
 }
 
-.reply{
-    margin-left: 90px;
-    margin-top: 30px;
-    color: white;
+.comment img {
+  height: 35px;
 }
 
-footer{
-    background-color: rgb(44, 44, 44);
-    text-align: center;
+#comment {
+  margin-left: 50px;
 }
 
-.fline{
-    padding-top: 150px;
-    border-bottom: 2px solid rgb(253, 183, 53);
+.reply {
+  margin-left: 90px;
+  margin-top: 30px;
+  color: white;
 }
 
-.links{
-    display: flex;
-    flex-direction: row;
+footer {
+  background-color: rgb(44, 44, 44);
+  text-align: center;
 }
 
-.brand h2{
-    margin-top: 80px;
-    color: white;
-    font-size: 20px;
+.fline {
+  padding-top: 150px;
+  border-bottom: 2px solid rgb(253, 183, 53);
 }
 
-.brand .links{
-    margin-top: 50px;
-    font-size: 20px;
-    margin-left: 550px;
+.links {
+  display: flex;
+  flex-direction: row;
 }
 
-.brand a{
-    color: white;
-    text-decoration: none;
-    margin-bottom: 50px;
-    margin-inline: 100px;
+.brand h2 {
+  margin-top: 80px;
+  color: white;
+  font-size: 20px;
 }
 
-.copy{
-    color: white;
-    font-size: 17px;
-    padding-bottom: 30px;
+.brand .links {
+  margin-top: 50px;
+  font-size: 20px;
+  margin-left: 550px;
+}
+
+.brand a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 50px;
+  margin-inline: 100px;
+}
+
+.copy {
+  color: white;
+  font-size: 17px;
+  padding-bottom: 30px;
 }

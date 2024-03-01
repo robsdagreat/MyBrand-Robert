@@ -1,182 +1,180 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 
-body{
-    background: #2C2C2C;
-
+body {
+  background: #2c2c2c;
 }
 
-nav{
-    z-index: 1;
+nav {
+  z-index: 1;
 }
 
-.logo{
-    margin-left: 50px;
-    margin-top: 20px;
-    font-size: 30px;
-    font-weight: bold;
+.logo {
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.logo .txt1{
-    color: white;
+.logo .txt1 {
+  color: white;
 }
 
-.logo .txt2{
-    color: rgb(253, 183, 53);
+.logo .txt2 {
+  color: rgb(253, 183, 53);
 }
 
-ul a{
-    text-decoration: none;
-    color: white;
+ul a {
+  text-decoration: none;
+  color: white;
 }
 
-ul{
-    display: flex;
-    margin-left: 150px;
-    margin-top: -50px;
-    font-size: 20px;
-    list-style: none;
-    float: right;
-    margin-right: 100px;
-    margin-bottom: 100px;
+ul {
+  display: flex;
+  margin-left: 150px;
+  margin-top: -50px;
+  font-size: 20px;
+  list-style: none;
+  float: right;
+  margin-right: 100px;
+  margin-bottom: 100px;
 }
 
-ul li{
-    margin-right: 100px;
+ul li {
+  margin-right: 100px;
 }
 
-.active{
-    color: rgb(253, 183, 53);
+.active {
+  color: rgb(253, 183, 53);
 }
 
-.border{
-    margin-top: 10px;
-    width: 100%;
-    border-bottom: 2px solid rgb(253, 183, 53);  
-    
+.border {
+  margin-top: 10px;
+  width: 100%;
+  border-bottom: 2px solid rgb(253, 183, 53);
 }
 
-#header{
-    width: 180px;
-    height: 15px;
-    border: 1px solid rgb(253, 183, 53);
-    text-align: center;
-    margin: auto;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 120px;
+#header {
+  width: 180px;
+  height: 15px;
+  border: 1px solid rgb(253, 183, 53);
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 120px;
 }
 
-#header span{
-    font-size: 20px;
-    color: white;
-    
-} 
-
-#form{
-    margin: auto;
-    background-color: #404040;
-    height: 500px;
-    width: 800px;
-    margin-top: 50px;
-    border-radius: 15px;
-    border: 1px solid rgb(253, 183, 53);
+#header span {
+  font-size: 20px;
+  color: white;
 }
 
-h4{
-    text-align: center;
-    color: aliceblue;
-    padding-top: 50px;
-    font-size: 20px;
- }
-
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
-}
-input[type='email']{
-    padding: 15px;
-    margin-bottom: 30px;
-    background-color: #2C2C2C;
-    color: white;
-    width: 400px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
+#form {
+  margin: auto;
+  background-color: #404040;
+  height: 500px;
+  width: 800px;
+  margin-top: 50px;
+  border-radius: 15px;
+  border: 1px solid rgb(253, 183, 53);
 }
 
-input[type='password']{
-    padding: 15px;
-    margin-bottom: 30px;
-    background-color: #2C2C2C;
-    color: white;
-    width: 400px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
+h4 {
+  text-align: center;
+  color: aliceblue;
+  padding-top: 50px;
+  font-size: 20px;
 }
 
-input[type='password']::placeholder, input[type='email']::placeholder{
-    color: white;
-    padding: 30px;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+input[type="email"] {
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: #2c2c2c;
+  color: white;
+  width: 400px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
 }
 
-#form .login{
-    padding: 10px;
-    width: 90px;
-    font-size: 15px;
-    font-weight: bold;
-    background: rgb(44, 44, 44);
-    border: 1px solid rgb(253, 183, 53);
-    color: rgb(253, 183, 53);
-    border-radius: 5px;
-    cursor: pointer;
+input[type="password"] {
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: #2c2c2c;
+  color: white;
+  width: 400px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
 }
 
-#form button:hover{
-    opacity: 0.5;
+input[type="password"]::placeholder,
+input[type="email"]::placeholder {
+  color: white;
+  padding: 30px;
 }
 
-footer{
-    background-color: rgb(44, 44, 44);
-    text-align: center;
+#form .login {
+  padding: 10px;
+  width: 90px;
+  font-size: 15px;
+  font-weight: bold;
+  background: rgb(44, 44, 44);
+  border: 1px solid rgb(253, 183, 53);
+  color: rgb(253, 183, 53);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.fline{
-    padding-top: 150px;
-    border-bottom: 2px solid rgb(253, 183, 53);
+#form button:hover {
+  opacity: 0.5;
 }
 
-.links{
-    display: flex;
-    flex-direction: row;
+footer {
+  background-color: rgb(44, 44, 44);
+  text-align: center;
 }
 
-.brand h2{
-    margin-top: 80px;
-    color: white;
-    font-size: 20px;
+.fline {
+  padding-top: 150px;
+  border-bottom: 2px solid rgb(253, 183, 53);
 }
 
-.brand .links{
-    margin-top: 50px;
-    font-size: 20px;
-    margin-left: 550px;
+.links {
+  display: flex;
+  flex-direction: row;
 }
 
-.brand a{
-    color: white;
-    text-decoration: none;
-    margin-bottom: 50px;
-    margin-inline: 100px;
+.brand h2 {
+  margin-top: 80px;
+  color: white;
+  font-size: 20px;
 }
 
-.copy{
-    color: white;
-    font-size: 17px;
-    padding-bottom: 30px;
+.brand .links {
+  margin-top: 50px;
+  font-size: 20px;
+  margin-left: 550px;
+}
+
+.brand a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 50px;
+  margin-inline: 100px;
+}
+
+.copy {
+  color: white;
+  font-size: 17px;
+  padding-bottom: 30px;
 }

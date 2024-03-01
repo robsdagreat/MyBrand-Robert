@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+}
+
+body {
+  background: #2c2c2c;
+}
+#header {
+  width: 180px;
+  height: 15px;
+  border: 1px solid rgb(253, 183, 53);
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 120px;
+}
+
+#header span {
+  font-size: 20px;
+  color: white;
+}
+
+.tech {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+header img {
+  margin-left: 400px;
+  margin-bottom: -80px;
+}
+
+#article {
+  width: 500px;
+  height: 50px;
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 400px;
+  margin-top: 100px;
+}
+
+.title {
+  padding-left: 20px;
+  padding-top: 15px;
+  color: white;
+  font-style: 20px;
+}
+.blog {
+  margin-left: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  padding-top: 15px;
+}
+
+.date {
+  margin-left: 150px;
+  color: rgba(255, 255, 255, 0.6);
+  padding-top: 20px;
+  font-size: 10px;
+}
+
+#update {
+  float: right;
+  margin-right: 700px;
+  margin-top: -30px;
+}
+
+#update img {
+  height: 30px;
+  margin-left: 70px;
+}
+
+#new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#new span {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+#new input[type="text"] {
+  width: 300px;
+  padding: 15px;
+  background-color: #2c2c2c;
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#new input[type="text"]::placeholder {
+  color: white;
+  padding: 20px;
+}
+
+#new button {
+  padding: 10px;
+  width: 100px;
+  background: #2c2c2c;
+  color: white;
+  border: 2px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+#new button:hover {
+  opacity: 0.5;
+}
+
+textarea {
+  width: 320px;
+  background-color: rgb(44, 44, 44);
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  color: white;
+}
+
+textarea::placeholder {
+  color: white;
+  padding: 50px;
+}
+
+footer {
+  background-color: rgb(44, 44, 44);
+  text-align: center;
+}
+
+.fline {
+  padding-top: 150px;
+  border-bottom: 2px solid rgb(253, 183, 53);
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.brand h2 {
+  margin-top: 80px;
+  color: white;
+  font-size: 20px;
+}
+
+.brand .links {
+  margin-top: 50px;
+  font-size: 20px;
+  margin-left: 550px;
+}
+
+.brand a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 50px;
+  margin-inline: 100px;
+}
+
+.copy {
+  color: white;
+  font-size: 17px;
+  padding-bottom: 30px;
+}
