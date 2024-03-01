@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+    }
+    /* styling home page */
+    .home{
+        background-color: rgb(44, 44, 44);
+        width: 100%vw;    
+    }
+    header img {
+        margin-left: 400px;
+        margin-bottom: -80px;
+        cursor: pointer;
+      }
+      
+      body {
+        background: #2c2c2c;
+      }    
+    
+    .login{
+        margin-left: 120px;
+        margin-top: 30px;
+    }
+    
+    
+    .login {
+        padding: 10px;
+        width: 90px;
+        font-size: 20px;
+        font-weight: bold;
+        
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+    
+    .login1{
+        margin-left: 70px;
+        margin-top: 15px;
+    }
+    
+    
+    .login1 {
+        padding: 10px;
+        width: 90px;
+        font-size: 20px;
+        font-weight: bold;
+        
+        color: rgb(253, 183, 53);;
+        cursor: pointer;
+    }
+    
+    .twotwo {
+        display: flex;
+    }
+    
+    .hire{
+        margin-left: 770px;
+        margin-top: 100px;
+        padding: 10px;
+        width: 180px;
+        font-size: 15px;
+        font-weight: bold;
+        background: rgb(44, 44, 44);
+        border: 1px solid rgb(253, 183, 53);
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .recen{
+        margin-left: 775px;
+        margin-top: 5px;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        color: rgba(255, 255, 255,0.6);
+    
+    }
+    
+    .qualify{
+        padding-bottom: 70px;
+    }
+    
+    .qheader{
+        color: white;
+        margin-bottom: 30px;
+        margin-top: 100px;
+        font-size: 30px;
+        margin-left: 200px;
+        /* border-bottom: 2px solid rgb(253, 183, 53); */
+    }
+    
+    .titles{
+        margin-left: 385px;
+        display: flex;
+    }
+    
+  
+    
+    .one1{
+        margin-left: 800px;
+        margin-top: 50px;
+        padding: 10px;
+        width: 100px;
+        font-size: 15px;
+        font-weight: bold;
+        background: rgb(44, 44, 44);
+        border: 1px solid rgb(253, 183, 53);
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+
+    /* styling my footer */
+    
+    footer{
+        background-color: rgb(44, 44, 44);
+        text-align: center;
+    }
+    
+    .fline{
+        padding-top: 150px;
+        border-bottom: 2px solid rgb(253, 183, 53);
+    }
+    
+    .links{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .brand h2{
+        margin-top: 80px;
+        color: white;
+    }
+    
+    .brand .links{
+        margin-top: 50px;
+        font-size: 20px;
+        margin-left: 480px;
+    }
+    
+    .brand a{
+        color: white;
+        text-decoration: none;
+        margin-bottom: 50px;
+        margin-inline: 100px;
+    }
+    
+    .copy{
+        color: white;
+        font-size: 17px;
+        padding-bottom: 30px;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        height: 40px;;
+        width: 1300px;
+        margin-left: 200px;
+        margin-top: 50px;
+        border: 2px solid rgb(253, 183, 53);
+        color: rgb(255, 255, 255);
+      }
