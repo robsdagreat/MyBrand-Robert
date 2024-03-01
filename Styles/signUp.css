@@ -1,223 +1,218 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 
-body{
-    background: #2C2C2C;
+body {
+  background: #2c2c2c;
 }
 
-nav{
-    z-index: 1;
+nav {
+  z-index: 1;
 }
 
-.logo{
-    margin-left: 50px;
-    margin-top: 20px;
-    font-size: 30px;
-    font-weight: bold;
+.logo {
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.logo .txt1{
-    color: white;
+.logo .txt1 {
+  color: white;
 }
 
-.logo .txt2{
-    color: rgb(253, 183, 53);
+.logo .txt2 {
+  color: rgb(253, 183, 53);
 }
 
-ul a{
-    text-decoration: none;
-    color: white;
+ul a {
+  text-decoration: none;
+  color: white;
 }
 
-ul{
-    display: flex;
-    margin-left: 150px;
-    margin-top: -50px;
-    font-size: 20px;
-    list-style: none;
-    float: right;
-    margin-right: 100px;
-    margin-bottom: 100px;
+ul {
+  display: flex;
+  margin-left: 150px;
+  margin-top: -50px;
+  font-size: 20px;
+  list-style: none;
+  float: right;
+  margin-right: 100px;
+  margin-bottom: 100px;
 }
 
-ul li{
-    margin-right: 100px;
+ul li {
+  margin-right: 100px;
 }
 
-.active{
-    color: rgb(253, 183, 53);
+.active {
+  color: rgb(253, 183, 53);
 }
 
-.border{
-    margin-top: 10px;
-    width: 100%;
-    border-bottom: 2px solid rgb(253, 183, 53);  
-    
+.border {
+  margin-top: 10px;
+  width: 100%;
+  border-bottom: 2px solid rgb(253, 183, 53);
 }
 
-#header{
-    width: 180px;
-    height: 15px;
-    border: 1px solid rgb(253, 183, 53);
-    text-align: center;
-    margin: auto;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 120px;
+#header {
+  width: 180px;
+  height: 15px;
+  border: 1px solid rgb(253, 183, 53);
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 120px;
 }
 
-#header span{
-    font-size: 20px;
-    color: white;
-    
-} 
-
-
-#header{
-    width: 180px;
-    height: 15px;
-    border: 1px solid rgb(253, 183, 53);
-    text-align: center;
-    margin: auto;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 120px;
+#header span {
+  font-size: 20px;
+  color: white;
 }
 
-#header span{
-    font-size: 20px;
-    color: white;
-    
-} 
+#header {
+  width: 180px;
+  height: 15px;
+  border: 1px solid rgb(253, 183, 53);
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 120px;
+}
+
+#header span {
+  font-size: 20px;
+  color: white;
+}
 
 .signup-form {
-    background-color: #404040;
-    padding: 20px;
-    border-radius: 5px;
-    width: 500px;
-    padding-left: 10%;
-    padding-right: 10%;
-    border: 1px solid #FFB633;
-    margin: auto;
-    margin-top:50px;
-    height: 800px;
+  background-color: #404040;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+  padding-left: 10%;
+  padding-right: 10%;
+  border: 1px solid #ffb633;
+  margin: auto;
+  margin-top: 50px;
+  height: 800px;
 }
 
-.sub{
-    margin-top: 30px;
-    padding: 10px;
-    width: 150px;
-    font-size: 15px;
-    font-weight: bold;
-    background: rgb(44, 44, 44);
-    border: 1px solid rgb(253, 183, 53);
-    color: rgb(253, 183, 53);
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
+.sub {
+  margin-top: 30px;
+  padding: 10px;
+  width: 150px;
+  font-size: 15px;
+  font-weight: bold;
+  background: rgb(44, 44, 44);
+  border: 1px solid rgb(253, 183, 53);
+  color: rgb(253, 183, 53);
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
 }
 
-.signup-form .pass{
-    color: rgba(255, 255, 255, 0.6);
-    margin-left: 20px;
+.signup-form .pass {
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 20px;
 }
 
-.pass img{
-    height: 15px;
+.pass img {
+  height: 15px;
 }
 
-.signup-form .log{
-    color: rgba(255, 255, 255, 0.6);
-    margin-left: 50px;
-    margin-top: 50px;
-    font-size: 20px ;
+.signup-form .log {
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 50px;
+  margin-top: 50px;
+  font-size: 20px;
 }
 
- h4{
-    text-align: center;
-    color: aliceblue;
-    padding-top: 50px;
-    margin-bottom: 50px;
-    font-size: 20px;
- }
+h4 {
+  text-align: center;
+  color: aliceblue;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
 .signup-form input[type="text"],
 .signup-form input[type="password"] {
-    width: 100%;
-    padding: 15px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #2C2C2C;
-    box-sizing: border-box;
-    color: white;
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  box-sizing: border-box;
+  color: white;
 }
 .signup-form input[type="text"]::placeholder,
-.signup-form input[type="password"]::placeholder {   
-    padding-left: 20px;
-    color: white;
+.signup-form input[type="password"]::placeholder {
+  padding-left: 20px;
+  color: white;
 }
 
 .signup-form input[type="submit"] {
-    width: 30%;
-    background-color: #2C2C2C;
-    color: #FFB633;
-    padding: 10px 0;
-    margin: 40px 20%;
-    border: 1px solid #FFB633;
-    border-radius: 4px;
-    cursor: pointer;
+  width: 30%;
+  background-color: #2c2c2c;
+  color: #ffb633;
+  padding: 10px 0;
+  margin: 40px 20%;
+  border: 1px solid #ffb633;
+  border-radius: 4px;
+  cursor: pointer;
 }
 .signup-form input[type="submit"]:hover {
-    background-color: #919090;
+  background-color: #919090;
 }
-a{
-    color: #FFB633;
-    text-decoration: none;
-    
-}
-
-.news{
-    margin-left: -70px;
-    color: rgba(255, 255, 255, 0.6);
+a {
+  color: #ffb633;
+  text-decoration: none;
 }
 
-footer{
-    background-color: rgb(44, 44, 44);
-    text-align: center;
+.news {
+  margin-left: -70px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.fline{
-    padding-top: 150px;
-    border-bottom: 2px solid rgb(253, 183, 53);
+footer {
+  background-color: rgb(44, 44, 44);
+  text-align: center;
 }
 
-.links{
-    display: flex;
-    flex-direction: row;
+.fline {
+  padding-top: 150px;
+  border-bottom: 2px solid rgb(253, 183, 53);
 }
 
-.brand h2{
-    margin-top: 80px;
-    color: white;
-    font-size: 20px;
+.links {
+  display: flex;
+  flex-direction: row;
 }
 
-.brand .links{
-    margin-top: 50px;
-    font-size: 20px;
-    margin-left: 550px;
+.brand h2 {
+  margin-top: 80px;
+  color: white;
+  font-size: 20px;
 }
 
-.brand a{
-    color: white;
-    text-decoration: none;
-    margin-bottom: 50px;
-    margin-inline: 100px;
+.brand .links {
+  margin-top: 50px;
+  font-size: 20px;
+  margin-left: 550px;
 }
 
-.copy{
-    color: white;
-    font-size: 17px;
-    padding-bottom: 30px;
+.brand a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 50px;
+  margin-inline: 100px;
+}
+
+.copy {
+  color: white;
+  font-size: 17px;
+  padding-bottom: 30px;
 }

@@ -1,282 +1,271 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 
-body{
-    background: #2C2C2C;
+body {
+  background: #2c2c2c;
 }
 
-header img{
-    margin-left: 400px;
-    margin-bottom: -80px;
+header img {
+  margin-left: 400px;
+  margin-bottom: -80px;
 }
 
-#setting{
-    display: flex;
-    flex-direction: row;
+#setting {
+  display: flex;
+  flex-direction: row;
 }
 
-#header{
-    width: 180px;
-    height: 15px;
-    border: 1px solid rgb(253, 183, 53);
-    text-align: center;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 120px;
-    margin-left: 400px;
+#header {
+  width: 180px;
+  height: 15px;
+  border: 1px solid rgb(253, 183, 53);
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 120px;
+  margin-left: 400px;
 }
 
-#header span{
-    font-size: 20px;
-    color: white;
-    
-} 
-
-.option{
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 20px;
-    margin-left: 400px;
-    margin-top: 50px;
+#header span {
+  font-size: 20px;
+  color: white;
 }
 
-.chosen{
-    color: rgb(253, 183, 53);
-    margin-bottom: 30px;
+.option {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
+  margin-left: 400px;
+  margin-top: 50px;
 }
 
-.user{
-    margin-bottom: 30px;
-    color: white;
+.chosen {
+  color: rgb(253, 183, 53);
+  margin-bottom: 30px;
 }
 
-.picture{
-    color: white;
+.user {
+  margin-bottom: 30px;
+  color: white;
 }
 
-#current{
-    color: white;
-    display: flex;
-    flex-direction: row;
-    float: right;
-    position: absolute;
-    top: 170px;
-    right: 600px;
+.picture {
+  color: white;
 }
 
-a{
-    text-decoration: none;
+#current {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  float: right;
+  position: absolute;
+  top: 170px;
+  right: 600px;
 }
 
-.one .title{
-    margin-bottom: 70px;
-    font-size: 20px;
+a {
+  text-decoration: none;
 }
 
-.img{
-    border: 2px solid white;
-    border-radius: 50%;
-    overflow: hidden;
-    background: white;
+.one .title {
+  margin-bottom: 70px;
+  font-size: 20px;
 }
 
-
-.profile .img img{
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    color: white;
-    margin-right: 30px;
+.img {
+  border: 2px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
 }
 
-#text{
-    font-size: 20px;
-    margin-top: 150px;
-    margin-left: 80px;
-}
-#username{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 200px;
+.profile .img img {
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  color: white;
+  margin-right: 30px;
 }
 
-#username span{
-    color: white;
-    margin-bottom: 50px;
-    font-size: 20px;
+#text {
+  font-size: 20px;
+  margin-top: 150px;
+  margin-left: 80px;
+}
+#username {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
 }
 
-
-
-#username input[type="text"]{
-    width: 300px;
-    padding: 15px;
-    background-color: #2C2C2C;
-    border: 1px solid rgb(253, 183, 53);
-    border-radius: 5px;
-    margin-bottom: 20px;
+#username span {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 20px;
 }
 
-#username input[type="text"]::placeholder{
-    color: white;
-    padding: 20px;
+#username input[type="text"] {
+  width: 300px;
+  padding: 15px;
+  background-color: #2c2c2c;
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
-#username button{
-    padding: 10px;
-    width: 100px;
-    background: #2C2C2C;
-    color: white;
-    border: 2px solid rgb(253, 183, 53);
-    border-radius: 5px;
-    cursor: pointer;
+#username input[type="text"]::placeholder {
+  color: white;
+  padding: 20px;
 }
 
-#username button:hover{
-    opacity: 0.5;
+#username button {
+  padding: 10px;
+  width: 100px;
+  background: #2c2c2c;
+  color: white;
+  border: 2px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-#password{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 200px;
+#username button:hover {
+  opacity: 0.5;
 }
 
-#password span{
-    color: white;
-    margin-bottom: 50px;
-    font-size: 20px;
+#password {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
 }
 
-
-
-#password input[type="text"]{
-    width: 300px;
-    padding: 15px;
-    background-color: #2C2C2C;
-    border: 1px solid rgb(253, 183, 53);
-    border-radius: 5px;
-    margin-bottom: 20px;
+#password span {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 20px;
 }
 
-#password input[type="text"]::placeholder{
-    color: white;
-    padding: 20px;
+#password input[type="text"] {
+  width: 300px;
+  padding: 15px;
+  background-color: #2c2c2c;
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
-#password button{
-    padding: 10px;
-    width: 100px;
-    background: #2C2C2C;
-    color: white;
-    border: 2px solid rgb(253, 183, 53);
-    border-radius: 5px;
-    cursor: pointer;
+#password input[type="text"]::placeholder {
+  color: white;
+  padding: 20px;
 }
 
-#password button:hover{
-    opacity: 0.5;
+#password button {
+  padding: 10px;
+  width: 100px;
+  background: #2c2c2c;
+  color: white;
+  border: 2px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-#picture{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 200px;
+#password button:hover {
+  opacity: 0.5;
 }
 
-#picture span{
-    color: white;
-    margin-bottom: 50px;
-    font-size: 20px;
+#picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
 }
 
-
-
-#picture input[type="text"]{
-    width: 300px;
-    padding: 15px;
-    background-color: #2C2C2C;
-    border: 1px solid rgb(253, 183, 53);
-    border-radius: 5px;
-    margin-bottom: 20px;
+#picture span {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 20px;
 }
 
-#picture input[type="text"]::placeholder{
-    color: white;
-    padding: 20px;
+#picture input[type="text"] {
+  width: 300px;
+  padding: 15px;
+  background-color: #2c2c2c;
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
-#picture button{
-    padding: 10px;
-    width: 100px;
-    background: #2C2C2C;
-    color: white;
-    border: 2px solid rgb(253, 183, 53);
-    border-radius: 5px;
-    cursor: pointer;
+#picture input[type="text"]::placeholder {
+  color: white;
+  padding: 20px;
 }
 
-#picture button:hover{
-    opacity: 0.5;
+#picture button {
+  padding: 10px;
+  width: 100px;
+  background: #2c2c2c;
+  color: white;
+  border: 2px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-
-.img2{
-    border: 2px solid white;
-    border-radius: 50%;
-    overflow: hidden;
-    background: white;
-    margin-bottom: 30px;
-
+#picture button:hover {
+  opacity: 0.5;
 }
 
-
-.profile2 .img2 img{
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    color: white;
+.img2 {
+  border: 2px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
+  margin-bottom: 30px;
 }
 
-footer{
-    background-color: rgb(44, 44, 44);
-    text-align: center;
+.profile2 .img2 img {
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  color: white;
 }
 
-.fline{
-    padding-top: 150px;
-    border-bottom: 2px solid rgb(253, 183, 53);
+footer {
+  background-color: rgb(44, 44, 44);
+  text-align: center;
 }
 
-.links{
-    display: flex;
-    flex-direction: row;
+.fline {
+  padding-top: 150px;
+  border-bottom: 2px solid rgb(253, 183, 53);
 }
 
-.brand h2{
-    margin-top: 80px;
-    color: white;
-    font-size: 20px;
+.links {
+  display: flex;
+  flex-direction: row;
 }
 
-.brand .links{
-    margin-top: 50px;
-    font-size: 20px;
-    margin-left: 550px;
+.brand h2 {
+  margin-top: 80px;
+  color: white;
+  font-size: 20px;
 }
 
-.brand a{
-    color: white;
-    text-decoration: none;
-    margin-bottom: 50px;
-    margin-inline: 100px;
+.brand .links {
+  margin-top: 50px;
+  font-size: 20px;
+  margin-left: 550px;
 }
 
-.copy{
-    color: white;
-    font-size: 17px;
-    padding-bottom: 30px;
+.brand a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 50px;
+  margin-inline: 100px;
+}
+
+.copy {
+  color: white;
+  font-size: 17px;
+  padding-bottom: 30px;
 }

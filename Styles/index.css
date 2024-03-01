@@ -1,496 +1,487 @@
-
-*{
-margin: 0;
-font-family: sans-serif;
+* {
+  margin: 0;
+  font-family: sans-serif;
 }
 /* styling home page */
-#home{
-    background-color: rgb(44, 44, 44);
-    width: 100%vw;    
+#home {
+  background-color: rgb(44, 44, 44);
+  width: 100%vw;
 }
 
-.right{
-    background-color: rgb(253, 183, 53);  
-    height: 700px;
-    width: 45%;
-    float: right;
-    position: absolute;
-    top: 0;
-    right: 0;
+.right {
+  background-color: rgb(253, 183, 53);
+  height: 700px;
+  width: 45%;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.header{
-    display: flex;
-    
+.header {
+  display: flex;
 }
 
-.burger img{
-    height: 30px;
-    margin-left: 30px;
-    margin-top: 20px;
+.burger img {
+  height: 30px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
 
-.logo{
-    margin-left: 450px;
-    margin-top: 20px;
-    font-size: 30px;
-    font-weight: bold;
+.logo {
+  margin-left: 450px;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.logo .txt1{
-    color: white;
+.logo .txt1 {
+  color: white;
 }
 
-.logo .txt2{
-    color: rgb(253, 183, 53);
+.logo .txt2 {
+  color: rgb(253, 183, 53);
 }
 
-.login{
-    margin-left: 330px;
-    margin-top: 20px;
+.login {
+  margin-left: 330px;
+  margin-top: 20px;
 }
 
-
-.login button{
-    padding: 10px;
-    width: 90px;
-    font-size: 15px;
-    font-weight: bold;
-    background: rgb(44, 44, 44);
-    border: 1px solid rgb(253, 183, 53);
-    color: rgb(253, 183, 53);
-    border-radius: 5px;
-    cursor: pointer;
+.login button {
+  padding: 10px;
+  width: 90px;
+  font-size: 15px;
+  font-weight: bold;
+  background: rgb(44, 44, 44);
+  border: 1px solid rgb(253, 183, 53);
+  color: rgb(253, 183, 53);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-
-
-.hello, .name, .moto, .descript, .qheader{
-    margin-left: 200px;
+.hello,
+.name,
+.moto,
+.descript,
+.qheader {
+  margin-left: 200px;
 }
 
-.hello{
-    color: white;
-    margin-bottom: 30px;
-    margin-top: 150px;
-    font-size: 30px;
+.hello {
+  color: white;
+  margin-bottom: 30px;
+  margin-top: 150px;
+  font-size: 30px;
 }
 
-.name{
-    color: rgb(253, 183, 53);;
-    margin-top: 150px; 
-    font-size: 40px ;
-    font-weight: bold;
+.name {
+  color: rgb(253, 183, 53);
+  margin-top: 150px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
-.moto{
-    margin-bottom: 50px;
-    margin-top: 10px;
-    color: white;
-    font-size: 20px;
+.moto {
+  margin-bottom: 50px;
+  margin-top: 10px;
+  color: white;
+  font-size: 20px;
 }
 
-.descript{
-    font-size: 20px;
-    max-width: 50ch;
-    color: rgba(255, 255, 255,0.6);
+.descript {
+  font-size: 20px;
+  max-width: 50ch;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.middle{
-    position: absolute;
-    left: 850px;
-    top: 170px;
-    z-index: 1;
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-    overflow: hidden;
+.middle {
+  position: absolute;
+  left: 850px;
+  top: 170px;
+  z-index: 1;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
-.middle img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
+.middle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.hire{
-    margin-left: 380px;
-    margin-top: 30px;
-    padding: 10px;
-    width: 90px;
-    font-size: 15px;
-    font-weight: bold;
-    background: rgb(44, 44, 44);
-    border: 1px solid rgb(253, 183, 53);
-    color: rgb(253, 183, 53);
-    border-radius: 5px;
-    cursor: pointer;
+.hire {
+  margin-left: 380px;
+  margin-top: 30px;
+  padding: 10px;
+  width: 90px;
+  font-size: 15px;
+  font-weight: bold;
+  background: rgb(44, 44, 44);
+  border: 1px solid rgb(253, 183, 53);
+  color: rgb(253, 183, 53);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.qualify{
-    padding-bottom: 70px;
+.qualify {
+  padding-bottom: 70px;
 }
 
-.qheader{
-    color: white;
-    margin-bottom: 30px;
-    margin-top: 150px;
-    font-size: 30px;
-    /* border-bottom: 2px solid rgb(253, 183, 53); */
+.qheader {
+  color: white;
+  margin-bottom: 30px;
+  margin-top: 150px;
+  font-size: 30px;
+  /* border-bottom: 2px solid rgb(253, 183, 53); */
 }
 
-.border{
-    margin-left: 205px;
-    margin-top: -20px;
-    width: 150px;
-    border-bottom: 5px solid rgb(253, 183, 53);  
-    
+.border {
+  margin-left: 205px;
+  margin-top: -20px;
+  width: 150px;
+  border-bottom: 5px solid rgb(253, 183, 53);
 }
-.headers{
-    margin-bottom: 50px;
-    margin-left: 200px;
-    color: white;
-    font-size: 20px;
-}
-
-.flex{
-    margin-top: 50px;
-    display: flex;
-    gap: 100px;
-    justify-content: center;
-    
+.headers {
+  margin-bottom: 50px;
+  margin-left: 200px;
+  color: white;
+  font-size: 20px;
 }
 
-.educate .card:nth-child(2){
+.flex {
+  margin-top: 50px;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+}
+
+.educate .card:nth-child(2) {
   margin-bottom: 50px;
 }
 
-.experience .card:nth-child(2){
-    margin-bottom: 50px;
+.experience .card:nth-child(2) {
+  margin-bottom: 50px;
 }
 
-.card{
-    border: 1px solid rgb(253, 183, 53);
-    width: 500px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
-    border-radius: 10px;
+.card {
+  border: 1px solid rgb(253, 183, 53);
+  width: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 10px;
 }
 
-.flex .card h5{
-    margin-bottom: 50px;
-    font-weight: bold;
-    color: white;
+.flex .card h5 {
+  margin-bottom: 50px;
+  font-weight: bold;
+  color: white;
 }
 
-.flex .card p{
-    color: rgba(255, 255, 255,0.6);
+.flex .card p {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* styling about page */
 
-#about{
-    background: #404040;
-    margin-top: -150px;
-    width: 100%;
-    height: 900px;
+#about {
+  background: #404040;
+  margin-top: -150px;
+  width: 100%;
+  height: 900px;
 }
 
-
-.qheader2{
-    padding-top: 80px;
-    color: white;
-    margin-bottom: 30px;
-    margin-top: 150px;
-    margin-left: 200px;
-    font-size: 30px;
+.qheader2 {
+  padding-top: 80px;
+  color: white;
+  margin-bottom: 30px;
+  margin-top: 150px;
+  margin-left: 200px;
+  font-size: 30px;
 }
 
-.border2{
-    margin-left: 205px;
-    margin-top: -20px;
-    width: 90px;
-    border-bottom: 5px solid rgb(253, 183, 53);  
-    
+.border2 {
+  margin-left: 205px;
+  margin-top: -20px;
+  width: 90px;
+  border-bottom: 5px solid rgb(253, 183, 53);
 }
 
-.cover{
-    height: 400px;
-    width: 400px;
-    border: 1px solid rgb(253, 183, 53);
-    border-radius: 50%;
-    margin-top: 120px;
-    margin-left: 190px;
-    background: rgb(44, 44, 44);
+.cover {
+  height: 400px;
+  width: 400px;
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 50%;
+  margin-top: 120px;
+  margin-left: 190px;
+  background: rgb(44, 44, 44);
 }
 
-.profile{
-    margin-top: 80px;
-    position: absolute;
-    z-index: 1;
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: absolute;
-    top: 1520px;
-    left: 240px;
+.profile {
+  margin-top: 80px;
+  position: absolute;
+  z-index: 1;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 1520px;
+  left: 240px;
 }
 
-.profile img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.right2{
-    float: right;
-    margin-right: 500px;
-    margin-top: -550px;
-    max-width: 50ch;
-    
+.right2 {
+  float: right;
+  margin-right: 500px;
+  margin-top: -550px;
+  max-width: 50ch;
 }
 
-.right2 h5{
-  color:white;
+.right2 h5 {
+  color: white;
   font-size: 20px;
   padding-bottom: 30px;
 }
 
-.right2 p{
-    color:rgba(255, 255, 255,0.6);
-    font-size: 20px;
-  }
-
-.cards{
-    display: flex;
-    float: right;
-    margin-right: 70px;
-    margin-top: -150px;
+.right2 p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
 }
 
-.card2{
-    border: 1px solid rgb(253, 183, 53);
-    border-radius: 8px;
-    background: rgb(44, 44, 44);
-    width: 200px;
-    padding: 30px;
-    margin-right: 30px;
-    text-align: center;
-}  
-
-.card2 h6{
-    color: white;
-    font-size: 15px;
-    margin-bottom: 20px;
+.cards {
+  display: flex;
+  float: right;
+  margin-right: 70px;
+  margin-top: -150px;
 }
 
-.card2 span{
-    color: rgba(255, 255, 255,0.6);;
-    font-size: 15px;
-    margin-bottom: 10px;
+.card2 {
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 8px;
+  background: rgb(44, 44, 44);
+  width: 200px;
+  padding: 30px;
+  margin-right: 30px;
+  text-align: center;
 }
 
-.card2 p{
-    color: rgba(255, 255, 255,0.6);
-    font-size: 15px;
-    margin-bottom: 10px;
+.card2 h6 {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 20px;
 }
 
-.btn button{
-    padding: 10px;
-    width: 180px;
-    font-size: 15px;
-    font-weight: bold;
-    background: rgb(44, 44, 44);
-    border: 1px solid rgb(253, 183, 53);
-    color: rgb(253, 183, 53);
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 1250px;
-    margin-top: 80px;
+.card2 span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.card2 p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.btn button {
+  padding: 10px;
+  width: 180px;
+  font-size: 15px;
+  font-weight: bold;
+  background: rgb(44, 44, 44);
+  border: 1px solid rgb(253, 183, 53);
+  color: rgb(253, 183, 53);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 1250px;
+  margin-top: 80px;
 }
 
 /* styling contact page */
 
 /* stying contact page */
-#contact{
-    background: rgb(44, 44, 44);
-    margin-top: -150px;
+#contact {
+  background: rgb(44, 44, 44);
+  margin-top: -150px;
 }
 
-
-.qheader3{
-    padding-top: 80px;
-    color: white;
-    margin-bottom: 30px;
-    margin-top: 150px;
-    margin-left: 200px;
-    font-size: 30px;
+.qheader3 {
+  padding-top: 80px;
+  color: white;
+  margin-bottom: 30px;
+  margin-top: 150px;
+  margin-left: 200px;
+  font-size: 30px;
 }
 
-.border3{
-    margin-left: 205px;
-    margin-top: -20px;
-    width: 90px;
-    border-bottom: 5px solid rgb(253, 183, 53);  
+.border3 {
+  margin-left: 205px;
+  margin-top: -20px;
+  width: 90px;
+  border-bottom: 5px solid rgb(253, 183, 53);
 }
 
-.cline{
-    display: flex;
-    flex-direction: row;
+.cline {
+  display: flex;
+  flex-direction: row;
 }
 
-.card3{
-    border: 1px solid rgb(253, 183, 53);
-    border-radius: 8px;
-    background: rgb(44, 44, 44);
-    width: 240px;
-    padding: 40px;
-    margin-left: 50px;
-    text-align: center;
+.card3 {
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 8px;
+  background: rgb(44, 44, 44);
+  width: 240px;
+  padding: 40px;
+  margin-left: 50px;
+  text-align: center;
 }
 
-.talk{
-    margin-left: 200px;
-    margin-top: 50px;
-    font-size: 20px;
-    color: rgba(255, 255, 255,0.6);
+.talk {
+  margin-left: 200px;
+  margin-top: 50px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.card3 img{
-    margin-bottom: 20px;
+.card3 img {
+  margin-bottom: 20px;
 }
 
-.card3 span{
-    margin-top: 70px;
-    margin-left: 50px;
-    font-size: 20px;
-    color: white;
+.card3 span {
+  margin-top: 70px;
+  margin-left: 50px;
+  font-size: 20px;
+  color: white;
 }
 
-.card3 p{
-    font-size: 20px;
-    color: white;
+.card3 p {
+  font-size: 20px;
+  color: white;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }
 
-.form h2{
-    color: white;
+.form h2 {
+  color: white;
 }
 
-.form input:nth-child(2){
-    margin-top: 80px;
-    margin-bottom: 50px;
-    width: 300px;
-    background-color: rgb(44, 44, 44);
-    border: 1px solid rgb(253, 183, 53);
-    border-radius: 5px;
-    padding: 15px;
-    color: white;
+.form input:nth-child(2) {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  width: 300px;
+  background-color: rgb(44, 44, 44);
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  padding: 15px;
+  color: white;
 }
 
-.form input:nth-child(3){
-    margin-bottom: 50px;
-    width: 300px;
-    background-color: rgb(44, 44, 44);
-    border: 1px solid rgb(253, 183, 53);
-    border-radius: 5px;
-    padding: 15px;
-    color: white;
-    transition: width 0.5s;
+.form input:nth-child(3) {
+  margin-bottom: 50px;
+  width: 300px;
+  background-color: rgb(44, 44, 44);
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  padding: 15px;
+  color: white;
+  transition: width 0.5s;
 }
 
-.form textarea{
-     width: 320px;
-    background-color: rgb(44, 44, 44);
-    border: 1px solid rgb(253, 183, 53);
-    border-radius: 5px;
-    color: white;
+.form textarea {
+  width: 320px;
+  background-color: rgb(44, 44, 44);
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  color: white;
 }
 
-.form textarea::placeholder{
-    color: white;
-    padding: 50px;
+.form textarea::placeholder {
+  color: white;
+  padding: 50px;
 }
 
-input[type="text"]::placeholder{
- color: white;
- padding: 35px;
+input[type="text"]::placeholder {
+  color: white;
+  padding: 35px;
 }
 
-input[type="email"]::placeholder{
-    color: white;
-    padding: 35px;
-   }
+input[type="email"]::placeholder {
+  color: white;
+  padding: 35px;
+}
 
-input[type="text"]:focus{
-    border: 1px solid rgb(253, 183, 53);
-    color: white;
-}  
+input[type="text"]:focus {
+  border: 1px solid rgb(253, 183, 53);
+  color: white;
+}
 
-.form button{
-    padding: 10px;
-    width: 100px;
-    font-size: 15px;
-    font-weight: bold;
-    background: rgb(44, 44, 44);
-    border: 1px solid rgb(253, 183, 53);
-    color: rgb(253, 183, 53);
-    border-radius: 5px;
-    cursor: pointer; 
-    margin-top: 50px;
+.form button {
+  padding: 10px;
+  width: 100px;
+  font-size: 15px;
+  font-weight: bold;
+  background: rgb(44, 44, 44);
+  border: 1px solid rgb(253, 183, 53);
+  color: rgb(253, 183, 53);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 50px;
 }
 
 /* styling my footer */
 
-footer{
-    background-color: rgb(44, 44, 44);
-    text-align: center;
+footer {
+  background-color: rgb(44, 44, 44);
+  text-align: center;
 }
 
-.fline{
-    padding-top: 150px;
-    border-bottom: 2px solid rgb(253, 183, 53);
+.fline {
+  padding-top: 150px;
+  border-bottom: 2px solid rgb(253, 183, 53);
 }
 
-.links{
-    display: flex;
-    flex-direction: row;
+.links {
+  display: flex;
+  flex-direction: row;
 }
 
-.brand h2{
-    margin-top: 80px;
-    color: white;
+.brand h2 {
+  margin-top: 80px;
+  color: white;
 }
 
-.brand .links{
-    margin-top: 50px;
-    font-size: 20px;
-    margin-left: 550px;
+.brand .links {
+  margin-top: 50px;
+  font-size: 20px;
+  margin-left: 550px;
 }
 
-.brand a{
-    color: white;
-    text-decoration: none;
-    margin-bottom: 50px;
-    margin-inline: 100px;
+.brand a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 50px;
+  margin-inline: 100px;
 }
 
-.copy{
-    color: white;
-    font-size: 17px;
-    padding-bottom: 30px;
+.copy {
+  color: white;
+  font-size: 17px;
+  padding-bottom: 30px;
 }
