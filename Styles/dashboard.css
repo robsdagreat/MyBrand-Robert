@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+  }
+  
+  body {
+    background: #2c2c2c;
+  }
+
+#up{
+   display: flex;
+    color: white;
+    padding-top: 50px;
+    padding-left: 100px;
+}  
+
+
+.icon{
+    display: flex; 
+    float: right;
+    margin-right: 700px;
+}
+
+.icon, .prof{
+    margin-left: 100px;
+}
+
+#search{
+    padding:15px;
+    margin-left: 500px;
+    border: 1px solid rgb(253, 183, 53);
+    border-radius: 8px;
+    background: #2c2c2c;
+}
+
+.dash span{
+    font-size: 25px;
+}
+
+.dash p{
+    font-size: 20px;
+}
+
+#dash{
+   height: 100%;
+   width: 15%;
+   background: #404040;
+   border: 1px solid rgb(253, 183, 53);
+   border-radius: 8px; 
+   margin-left: 30px;
+}
+
+#options img{
+    height: 25px;
+}
+
+#dash h3{
+   text-align: center;
+   padding-top: 20px;
+ }
+
+#dash .one{
+   color: white;
+}
+
+#dash .two{
+    color: rgb(253, 183, 53);
+ }
+
+.border{
+    border-bottom: 2px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+} 
+
+.active{
+    display: flex;
+    background: rgb(253, 183, 53);
+    border-radius: 5px;
+    width: 200px;
+    margin-left: 40px;
+    font-weight: bold;
+}
+
+.active .page a:hover{
+    color: black;
+    transition: ease 2s;
+}
+
+.link{
+    display: flex;
+    margin-left: 40px;
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.page a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+
+}
+
+.page a:hover{
+    color: rgb(253, 183, 53);
+}
+
+#admin-options{
+    margin-top: 80px;
+}
+
+
+#admin-options img{
+    height: 25px;
+}
+
+
+.logout{
+    display: flex;
+    background: rgb(253, 183, 53);
+    border-radius: 5px;
+    width: 200px;
+    margin-left: 40px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+
+.logout a:hover{
+    color: black;
+    transition: ease 2s;
+}
+
+.logout img{
+    height: 25px;
+}
+
+#cards{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    left: 20%;
+}
+
+
+.card{
+    border: 1px solid rgb(253, 183, 53);
+    border-radius: 8px;
+    margin-left: 50px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.card span{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.card p:nth-child(2){
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card p:nth-child(3){
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 700px){
+    body    {
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+    main{
+        overflow-x: hidden;
+        box-sizing: border-box;  
+    }
+    .dash p, .dash span{
+        display: none;
+    }
+    
+    #dash{
+       height: 100%;
+       width: 30%;
+       background: #404040;
+       border: 1px solid rgb(253, 183, 53);
+       border-radius: 4px; 
+       margin-left: 10px;
+       box-sizing: border-box;
+       margin-top: 30px;
+       box-sizing: border-box;
+    }
+    #cards{
+    display: flex;
+    box-sizing: border-box;
+    margin-left: 70px;
+   }
+   
+    .card{
+        padding: 10px;
+        width: 70px;
+        margin-left: 50px;
+        margin-top: 20px;
+        border-radius: 4px;
+    }
+
+    .card span{
+        font-weight: bold;
+        font-size: 10px;
+    }
+    
+    .card p:nth-child(2){
+        font-size: 10px;
+        font-weight: bold;
+    }
+    
+    .card p:nth-child(3){
+        font-size: 8px;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    #dash h3{
+        text-align: center;
+        padding-top: 5px;
+        font-size: 15px;
+      }
+     
+     #dash .one{
+        color: white;
+        font-size: 15px;
+     }
+     
+     #dash .two{
+         color: rgb(253, 183, 53);
+         font-size: 15px;
+      }
+     
+     .border{
+         border-bottom: 2px solid black;
+         margin-top: 10px;
+         margin-bottom: 10px;
+     }
+
+     .logout img{
+        height: 25px;
+    }
+    #options img{
+        height: 25px;
+    }
+
+    #admin-options{
+        margin-top: 40px;
+    }
+    
+    #admin-options img{
+        height: 25px;
+    }
+
+    .link{
+        display: flex;
+        margin-left: 10px;
+        margin-top: 10px;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .active{
+        display: flex;
+        background: rgb(253, 183, 53);
+        border-radius: 5px;
+        width: 170px;
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    .logout{
+        display: flex;
+        background: rgb(253, 183, 53);
+        border-radius: 5px;
+        width: 150px;
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    #search{
+        padding:8px;
+        margin-left: -50px;
+        width: 180px;
+        border: 1px solid rgb(253, 183, 53);
+        border-radius: 4px;
+        background: #2c2c2c;
+        box-sizing: border-box;
+        color: white;
+    }
+
+    #up{
+         padding-top: 30px;
+         padding-left: 80px;
+         box-sizing: border-box;
+     }  
+
+    .prof img{
+        height: 20px;
+    }
+    .icon{
+        margin-left: 300px;
+    }
+
+    .prof{
+        margin-left: 30px;
+    }
+    
+    .icon img{
+        height: 20px;
+    }
+   
+}
+
+
+@media screen and (max-width: 400px){
+
+    body    {
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+    main{
+        overflow-x: hidden;
+        box-sizing: border-box;  
+    }
+    .dash p, .dash span{
+        display: none;
+    }
+    
+    #dash{
+       height: 100%;
+       width: 30%;
+       background: #404040;
+       border: 1px solid rgb(253, 183, 53);
+       border-radius: 4px; 
+       margin-left: 10px;
+       box-sizing: border-box;
+       margin-top: 30px;
+       box-sizing: border-box;
+    }
+    #cards{
+    display: block;
+    box-sizing: border-box;
+   }
+   
+    .card{
+        padding: 2px;
+        width: 80px;
+        margin-left: 100px;
+        margin-top: 20px;
+        border-radius: 4px;
+    }
+
+    .card span{
+        font-weight: bold;
+        font-size: 10px;
+    }
+    
+    .card p:nth-child(2){
+        font-size: 10px;
+        font-weight: bold;
+    }
+    
+    .card p:nth-child(3){
+        font-size: 8px;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    #dash h3{
+        text-align: center;
+        padding-top: 5px;
+        font-size: 15px;
+      }
+     
+     #dash .one{
+        color: white;
+        font-size: 15px;
+     }
+     
+     #dash .two{
+         color: rgb(253, 183, 53);
+         font-size: 15px;
+      }
+     
+     .border{
+         border-bottom: 2px solid black;
+         margin-top: 10px;
+         margin-bottom: 10px;
+     }
+
+     .logout img{
+        height: 15px;
+    }
+    #options img{
+        height: 15px;
+    }
+
+    #admin-options{
+        margin-top: 40px;
+    }
+    
+    #admin-options img{
+        height: 15px;
+    }
+
+    .link{
+        display: flex;
+        margin-left: 10px;
+        margin-top: 10px;
+        color: white;
+        font-size: 8px;
+        font-weight: bold;
+    }
+
+    .active{
+        display: flex;
+        background: rgb(253, 183, 53);
+        border-radius: 5px;
+        width: 100px;
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .logout{
+        display: flex;
+        background: rgb(253, 183, 53);
+        border-radius: 5px;
+        width: 100px;
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    #search{
+        padding:1px;
+        margin-left: -50px;
+        width: 80px;
+        border: 1px solid rgb(253, 183, 53);
+        border-radius: 1px;
+        background: #2c2c2c;
+        box-sizing: border-box;
+        color: white;
+    }
+
+    #up{
+         padding-top: 10px;
+         padding-left: 80px;
+         box-sizing: border-box;
+     }  
+
+    .prof img{
+        height: 20px;
+    }
+    .icon{
+        margin-left: 200px;
+    }
+
+    .prof{
+        margin-left: 30px;
+    }
+    
+    .icon img{
+        height: 20px;
+    }
+
+}
+
+
