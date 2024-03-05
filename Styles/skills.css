@@ -3,11 +3,15 @@
 }
 
 body {
-  background: #2c2c2c;
+  background: #2c2c2c; 
 }
 
 nav {
   z-index: 1;
+}
+
+nav img{
+  display: none;
 }
 
 .logo {
@@ -62,7 +66,7 @@ ul li {
   text-align: center;
   margin: auto;
   border-radius: 10px;
-  padding: 15px;
+  padding: 20px;
   margin-top: 120px;
 }
 
@@ -78,11 +82,8 @@ ul li {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.front {
-  text-align: center;
-}
-
 .front h2 {
+  text-align: center;
   margin-top: 100px;
   color: white;
   font-size: 15px;
@@ -91,6 +92,7 @@ ul li {
 #html {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .img span {
@@ -216,4 +218,311 @@ footer {
   color: white;
   font-size: 17px;
   padding-bottom: 30px;
+}
+
+
+@media screen and (max-width: 400px) {
+  nav img{
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    height: 30px;
+  }
+
+  ul{
+    display: none;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 700px;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .border {
+  height: 100px;
+  width: 1600px;
+  }
+
+  #header {
+    width: 280px;
+    height: 50px;
+    border: 1px solid rgb(253, 183, 53);
+    position: absolute;
+    left: 700px;
+    border-radius: 10px;  
+    font-size: 25px;
+  }
+
+  #header span{
+    font-size: 25px;
+  }
+
+  .tech {
+    font-size: 25px;
+    position: relative;
+    top: 180px;
+    left: 640px;
+  }
+  
+  .front{
+    position: absolute;
+    top: 360px;
+    left: 200px;
+  }
+  
+  .back{
+    position: absolute;
+    top: 800px;
+    left: 200px;
+  }
+
+  .front h2{
+    font-size: 25px;
+  }
+
+  .back h2{
+    font-size: 25px;
+  }
+
+  .img span{
+    font-size: 20px;
+  }
+
+  .fline{
+    width: 1600px;
+  }
+  
+  footer{
+    position: absolute;
+    top: 1500px;
+  }
+
+  .brand .links {
+    margin-top: 50px;
+    font-size: 20px;
+    margin-left: 380px;
+  }
+  .white {
+    width: 530px;
+    height: 20px;
+    background: white;
+    border-radius: 10px;
+  }
+  
+  .yellow {
+    height: 20px;
+    width: 480px;
+    background: rgb(253, 183, 53);
+    border-radius: 10px;
+  }
+  
+  .yellow2 {
+    height: 20px;
+    width: 380px;
+    background: rgb(253, 183, 53);
+    border-radius: 10px;
+  }
+  
+  .yellow3 {
+    height: 20px;
+    width: 380px;
+    background: rgb(253, 183, 53);
+    border-radius: 10px;
+  }
+  
+  .yellow4 {
+    height: 20px;
+    width: 290px;
+    background: rgb(253, 183, 53);
+    border-radius: 10px;
+  }
+  
+  .yellow6 {
+    height: 20px;
+    width: 450px;
+    background: rgb(253, 183, 53);
+    border-radius: 10px;
+  }
+  
+  .yellow5 {
+    height: 20px;
+    width: 250px;
+    background: rgb(253, 183, 53);
+    border-radius: 10px;
+  }
+  
+  .white,
+  .yellow,
+  .img,
+  .percent,
+  .skill {
+    margin-top: 50px;
+  }
+  
+  .percent {
+    font-size: 25px;
+    color: white;
+    margin-left: 50px;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .logo {
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+    
+  ul a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  ul {
+    display: flex;
+    margin-top: -35px;
+    font-size: 20px;
+    list-style: none;
+    position: absolute;
+    left: 700px;
+    margin-bottom: 100px;
+  }
+  
+  ul li {
+    margin-right: 120px;
+  }
+
+  .border {
+    height: 50px;
+    width: 1780px;
+    }
+
+
+    .front{
+      position: absolute;
+      top: 360px;
+      left: 300px;
+    }
+    
+    .back{
+      position: absolute;
+      top: 800px;
+      left: 300px;
+    }
+
+    #header {
+      width: 180px;
+      height: 50px;
+      border: 1px solid rgb(253, 183, 53);
+      position: absolute;
+      left: 700px;
+      border-radius: 10px;  
+      font-size: 25px;
+    }
+  
+    #header span{
+      font-size: 25px;
+    }
+  
+    .tech {
+      font-size: 25px;
+      position: relative;
+      top: 230px;
+      left: 460px;
+    }
+    
+    .front h2{
+      font-size: 25px;
+    }
+  
+    .back h2{
+      font-size: 25px;
+    }
+  
+    .img span{
+      font-size: 20px;
+    }
+  
+    .fline{
+      width: 1780px;
+    }
+    
+    footer{
+      position: absolute;
+      top: 1500px;
+    }
+  
+    .brand .links {
+      margin-top: 50px;
+      font-size: 20px;
+      margin-left: 450px;
+    }
+    .white {
+      width: 530px;
+      height: 20px;
+      background: white;
+      border-radius: 10px;
+    }
+    
+    .yellow {
+      height: 20px;
+      width: 480px;
+      background: rgb(253, 183, 53);
+      border-radius: 10px;
+    }
+    
+    .yellow2 {
+      height: 20px;
+      width: 380px;
+      background: rgb(253, 183, 53);
+      border-radius: 10px;
+    }
+    
+    .yellow3 {
+      height: 20px;
+      width: 380px;
+      background: rgb(253, 183, 53);
+      border-radius: 10px;
+    }
+    
+    .yellow4 {
+      height: 20px;
+      width: 290px;
+      background: rgb(253, 183, 53);
+      border-radius: 10px;
+    }
+    
+    .yellow6 {
+      height: 20px;
+      width: 450px;
+      background: rgb(253, 183, 53);
+      border-radius: 10px;
+    }
+    
+    .yellow5 {
+      height: 20px;
+      width: 250px;
+      background: rgb(253, 183, 53);
+      border-radius: 10px;
+    }
+    
+    .white,
+    .yellow,
+    .img,
+    .percent,
+    .skill {
+      margin-top: 50px;
+    }
+    
+    .percent {
+      font-size: 25px;
+      color: white;
+      margin-left: 50px;
+    }
+  
 }
