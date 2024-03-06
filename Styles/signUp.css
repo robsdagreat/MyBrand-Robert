@@ -240,6 +240,7 @@ footer {
   .border {
   height: 100px;
   width: 1600px;
+  padding-top: 30px;
   }
 
   #header {
