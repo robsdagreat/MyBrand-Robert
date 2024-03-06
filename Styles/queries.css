@@ -15,7 +15,24 @@
       
       body {
         background: #2c2c2c;
-      }    
+      } 
+      
+      #header {
+        width: 180px;
+        height: 15px;
+        border: 1px solid rgb(253, 183, 53);
+        text-align: center;
+        margin: auto;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 120px;
+      }
+      
+      #header span {
+        font-size: 20px;
+        color: white;
+      }
+      
     
     .login{
         margin-left: 120px;
@@ -67,13 +84,12 @@
         cursor: pointer;
     }
     .recen{
-        margin-left: 775px;
-        margin-top: 5px;
+        margin-left: 840px;
         padding: 10px;
         font-size: 15px;
         font-weight: bold;
         color: rgba(255, 255, 255,0.6);
-    
+        width: 400px;
     }
     
     .qualify{
@@ -162,3 +178,102 @@
         border: 2px solid rgb(253, 183, 53);
         color: rgb(255, 255, 255);
       }
+
+      @media screen and (max-width:400px) {
+        table, th, td{
+          margin-left: 380px;
+          margin-top: 200px;
+          width: 900px;
+          height: 80px;
+          font-size: 25px;
+      }
+
+      #header {
+        width: 280px;
+        height: 35px;
+        border: 1px solid rgb(253, 183, 53);
+        margin-left: 700px;
+        border-radius: 10px;  
+        font-size: 25px;
+      }
+    
+      #header span{
+        font-size: 25px;
+      }
+
+      .recen{
+        margin-left: 700px;
+        padding: 30px;
+        font-size: 25px;
+        font-weight: bold;
+        color: rgba(255, 255, 255,0.6);
+        
+    }
+
+    .one1{
+        margin-top: 100px;
+        width: 150px;
+        font-size: 25px;
+    }
+
+      footer{
+        position: absolute;
+        top: 1800px;
+      }
+    
+      .brand .links {
+        margin-top: 50px;
+        font-size: 20px;
+        margin-left: 380px;
+      }
+    
+      .fline{
+        width: 1600px;
+      }
+    }
+
+@media screen and (max-width: 700px) {
+    header img{
+        margin-left: 150px;
+    }
+
+    #header {
+        margin-left: 700px;
+      }
+    
+      #header span{
+        font-size: 25px;
+      }
+
+      .recen{
+        margin-left: 700px;
+      }
+      
+      table,th,td{
+        height: 70px;
+        width: 700px;
+        margin-left: 500px;
+      }
+
+      .one1{
+        margin-left: 800px;
+      }
+
+      footer{
+        position: absolute;
+        top: 1500px;
+      }
+    
+      .brand .links {
+        margin-top: 50px;
+        font-size: 20px;
+        margin-left: 450px;
+      }
+      .fline {
+        padding-top: 150px;
+        border-bottom: 2px solid rgb(253, 183, 53);
+        width: 1800px;
+      }
+      }
+
+    
