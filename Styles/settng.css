@@ -201,6 +201,20 @@ a {
   padding: 20px;
 }
 
+#picture input[type="file"] {
+  width: 300px;
+  padding: 15px;
+  background-color: #2c2c2c;
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#picture input[type="file"]::placeholder {
+  color: white;
+  padding: 20px;
+}
+
 #picture button {
   padding: 10px;
   width: 100px;
@@ -269,3 +283,229 @@ footer {
   font-size: 17px;
   padding-bottom: 30px;
 }
+
+@media screen and (max-width: 700px) {
+  
+  #profile{
+    display: none;
+  }
+  
+  header img {
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+
+  #setting {
+    flex-direction: column;
+  }
+
+  #header {
+    width: 90%;
+    height: 35px;
+    border: 1px solid rgb(253, 183, 53);
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #header span {
+    font-size: 20px;
+  }
+
+  .option {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .chosen {
+    margin-bottom: 15px;
+  }
+
+  .user,
+  .picture,
+  #current {
+    margin-bottom: 15px;
+  }
+
+  .one .title {
+    margin-bottom: 15px;
+  }
+
+  .img {
+    border: 2px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+  }
+
+  .profile .img img {
+    height: 150px;
+    margin-right: 10px;
+  }
+
+  #text,
+  #username,
+  #password,
+  #picture {
+    margin-top: 20px;
+  }
+
+  #username input[type="text"],
+  #password input[type="text"],
+  #picture input[type="text"] {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  #username button,
+  #password button,
+  #picture button {
+    margin-bottom: 15px;
+  }
+
+  .img2 {
+    margin-bottom: 15px;
+  }
+
+  .profile2 .img2 img {
+    height: 70px;
+  }
+
+  .brand h2 {
+    margin-top: 20px;
+  }
+
+  .brand .links {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .brand a {
+    margin-bottom: 20px;
+    margin-inline: 20px;
+  }
+
+  .copy {
+    padding-bottom: 20px;
+  }
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+  #profile{
+    display: none;
+  }
+
+  header img {
+    margin-left: 10px;
+    margin-bottom: 0; 
+  }
+
+  body{
+    font-style: 25px;
+  }
+
+  #setting {
+    flex-direction: column; 
+  }
+
+  #header {
+    width: 50%;
+    height: 35px;
+    border: 1px solid rgb(253, 183, 53);
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #header span {
+    font-size: 20px;
+  }
+
+  .option {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .chosen {
+    margin-bottom: 15px;
+  }
+
+  .user,
+  .picture,
+  #current {
+    margin-bottom: 15px;
+  }
+
+  .one .title {
+    margin-bottom: 15px;
+  }
+
+  .img {
+    border: 2px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+  }
+
+  .profile .img img {
+    height: 150px;
+    margin-right: 10px;
+  }
+
+  #text,
+  #username,
+  #password,
+  #picture {
+    margin-top: 20px;
+  }
+
+  #username input[type="text"],
+  #password input[type="text"],
+  #picture input[type="file"] {
+    width: 40%;
+    margin-bottom: 15px;
+  }
+
+  #username button,
+  #password button,
+  #picture button {
+    margin-bottom: 15px;
+  }
+
+  .img2 {
+    margin-bottom: 15px;
+  }
+
+  .profile2 .img2 img {
+    height: 70px;
+  }
+
+  .brand h2 {
+    margin-top: 20px;
+  }
+
+  .brand .links {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .brand a {
+    margin-bottom: 20px;
+    margin-inline: 20px;
+  }
+
+  .copy {
+    padding-bottom: 20px; 
+  }
+}
+
+
