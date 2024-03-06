@@ -225,9 +225,9 @@ footer {
   nav img{
     display: block;
     position: absolute;
-    top: 50px;
+    top: 10px;
     left: 20px;
-    height: 30px;
+    height: 20px;
   }
 
   ul{
@@ -237,6 +237,10 @@ footer {
   .logo {
     position: absolute;
     left: 700px;
+    top: 10px;
+  }
+
+  .txt1, .txt2{
     font-size: 50px;
     font-weight: bold;
   }
@@ -244,6 +248,7 @@ footer {
   .border {
   height: 100px;
   width: 1600px;
+  padding-top: 100px;
   }
 
   #header {
@@ -260,11 +265,8 @@ footer {
     font-size: 25px;
   }
 
-  .tech {
-    font-size: 25px;
-    position: relative;
-    top: 180px;
-    left: 640px;
+  h6{
+    margin-left: 300px;
   }
   
   .front{

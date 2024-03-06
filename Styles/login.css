@@ -232,3 +232,88 @@ footer {
   font-size: 17px;
   padding-bottom: 30px;
 }
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 14px; 
+  }
+
+  .logo {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 24px;
+  }
+
+  ul {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+  }
+
+  ul li {
+    margin-right: 20px;
+  }
+
+  .border {
+    margin-top: 5px;
+  }
+
+  #header {
+    width: 150px;
+    height: 10px;
+    margin-top: 80px;
+  }
+
+  #header span {
+    font-size: 16px;
+  }
+
+  #form {
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  h4 {
+    padding-top: 30px;
+    font-size: 16px;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .form .login,
+  .form .sub {
+    width: 70px;
+    font-size: 14px;
+  }
+
+  .forget {
+    font-size: 16px;
+    margin-top: -40px;
+  }
+
+  .sign p,
+  .subs h3 {
+    font-size: 16px;
+  }
+
+  .brand h2 {
+    margin-top: 50px;
+    font-size: 16px;
+  }
+
+  .brand .links {
+    margin-top: 30px;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
+  .copy {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+}

@@ -11,7 +11,9 @@
       <div class="logo">
         <span class="txt1">RO</span><span class="txt2">BS</span>
       </div>
+      
       <nav>
+        <img src="./imgs/Vector (1).svg" alt="Burger menu goes here" />
         <ul>
           <a href="./index.html"><li>Home</li></a>
           <a href="./login.html"><li>Login</li></a>
@@ -23,10 +25,10 @@
       </nav>
     </header>
     <main>
+      <div id="header">
+        <span>SignUp page</span>
+      </div>
       <div id="form">
-        <div id="header">
-          <span>SignUp page</span>
-        </div>
         <div class="signup-form">
           <h4>Please fill the form to create an account</h4>
 
@@ -41,17 +43,9 @@
             <input
               type="password"
               name="password"
-              id="password"
               placeholder="Password"
               required
             />
-            <p class="pass">
-              <img src="./imgs/Group.png" alt="" />
-              <span
-                >Your password should be 8 characters long, containing an
-                uppercase character and a special character.</span
-              >
-            </p>
             <input
               type="password"
               name="password"
@@ -59,7 +53,10 @@
               placeholder="Confirm password"
               required
             />
-            <button type="submit" class="sub">Sign up</button>
+
+            <button 
+            type="submit" 
+            class="sub">Sign up</button>
 
             <p class="log">
               Already have an account? <a href="./login.html">Login</a>
@@ -70,11 +67,13 @@
             <input
               type="text"
               name="email"
-              id="email"
+              id="subscribe"
               placeholder="Email"
               required
             />
-            <button type="submit" class="sub">Subscribe</button>
+            <button 
+            type="submit" 
+            class="sub2">Subscribe</button>
           </form>
         </div>
       </div>
