@@ -178,3 +178,154 @@ footer {
   font-size: 17px;
   padding-bottom: 30px;
 }
+
+@media screen and (max-width: 400px) {
+  nav img{
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    height: 30px;
+  }
+
+  ul{
+    display: none;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 700px;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .border {
+  height: 100px;
+  width: 1600px;
+  padding-top: 30px;
+  }
+
+  #header {
+    width: 280px;
+    height: 35px;
+    border: 1px solid rgb(253, 183, 53);
+    position: absolute;
+    left:600px;
+    top: 100px;
+    border-radius: 10px;  
+    font-size: 25px;
+  }
+
+  #header span{
+    font-size: 25px;
+  }
+  #form {
+    width: 120%;
+    height: 700px;
+    margin-left: 60%;
+    margin-top: 30px;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 90%;
+  }
+
+  #form .login {
+    width: 70%;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  nav img{
+    display: none;
+  }
+   
+  .logo {
+    margin-left: 30px;
+    margin-top: 15px;
+    font-size: 26px;
+  }
+
+  ul {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  ul li {
+    margin-right: 10px;
+  }
+
+  .border {
+    margin-top: 10px;
+    width: 1800px;
+    border-bottom: 2px solid rgb(253, 183, 53);
+  }
+  
+  #header {
+    width: 280px;
+    height: 55px;
+    border: 1px solid rgb(253, 183, 53);
+    text-align: center;
+    margin-left: 680px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 120px;
+  }
+  
+  #header span {
+    font-size: 20px;
+    color: white;
+  } 
+
+  ul {
+    display: flex;
+    margin-top: -35px;
+    font-size: 20px;
+    list-style: none;
+    position: absolute;
+    left: 700px;
+    margin-bottom: 100px;
+  }
+  
+  ul li {
+    margin-right: 120px;
+  }
+
+  #form {
+    width: 90%;
+    margin-left: 580px;
+    margin-top: 50px;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 60%;
+  }
+
+  #form .login {
+    width: 50%;
+  }
+  footer{
+    position: absolute;
+    top: 1600px;
+  }
+
+  .brand .links {
+    margin-top: 50px;
+    font-size: 20px;
+    margin-left: 450px;
+  }
+
+  .fline{
+    width: 1800px;
+  }
+
+  .copy {
+    padding-bottom: 20px;
+  }
+}

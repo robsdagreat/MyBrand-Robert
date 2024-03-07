@@ -308,3 +308,236 @@ footer {
   font-size: 17px;
   padding-bottom: 30px;
 }
+
+
+@media screen and (max-width: 400px) {
+  .logo {
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 24px;
+  }
+
+  ul {
+   display: none;
+  }
+
+  #header {
+    width: 30%;
+    margin: auto;
+    margin-top: 80px;
+  }
+
+  #blog {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    height: auto;
+  }
+
+  .cover img {
+    height: auto;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 320px;
+  }
+
+  .img img {
+    height: 40px;
+  }
+
+  .profile .name,
+  .separate,
+  .date {
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+
+  .story p {
+    margin-left: 20px;
+    margin-top: -15px;
+    max-width: none;
+    font-size: 16px;
+  }
+
+  .line {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .time,
+  .react {
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+
+  .news {
+    margin-left: 20px;
+  }
+
+  .letter {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .sub {
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .letter h4,
+  input,
+  button {
+    padding-top: 20px;
+  }
+
+  .brand .links {
+    margin-left: 50px;
+  }
+
+  .brand a {
+    margin-bottom: 20px;
+    margin-inline: 10px;
+  }
+
+  .copy {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .logo {
+    margin-left: 30px;
+    margin-top: 18px;
+    font-size: 28px;
+  }
+
+  ul {
+    display: flex;
+    margin-top: -35px;
+    font-size: 20px;
+    list-style: none;
+    position: absolute;
+    left: 700px;
+    margin-bottom: 100px;
+  }
+  
+  ul li {
+    margin-right: 120px;
+  }
+  .border {
+    margin-top: 10px;
+    width: 1800px;
+    border-bottom: 2px solid rgb(253, 183, 53);
+  }
+  
+  #header {
+    width: 280px;
+    height: 55px;
+    border: 1px solid rgb(253, 183, 53);
+    text-align: center;
+    margin-left: 680px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 120px;
+  }
+  
+  #header span {
+    font-size: 20px;
+    color: white;
+  } 
+  
+  .fline {
+    padding-top: 150px;
+    border-bottom: 2px solid rgb(253, 183, 53);
+    width: 1800px;
+  }
+
+  #blog {
+    width: 90%;
+    margin-left: 600px;
+    margin-top: 70px;
+    height: auto;
+  }
+
+  .cover img {
+    height: auto;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  .img img {
+    height: 45px;
+  }
+
+  .profile .name,
+  .separate,
+  .date {
+    margin-top: 25px;
+    margin-left: 30px;
+  }
+
+  .story p {
+    margin-left: 30px;
+    margin-top: -25px;
+    max-width: none;
+    font-size: 18px;
+  }
+
+  .line {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .time,
+  .react {
+    margin-left: 30px;
+    margin-top: 25px;
+  }
+
+  .news {
+    margin-left: 30px;
+  }
+
+  .letter {
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .sub {
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .letter h4,
+  input,
+  button {
+    padding-top: 30px;
+  }
+
+  footer{
+    position: absolute;
+    top: 1700px;
+  }
+
+  .brand .links {
+    margin-top: 50px;
+    font-size: 20px;
+    margin-left: 450px;
+  }
+}
