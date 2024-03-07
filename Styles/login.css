@@ -10,6 +10,10 @@ nav {
   z-index: 1;
 }
 
+nav img{
+  display: none;
+}
+
 .logo {
   margin-left: 50px;
   margin-top: 20px;
@@ -231,4 +235,167 @@ footer {
   color: white;
   font-size: 17px;
   padding-bottom: 30px;
+}
+
+@media screen and (max-width: 400px) {
+  ul{
+    display: none;
+  }
+
+  nav img{
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    height: 30px;
+  }
+
+  .logo {
+    position: absolute;
+    left: 700px;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .border {
+  height: 100px;
+  width: 1600px;
+  padding-top: 30px;
+  }
+
+  #header {
+    width: 280px;
+    height: 50px;
+    border: 1px solid rgb(253, 183, 53);
+    margin-left: 700px;
+    border-radius: 10px;  
+    font-size: 25px;
+  }
+
+  #header span{
+    font-size: 25px;
+  }
+
+  #form {
+    position: relative;
+    left: 300px;
+    top: 250px;
+    height: 1000px;
+    width: 1000px;
+    font-size: 25px;
+    padding: 5%;
+  }
+  
+  h4 {
+    text-align: center;
+    color: aliceblue;
+    padding-top: 50px;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  h3{
+    padding-top: 30px;
+    max-width: 25ch;
+    margin: auto  ;
+  }
+
+  .form input[type="email"],
+button {
+  margin-top: 20px;
+  padding: 20px;
+} 
+
+.form input[type="password"]{
+  padding: 20px;
+}
+   footer{
+    position: absolute;
+    top: 2100px;
+  }
+
+  .brand .links {
+    margin-top: 50px;
+    font-size: 20px;
+    margin-left: 380px;
+  }
+
+  .fline{
+    width: 1600px;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  ul {
+    display: flex;
+    margin-top: -35px;
+    font-size: 20px;
+    list-style: none;
+    position: absolute;
+    left: 700px;
+    margin-bottom: 100px;
+  }
+  
+  ul li {
+    margin-right: 120px;
+  }
+
+  #header {
+    width: 280px;
+    height: 35px;
+    border: 1px solid rgb(253, 183, 53);
+    text-align: center;
+    margin-left: 680px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 120px;
+  }
+  
+  #header span {
+    font-size: 20px;
+    color: white;
+  }
+
+  #form{
+    height: 1000px;
+    margin-left: 480px;
+    margin-top: 150px;
+  }
+  
+  .forget{
+    margin-top: 10px;
+  }
+
+  .sign{
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  h3{
+    padding-bottom: 50px;
+  }
+
+  footer{
+    position: absolute;
+    top: 1500px;
+  }
+
+  .brand .links {
+    margin-top: 50px;
+    font-size: 20px;
+    margin-left: 450px;
+  }
+
+  .fline {
+    padding-top: 150px;
+    border-bottom: 2px solid rgb(253, 183, 53);
+    width: 1800px;
+  }
+
+  .border {
+    padding-top: 30px;
+    width: 1800px;
+    border-bottom: 2px solid rgb(253, 183, 53);
+  }
 }

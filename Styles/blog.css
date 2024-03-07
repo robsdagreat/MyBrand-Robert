@@ -275,3 +275,293 @@ footer {
   font-size: 17px;
   padding-bottom: 30px;
 }
+
+@media screen and (max-width: 700px) {
+   
+  nav img{
+    display: none;
+  }
+   
+  .logo {
+    margin-left: 30px;
+    margin-top: 15px;
+    font-size: 26px;
+  }
+
+  ul {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  ul li {
+    margin-right: 10px;
+  }
+
+  .border {
+    margin-top: 10px;
+    width: 1800px;
+    border-bottom: 2px solid rgb(253, 183, 53);
+  }
+  
+  #header {
+    width: 280px;
+    height: 55px;
+    border: 1px solid rgb(253, 183, 53);
+    text-align: center;
+    margin-left: 680px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 120px;
+  }
+  
+  #header span {
+    font-size: 20px;
+    color: white;
+  } 
+
+  ul {
+    display: flex;
+    margin-top: -35px;
+    font-size: 20px;
+    list-style: none;
+    position: absolute;
+    left: 700px;
+    margin-bottom: 100px;
+  }
+  
+  ul li {
+    margin-right: 120px;
+  }
+
+  #blog {
+    width: 90%;
+    margin-left: 600px;
+    margin-top: 50px;
+    height: auto;
+  }
+
+  .cover img {
+    height: auto;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  .img img {
+    height: 40px;
+  }
+
+  .profile .name,
+  .separate,
+  .date {
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+
+  .story p {
+    margin-left: 30px;
+    margin-top: -20px;
+    max-width: none;
+    font-size: 18px;
+  }
+
+  .line {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .time,
+  .react {
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+
+  .news {
+    margin-left: 30px;
+  }
+
+  .letter {
+    width: 90%;
+    margin-left: 600px;
+    margin-top: 80px;
+  }
+
+  .letter h4{
+    margin-top: 50px;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .sub {
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .letter h4,
+  input,
+  button {
+    padding-top: 20px;
+  }
+
+  .fline{
+    width: 1800px;
+  }
+
+  footer{
+    position: absolute;
+    top: 2700px;
+  }
+
+  .brand .links {
+    margin-top: 50px;
+    font-size: 20px;
+    margin-left: 450px;
+  }
+
+
+  .copy {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  
+  nav img{
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    height: 30px;
+  }
+
+ .logo {
+    position: absolute;
+    left: 700px;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  ul {
+    display: none;
+  }
+
+  .border {
+    height: 100px;
+    width: 1600px;
+    padding-top: 30px;
+    }
+
+  #header {
+    width: 30%;
+    margin-left: 780px;
+    margin-top: 80px;
+  }
+
+  #blog {
+    width: 120%;
+    margin-left: 700px;
+    margin-top: 30px;
+    height: 600px;
+    margin-bottom: 50px;
+    font-size: 25px;
+  }
+
+  .cover img {
+    height: 170px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .img img {
+    height: 30px;
+  }
+
+  .profile .name,
+  .separate,
+  .date {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .story p {
+    margin-left: 20px;
+    margin-top: -20px;
+    max-width: none;
+    font-size: 16px;
+  }
+
+  .line {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .time,
+  .react {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .news {
+    margin-left: 20px;
+  }
+
+  .letter {
+    width: 120%;
+    margin-left: 700px;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .letter h4{
+    margin-top: 80px;
+  }
+
+  input[type="text"] {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .sub {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .letter h4,
+  input,
+  button {
+    padding-top: 0;
+  }
+
+  footer{
+    position: absolute;
+    top: 2600px;
+  }
+
+  .brand .links {
+    margin-top: 50px;
+    font-size: 25px;
+    margin-left: 500px;
+
+  }
+
+  .link{
+    margin-left: 100px;
+    font-size: 25px;
+  }
+
+  .fline{
+    width: 1600px;
+  }
+  
+}
+
+

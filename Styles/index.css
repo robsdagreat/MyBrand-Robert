@@ -485,3 +485,104 @@ footer {
   font-size: 17px;
   padding-bottom: 30px;
 }
+
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+ 
+  body{
+    width: 100%;
+    font-size: 10px;
+  }
+  .login{
+    margin-left: 50px;
+    height: 20px;
+    width: 50px;
+  } 
+
+  .logo {
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .middle {
+    position: relative;
+    left: 280px;
+    top: -300px;
+    z-index: 1;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .intro{
+    margin-top: 300px;
+  }
+
+   .right {
+  background-color: rgb(253, 183, 53);
+  height: 700px;
+  width: 45%;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+   .flex{
+    display: block;
+   }
+
+   .experience h5, .educate h5{
+    margin-right: 50px;
+   }
+
+   .experience{
+    margin-top: 50px;
+   }
+
+   .card{
+    width: 200px;
+   }
+
+   .cards{
+    display: block;
+   }
+
+   .btn{
+    margin-left: -900px;
+   }
+
+   .cline{
+    display: block;
+   }
+
+   .links{
+    display: block;
+    margin-right: 300px;
+   }
+
+   .hello,
+.name,
+.moto,
+.descript{
+  margin-left: 10px;
+  font-size: 10px;
+}
+
+.qheader{
+  font-size: 25px;
+} 
+
+.qualify .flex{
+  margin-left: 230px;
+}
+
+
+.hire {
+  margin-left: 100px;
+}
+
+}
