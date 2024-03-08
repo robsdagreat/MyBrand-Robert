@@ -12,6 +12,30 @@
         <div class="burger">
           <img src="./imgs/Vector (1).svg" alt="Burger menu goes here" />
         </div>
+        <div class="burgerMenu">
+        <nav id="nav-home">
+          <span>Home</span>
+        </nav>
+      
+        <nav id="nav-about">
+          <span>About</span>
+        </nav>
+      
+        <nav id="nav-contact">
+          <span>Contact</span>
+        </nav>
+         <nav id="nav-signup">
+          <span>SignUp</span>
+        </nav>
+      
+        <nav id="nav-login">
+          <span>Login</span>
+        </nav>
+      
+        <nav id="nav-blog">
+          <span>Blog</span>
+        </nav>
+      </div>
         <div class="logo">
           <span class="txt1">RO</span><span class="txt2">BS</span>
         </div>
@@ -142,10 +166,12 @@
       </div>
       <div class="form">
         <h2>Write me your message</h2>
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Message" id="" cols="30" rows="10"></textarea>
-        <button type="submit">SEND</button>
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" placeholder="Message" id="" cols="30" rows="10" required></textarea>
+          <button type="submit">SEND</button>
+        </form>
       </div>
     </section>
     <footer>
@@ -160,5 +186,6 @@
         <div class="copy">&copy; H.Rwibutso Robert 2024</div>
       </div>
     </footer>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
