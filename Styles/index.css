@@ -26,10 +26,15 @@
   height: 30px;
   margin-left: 30px;
   margin-top: 20px;
+  cursor: pointer;
+}
+
+.burger img:hover{
+  opacity: 0.5;
 }
 
 .logo {
-  margin-left: 450px;
+  margin-left: 350px;
   margin-top: 20px;
   font-size: 30px;
   font-weight: bold;
@@ -231,7 +236,7 @@
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
-  top: 1520px;
+  top: 1780px;
   left: 240px;
 }
 
@@ -370,7 +375,7 @@
   color: white;
 }
 
-.form {
+#contactForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -380,9 +385,11 @@
 
 .form h2 {
   color: white;
+  text-align: center;
+  margin-top: 120px;
 }
 
-.form input:nth-child(2) {
+#contactForm input[name="name"] {
   margin-top: 80px;
   margin-bottom: 50px;
   width: 300px;
@@ -393,7 +400,7 @@
   color: white;
 }
 
-.form input:nth-child(3) {
+#contactForm input[name="email"] {
   margin-bottom: 50px;
   width: 300px;
   background-color: rgb(44, 44, 44);
@@ -404,7 +411,7 @@
   transition: width 0.5s;
 }
 
-.form textarea {
+#contactForm textarea {
   width: 320px;
   background-color: rgb(44, 44, 44);
   border: 1px solid rgb(253, 183, 53);
@@ -412,22 +419,22 @@
   color: white;
 }
 
-.form textarea::placeholder {
+#contactForm textarea::placeholder {
   color: white;
   padding: 50px;
 }
 
-input[type="text"]::placeholder {
+#contactForm input[type="text"]::placeholder {
   color: white;
   padding: 35px;
 }
 
-input[type="email"]::placeholder {
+#contactForm input[type="email"]::placeholder {
   color: white;
   padding: 35px;
 }
 
-input[type="text"]:focus {
+#contactForm input[type="text"]:focus {
   border: 1px solid rgb(253, 183, 53);
   color: white;
 }
@@ -485,6 +492,31 @@ footer {
   font-size: 17px;
   padding-bottom: 30px;
 }
+
+
+.burgerMenu {
+  display: none;
+}
+
+.burgerMenu nav {
+  margin-top: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.burgerMenu nav:hover{
+  color: rgb(253, 183, 53);
+  transition: ease 0.5s;
+}
+
+.burgerShow {
+  display: block;
+  margin-top: 50px;
+  border: 2px solid rgb(253, 183, 53);
+  border-radius: 8px;
+  padding: 15px;
+}
+
 
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {
