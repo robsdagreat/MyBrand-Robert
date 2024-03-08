@@ -26,4 +26,4 @@ To set up this portfolio on your local machine, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-portfolio.git
+   https://github.com/robsdagreat/MyBrand-Robert.git
