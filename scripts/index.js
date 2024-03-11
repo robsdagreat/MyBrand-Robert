@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger img');
     const burgerMenu = document.querySelector('.burgerMenu');
-  
+    const profile= document.getElementsByClassName("profile")[0];
+
     burger.addEventListener('click', () => {
       burgerMenu.classList.toggle("burgerShow");
+      
     });
 
     const contactForm = document.getElementById("contactForm");
