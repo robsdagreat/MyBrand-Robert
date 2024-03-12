@@ -179,101 +179,148 @@
         color: rgb(255, 255, 255);
       }
 
-      @media screen and (max-width:400px) {
-        table, th, td{
-          margin-left: 380px;
-          margin-top: 200px;
-          width: 900px;
-          height: 80px;
-          font-size: 25px;
-      }
+@media only screen and (max-width: 400px) {
+  header img {
+      margin-left: 20px;
+      margin-top: 10px;
+  }
 
-      #header {
-        width: 280px;
-        height: 35px;
-        border: 1px solid rgb(253, 183, 53);
-        margin-left: 700px;
-        border-radius: 10px;  
-        font-size: 25px;
-      }
-    
-      #header span{
-        font-size: 25px;
-      }
+  .login, .login1, .hire, .recen, .qheader, .one1 {
+      margin-left: 20px;
+  }
 
-      .recen{
-        margin-left: 700px;
-        padding: 30px;
-        font-size: 25px;
-        font-weight: bold;
-        color: rgba(255, 255, 255,0.6);
-        
-    }
+  .titles {
+      margin-left: 20px;
+  }
 
-    .one1{
-        margin-top: 100px;
-        width: 150px;
-        font-size: 25px;
-    }
+  table, th, td {
+      margin-left: 20px;
+      width: 90%;
+  }
+}
 
-      footer{
-        position: absolute;
-        top: 1800px;
-      }
-    
-      .brand .links {
-        margin-top: 50px;
-        font-size: 20px;
-        margin-left: 380px;
-      }
-    
-      .fline{
-        width: 1600px;
-      }
-    }
 
-@media screen and (max-width: 700px) {
-    header img{
-        margin-left: 150px;
-    }
+@media only screen and (max-width: 600px) {
+  header img {
+      margin-left: 30px;
+      margin-top: 20px;
+  }
 
-    #header {
-        margin-left: 700px;
-      }
-    
-      #header span{
-        font-size: 25px;
-      }
+  .login, .login1, .hire, .recen, .qheader, .one1 {
+      margin-left: 30px;
+  }
 
-      .recen{
-        margin-left: 700px;
-      }
-      
-      table,th,td{
-        height: 70px;
-        width: 700px;
-        margin-left: 500px;
-      }
+  .titles {
+      margin-left: 30px;
+  }
 
-      .one1{
-        margin-left: 800px;
-      }
+  table, th, td {
+      margin-left: 30px;
+      width: 90%;
+  }
+}
 
-      footer{
-        position: absolute;
-        top: 1500px;
-      }
-    
-      .brand .links {
-        margin-top: 50px;
-        font-size: 20px;
-        margin-left: 450px;
-      }
-      .fline {
-        padding-top: 150px;
-        border-bottom: 2px solid rgb(253, 183, 53);
-        width: 1800px;
-      }
-      }
 
-    
+@media only screen and (max-width: 800px) {
+  header img {
+      margin-left: 50px;
+      margin-top: 30px;
+  }
+
+  .login, .login1, .hire, .recen, .qheader, .one1 {
+      margin-left: 50px;
+  }
+
+  .titles {
+      margin-left: 50px;
+  }
+
+  table, th, td {
+      margin-left: 50px;
+      width: 90%;
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  header img {
+      margin-left: 100px;
+      margin-top: 50px;
+  }
+
+  .login, .login1, .hire, .recen, .qheader, .one1 {
+      margin-left: 100px;
+  }
+
+  .titles {
+      margin-left: 100px;
+  }
+
+  table, th, td {
+      margin-left: 100px;
+      width: 90%;
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  header img {
+      margin-left: 150px;
+      margin-top: 70px;
+  }
+
+  .login, .login1, .hire, .recen, .qheader, .one1 {
+      margin-left: 150px;
+  }
+
+  .titles {
+      margin-left: 150px;
+  }
+
+  table, th, td {
+      margin-left: 150px;
+      width: 90%;
+  }
+}
+
+
+@media only screen and (max-width: 1400px) {
+  header img {
+      margin-left: 200px;
+      margin-top: 90px;
+  }
+
+  .login, .login1, .hire, .recen, .qheader, .one1 {
+      margin-left: 200px;
+  }
+
+  .titles {
+      margin-left: 200px;
+  }
+
+  table, th, td {
+      margin-left: 200px;
+      width: 90%;
+  }
+}
+
+
+@media only screen and (max-width: 1621px) {
+  header img {
+      margin-left: 300px;
+      margin-top: 110px;
+  }
+
+  .login, .login1, .hire, .recen, .qheader, .one1 {
+      margin-left: 300px;
+  }
+
+  .titles {
+      margin-left: 300px;
+  }
+
+  table, th, td {
+      margin-left: 300px;
+      width: 90%;
+  }
+}
