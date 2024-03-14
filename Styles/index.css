@@ -943,6 +943,16 @@ footer {
     margin-left: 50px;
   }
 
+  .burgerMenu a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .burgerMenu a:hover{
+    color: rgb(253, 183, 53);
+    opacity: ease 0.7;
+  }
+
   .login button{
     font-size: 10px;
     width: 50px;
