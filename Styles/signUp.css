@@ -60,8 +60,8 @@ ul li {
 }
 
 #header {
-  width: 280px;
-  height: 55px;
+  width: 170px;
+  height: 35px;
   border: 1px solid rgb(253, 183, 53);
   text-align: center;
   margin: auto;
@@ -78,16 +78,18 @@ ul li {
 .signup-form {
   background-color: #404040;
   border-radius: 5px;
-  width: 700px;
+  width: 500px;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 50px;
   border: 1px solid #ffb633;
   margin: auto;
   margin-top: 50px;
-  height: 900px;
+  height: auto;
   text-align: center;
 }
+
+
 
 .sub {
   margin-top: 30px;
@@ -115,6 +117,7 @@ ul li {
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .signup-form .pass {
@@ -215,208 +218,77 @@ footer {
   padding-bottom: 30px;
 }
 
-
-
-@media screen and (max-width: 400px) {
-  nav img{
-    display: block;
-    position: absolute;
-    top: 50px;
-    left: 80px;
-    height: 30px;
-  }
-
-  ul{
-    display: none;
-  }
-  
+/* Media query for min-width: 1231px */
+@media only screen and (min-width: 1231px) {
   .logo {
-    position: absolute;
-    left: 700px;
-    font-size: 50px;
-    font-weight: bold;
+    margin-left: 100px; /* Adjusting logo margin */
   }
 
-  .border {
-  height: 100px;
-  width: 1600px;
-  padding-top: 30px;
+  nav ul {
+    margin-left: 200px; /* Adjusting nav menu margin */
   }
-
-  #header {
-    width: 280px;
-    height: 50px;
-    border: 1px solid rgb(253, 183, 53);
-    position: absolute;
-    left:80px;
-    top: 100px;
-    border-radius: 10px;  
-    font-size: 25px;
-  }
-
-  #header span{
-    font-size: 25px;
-  }
-
-  .tech {
-    font-size: 25px;
-    position: relative;
-    top: 180px;
-    left: 640px;
-  }
-  
-  .signup-form {
-    background-color: #404040;
-    padding: 20px;
-    border-radius: 10px;
-    width: 700px;
-    padding-left: 40%;
-    padding-right: 40%;
-    border: 1px solid #ffb633;
-    margin-left: 180px;
-    margin-top: 350px;
-    text-align: center;
-    height: 1400px;
-  }
-
-  footer{
-    position: absolute;
-    top: 2100px;
-  }
-
-  .brand .links {
-    margin-top: 50px;
-    font-size: 20px;
-    margin-left: 380px;
-  }
-
-  .fline{
-    width: 1600px;
-  }
-
-  .signup-form .pass {
-    color: rgba(255, 255, 255, 0.6);
-    margin-left: 20px;
-  }
-  
-  .pass img {
-    height: 15px;
-  }
-  
-  .signup-form .log {
-    color: rgba(255, 255, 255, 0.6);
-    margin-left: 50px;
-    margin-top: 50px;
-    font-size: 20px;
-  }
-  
-  h4 {
-    text-align: center;
-    color: aliceblue;
-    padding-top: 50px;
-    margin-bottom: 30px;
-    font-size: 25px;
-  }
-  .signup-form input[type="text"],
-  .signup-form input[type="password"] {
-    width: 100%;
-    padding: 25px;
-    margin-top: 80px;
-    border: none;
-    border-radius: 8px;
-    color: white;
-  }
-  .signup-form input[type="text"]::placeholder,
-  .signup-form input[type="password"]::placeholder {
-    padding-left: 50px;
-    color: white;
-  }
-  
-  .signup-form input[type="submit"] {
-    width: 30%;
-    background-color: #2c2c2c;
-    color: #ffb633;
-    padding: 10px 0;
-    margin: 40px 20%;
-    border: 1px solid #ffb633;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .signup-form input[type="submit"]:hover {
-    background-color: #919090;
-  }
-  
-  .pass span {
-    margin-top: 40px;
-  }
-
 }
 
-@media screen and (max-width: 700px) {
-  .signup-form{
-     margin-left: 400px;
-     height: 900px;
-     
+/* Media query for max-width: 1000px */
+@media only screen and (max-width: 1000px) {
+  .logo {
+    margin-left: 30px; /* Adjusting logo margin */
   }
 
-  .signup-form input[type="text"],
-  .signup-form input[type="password"] {
-    width: 100%;
-    padding: 25px;
-    margin-top: 40px;
+  nav ul {
+    margin-left: 100px; /* Adjusting nav menu margin */
+  }
+}
+
+/* Media query for max-width: 800px */
+@media only screen and (max-width: 800px) {
+  .logo {
+    margin-left: 20px; /* Adjusting logo margin */
   }
 
-  .border {
-    margin-top: 10px;
-    width: 1800px;
-    border-bottom: 2px solid rgb(253, 183, 53);
+  nav ul {
+    margin-left: 50px; /* Adjusting nav menu margin */
+    font-size: 16px; /* Adjusting font size of nav items */
   }
-  
-  #header {
-    width: 280px;
-    height: 55px;
-    border: 1px solid rgb(253, 183, 53);
-    text-align: center;
-    margin-left: 680px;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 120px;
+
+  .signup-form {
+    width: 500px; /* Adjusting form width */
   }
-  
-  #header span {
-    font-size: 20px;
-    color: white;
-  } 
-  
-  .fline {
-    padding-top: 150px;
-    border-bottom: 2px solid rgb(253, 183, 53);
-    width: 1800px;
+
+  .sub,
+  .sub2 {
+    width: 120px; /* Adjusting button width */
+  }
+}
+
+/* Media query for max-width: 600px */
+@media only screen and (max-width: 600px) {
+  .logo {
+    margin-left: 10px; /* Adjusting logo margin */
+  }
+
+  nav {
+    display: none; /* Hiding nav menu */
+  }
+
+  nav img {
+    display: block; /* Displaying burger menu icon */
   }
 
   ul {
-    display: flex;
-    margin-top: -35px;
-    font-size: 20px;
-    list-style: none;
-    position: absolute;
-    left: 700px;
-    margin-bottom: 100px;
-  }
-  
-  ul li {
-    margin-right: 120px;
+    margin-left: 0; /* Resetting margin for nav menu */
+    margin-right: 20px; /* Adjusting right margin */
+    margin-top: 0; /* Resetting margin */
+    font-size: 14px; /* Adjusting font size of nav items */
   }
 
-  footer{
-    position: absolute;
-    top: 1500px;
+  .signup-form {
+    width: 300px; /* Adjusting form width */
   }
 
-  .brand .links {
-    margin-top: 50px;
-    font-size: 20px;
-    margin-left: 450px;
+  .sub,
+  .sub2 {
+    width: 100px; /* Adjusting button width */
   }
-
 }
+

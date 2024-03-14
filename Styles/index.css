@@ -34,6 +34,17 @@
   opacity: 0.5;
 }
 
+.burgerMenu a {
+  color: white; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
+}
+
+
+.burgerMenu a:hover {
+  color: rgb(253, 183, 53); 
+}
+
 .logo {
   margin-left: 350px;
   margin-top: 20px;
@@ -941,16 +952,6 @@ footer {
   .logo{
     font-size: 18px;
     margin-left: 50px;
-  }
-
-  .burgerMenu a{
-    text-decoration: none;
-    color: white;
-  }
-
-  .burgerMenu a:hover{
-    color: rgb(253, 183, 53);
-    opacity: ease 0.7;
   }
 
   .login button{
