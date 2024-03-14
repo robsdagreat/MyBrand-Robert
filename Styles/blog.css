@@ -10,6 +10,10 @@ nav {
   z-index: 1;
 }
 
+nav img{
+  display: none;
+}
+
 .logo {
   margin-left: 50px;
   margin-top: 20px;
@@ -71,7 +75,7 @@ ul li {
   color: white;
 }
 
-#blog {
+.blog {
   height: 680px;
   width: 500px;
   border: 1px solid rgb(253, 183, 53);

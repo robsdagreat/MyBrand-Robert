@@ -1,3 +1,5 @@
+    
+    
     document.addEventListener('DOMContentLoaded', ()=>{
 
         const signupForm = document.getElementById("signupForm");
@@ -6,7 +8,7 @@
         signupForm.addEventListener('submit', (event)=>{
             event.preventDefault();
 
-
+       
             const email= event.target.elements.email.value.trim();
             const password= event.target.elements.password.value.trim();
 
@@ -14,6 +16,8 @@
                 alert("Pease fill the form to sign-up")
                 return;
             }
+
+            console.log(email,password);
             
             const signedUsers= JSON.parse(localStorage.getItem('users')) || [];
             const existingUser= signedUsers.some(user => user.email === email);
@@ -23,7 +27,9 @@
                 return;
             }
 
-            let newUser = { email, password };
+            const userId= generateUserId();
+
+            let newUser = { userId, email, password };
 
             signedUsers.push(newUser);
 
@@ -33,7 +39,15 @@
 
             window.location.href = "./login.html";
 
-            // signupForm.reset();
+            signupForm.reset();
 
         });
+
+            const generateUserId= ()=>{
+                const timeStamp= new Date().getTime().toString(8);
+                const randomPart= Math.floor(Math.random() * 1000000).toString(8);
+                const uniqueId= timeStamp + randomPart;
+
+                return uniqueId;
+            }
     })
