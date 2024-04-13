@@ -210,6 +210,14 @@ ul li {
   font-size: 20px;
 }
 
+.reply p{
+  color: rgba(255, 255, 255, 0.9);
+  margin-left: 10px;
+  max-width: 35ch;
+  font-size: 20px;
+
+}
+
 .line {
   border-bottom: 1px solid rgb(253, 183, 53);
   margin-top: 30px;

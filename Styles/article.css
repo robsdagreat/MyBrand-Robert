@@ -97,6 +97,15 @@ header img {
   margin-bottom: 20px;
 }
 
+#new input[type="file"]{
+  width: 300px;
+  padding: 15px;
+  background-color: #2c2c2c;
+  border: 1px solid rgb(253, 183, 53);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
 #new input[type="text"]::placeholder {
   color: white;
   padding: 20px;
