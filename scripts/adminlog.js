@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const adminForm = document.getElementById("adminlog");
+
+
   adminForm.addEventListener('submit', async (event) => {
     event.preventDefault();
+
     const email = event.target.elements.email.value.trim();
     const password = event.target.elements.password.value.trim();
     const formData = { email, password };
@@ -12,13 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        const { token, role } = await response.json();
-        localStorage.setItem('adminToken', token);
-        localStorage.setItem('userRole', role);
+        const { token } = await response.json();
+        localStorage.setItem('token', token);
+        localStorage.setItem('role', 'admin'); 
+        alert('Admin logged in successfully!');
         window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/dashboard.html';
       } else {
         const error = await response.text();
