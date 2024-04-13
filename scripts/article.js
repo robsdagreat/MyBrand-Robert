@@ -17,20 +17,17 @@ articleForm.addEventListener('submit', async (e) => {
   };
 
   try {
-    let userRole = localStorage.getItem('userRole');
-    let token;
-
-    if (userRole === 'admin') {
-      token = localStorage.getItem('adminToken');
-    } else {
-      token = localStorage.getItem('userToken');
-    }
-
-    console.log('User role:', userRole);
-    console.log('Token:', token);
+    const token = localStorage.getItem('token');
+    const role = localStorage.getItem('role');
 
     if (!token) {
-      throw new Error('You must be logged in to create a blog post');
+      alert('You must be logged in to create a blog post');
+      return;
+    }
+
+    if (role !== 'admin') {
+      alert('You must be an admin to create a blog post');
+      return;
     }
 
     const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/blog/add', {
