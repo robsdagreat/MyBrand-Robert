@@ -4,7 +4,7 @@ articleForm.addEventListener('submit', async (e) => {
 
   const author = e.target.elements.author.value.trim();
   const title = e.target.elements.title.value.trim();
-  const story = e.target.elements.sstory.value.trim();
+  const story = e.target.elements.story.value.trim();
   const imageFile = e.target.elements.image.files[0];
 
   const article = {
