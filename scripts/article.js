@@ -21,12 +21,12 @@ articleForm.addEventListener('submit', async (e) => {
     const role = localStorage.getItem('role');
 
     if (!token) {
-      alert('You must be logged in to create a blog post');
+      alert('You must be logged in to create a blog');
       return;
     }
 
     if (role !== 'admin') {
-      alert('You must be an admin to create a blog post');
+      alert('You must be an admin to create a blog');
       return;
     }
 
@@ -44,7 +44,7 @@ articleForm.addEventListener('submit', async (e) => {
       if (data.success) {
         alert('Blog post was created successfully!');
       } else {
-        alert(`Error creating blog post: ${data.message}`);
+        alert(`Error creating blog: ${data.message}`);
       }
     } else {
       const error = await response.text();
