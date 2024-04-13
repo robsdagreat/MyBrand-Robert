@@ -27,7 +27,10 @@
       <div id="header">
         <span>Blog</span>
       </div>
-      <div class="blog" id="blog1">
+      <div id="blogContainer">
+        
+      </div>
+      <!-- <div class="blog" id="blog1">
         <div class="profile">
           <div class="img"><img src="./imgs/et_profile-male.png" alt="" /></div>
 
@@ -38,7 +41,8 @@
         <div class="content">
           <div class="story">
             <p>
-              New Post: React will now be _more_ compiled that it was before.
+              <span id="title">New Post:</span>
+              React will now be _more_ compiled that it was before.
               What does that mean? How did we get to this point? Also, you can
               forget about memoization...
             </p>
@@ -47,24 +51,6 @@
             <a href="./blogpost.html"><img src="./imgs/blog 1.png" alt="" /></a>
           </div>
         </div>
-        <div class="profile">
-          <div class="img"><img src="./imgs/et_profile-male.png" alt="" /></div>
-
-          <div class="name"><span>@Musafiri_yves</span></div>
-        </div>
-        <div class="story">
-          <p>
-            Note that React 19 is focused on the (awesome) features already in
-            canary. React Compiler is more of the thing that comes next after
-            that, so 19 != Compiler.
-          </p>
-        </div>
-        <div class="time">
-          <div class="date2"><span>12:39 AM</span></div>
-          <div class="separate2"><span>.</span></div>
-          <div class="date3"><span>Feb 27, 2024</span></div>
-        </div>
-        <div class="line"></div>
         <div class="react">
           <div class="like">
             <img src="./imgs/icon-park-twotone_like.png" alt=""  />
@@ -75,37 +61,13 @@
             <span>5</span>
           </div>
         </div>
-      </div>
-      <div class="blog" id="blog2">
-        <div class="profile">
-          <div class="img"><img src="./imgs/et_profile-male.png" alt="" /></div>
-
-          <div class="name"><span>@Robs_dagreat</span></div>
-          <div class="separate"><span>.</span></div>
-          <div class="date"><span>Feb 27, 2024</span></div>
-        </div>
-        <div class="content">
-          <div class="story">
-            <p>
-              New Post: React will now be _more_ compiled that it was before.
-              What does that mean? How did we get to this point? Also, you can
-              forget about memoization...
-            </p>
-          </div>
-          <div class="cover">
-            <a href="./blogpost.html"><img src="./imgs/blog 1.png" alt="" /></a>
-          </div>
-        </div>
-        <div class="profile">
-          <div class="img"><img src="./imgs/et_profile-male.png" alt="" /></div>
-
+        <div id="comment">
+          <span class="com">Comments</span>
           <div class="name"><span>@Musafiri_yves</span></div>
         </div>
-        <div class="story">
+        <div class="reply">
           <p>
-            Note that React 19 is focused on the (awesome) features already in
-            canary. React Compiler is more of the thing that comes next after
-            that, so 19 != Compiler.
+            Wow! I can't wait to experience it.
           </p>
         </div>
         <div class="time">
@@ -114,6 +76,28 @@
           <div class="date3"><span>Feb 27, 2024</span></div>
         </div>
         <div class="line"></div>
+      </div>
+      <div class="blog" id="blog2">
+        <div class="profile">
+          <div class="img"><img src="./imgs/et_profile-male.png" alt="" /></div>
+
+          <div class="name"><span id="author">@Robs_dagreat</span></div>
+          <div class="separate"><span>.</span></div>
+          <div class="date"><span>Feb 27, 2024</span></div>
+        </div>
+        <div class="content">
+          <div class="story">
+            <p id="story">
+              <span id="title">New Post:</span>
+               React will now be _more_ compiled that it was before.
+              What does that mean? How did we get to this point? Also, you can
+              forget about memoization...
+            </p>
+          </div>
+          <div class="cover">
+            <a href="./blogpost.html"><img src="./imgs/blog 1.png" alt="" /></a>
+          </div>
+        </div>
         <div class="react">
           <div class="like">
             <img src="./imgs/icon-park-twotone_like.png" alt=""  />
@@ -124,6 +108,22 @@
             <span>5</span>
           </div>
         </div>
+        <div id="comment">
+          <span class="com">Comments</span>
+          <div class="name"><span>@Musafiri_yves</span></div>
+        </div>
+        <div class="reply">
+          <p>
+            Wow! I can't wait to experience it.
+          </p>
+        </div>
+        <div class="time">
+          <div class="date2"><span>12:39 AM</span></div>
+          <div class="separate2"><span>.</span></div>
+          <div class="date3"><span>Feb 27, 2024</span></div>
+        </div>
+        <div class="line"></div>
+
       </div>
       <div class="blog" id="blog3">
         <div class="profile">
@@ -136,7 +136,8 @@
         <div class="content">
           <div class="story">
             <p>
-              New Post: React will now be _more_ compiled that it was before.
+              <span id="title">New Post:</span>
+              React will now be _more_ compiled that it was before.
               What does that mean? How did we get to this point? Also, you can
               forget about memoization...
             </p>
@@ -145,24 +146,6 @@
             <a href="./blogpost.html"><img src="./imgs/blog 1.png" alt="" /></a>
           </div>
         </div>
-        <div class="profile">
-          <div class="img"><img src="./imgs/et_profile-male.png" alt="" /></div>
-
-          <div class="name"><span>@Musafiri_yves</span></div>
-        </div>
-        <div class="story">
-          <p>
-            Note that React 19 is focused on the (awesome) features already in
-            canary. React Compiler is more of the thing that comes next after
-            that, so 19 != Compiler.
-          </p>
-        </div>
-        <div class="time">
-          <div class="date2"><span>12:39 AM</span></div>
-          <div class="separate2"><span>.</span></div>
-          <div class="date3"><span>Feb 27, 2024</span></div>
-        </div>
-        <div class="line"></div>
         <div class="react">
           <div class="like">
             <img src="./imgs/icon-park-twotone_like.png" alt=""  />
@@ -173,7 +156,22 @@
             <span>5</span>
           </div>
         </div>
-      </div>
+        <div id="comment">
+          <span class="com">Comments</span>
+          <div class="name"><span>@Musafiri_yves</span></div>
+        </div>
+        <div class="reply">
+          <p>
+            Wow! I can't wait to experience it.
+          </p>
+        </div>
+        <div class="time">
+          <div class="date2"><span>12:39 AM</span></div>
+          <div class="separate2"><span>.</span></div>
+          <div class="date3"><span>Feb 27, 2024</span></div>
+        </div>
+         <div class="line"></div>
+      </div> -->
       <div class="letter">
         <h4 class="news">Would you like to subscribe for our newsletter?</h4>
         <input

@@ -1,19 +1,32 @@
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
+  const adminForm = document.getElementById("adminlog");
+  adminForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const email = event.target.elements.email.value.trim();
+    const password = event.target.elements.password.value.trim();
+    const formData = { email, password };
 
-    const adminForm= document.getElementById("adminlog");
+    try {
+      const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/admin/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
 
-    adminForm.addEventListener('submit', (event)=>{
-       event.preventDefault();
-
-       const email= event.target.elements.email.value.trim();
-       const password= event.target.elements.password.value.trim();
-
-       if(email === 'rwibutsorobert12@gmail.com' && password === 'dreamb4rever'){
-        window.location.href= './dashboard.html';
-       } else{
-        alert('Please check you email or password')
-       }
-
-       adminForm.reset();
-    })
-})
+      if (response.ok) {
+        const { token, role } = await response.json();
+        localStorage.setItem('adminToken', token);
+        localStorage.setItem('userRole', role);
+        window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/dashboard.html';
+      } else {
+        const error = await response.text();
+        alert(`Error during admin login: ${error}`);
+      }
+    } catch (error) {
+      console.error('Error during admin login:', error);
+      alert('An error occurred during admin login. Please try again later.');
+    }
+  });
+});

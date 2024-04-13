@@ -56,13 +56,16 @@
       <div class="tech">
         <h5>New article</h5>
       </div>
-      <div id="new">
-        <input type="text" placeholder="Author" />
-        <input type="text" placeholder="Date" />
-        <input type="text" placeholder="No file chosen" />
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <button>Change</button>
-      </div>
+      
+        <form action="" id="new">
+        <input type="text" name="Author" id="author" placeholder="Author" />
+        <input type="text" name="Title" id="title" placeholder="Title" />
+        <textarea name="story" id="story" cols="30" rows="10" placeholder="Story"></textarea>
+        <input type="file" name="Image" id="image" placeholder="Image" />
+        
+        <button>Create</button>
+      </form>
+  
     </main>
     <footer>
       <div class="fline"></div>
@@ -76,5 +79,6 @@
         <div class="copy">&copy; H.Rwibutso Robert 2024</div>
       </div>
     </footer>
+    <script src="./scripts/article.js"></script>
   </body>
 </html>

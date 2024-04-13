@@ -139,7 +139,8 @@ h4 {
   margin-bottom: 50px;
   font-size: 20px;
 }
-.signup-form input[type="text"],
+.signup-form input[type="username"],
+.signup-form input[type="email"],
 .signup-form input[type="password"] {
   width: 400px;
   padding: 15px;
@@ -150,7 +151,8 @@ h4 {
   box-sizing: border-box;
   color: white;
 }
-.signup-form input[type="text"]::placeholder,
+.signup-form input[type="username"]::placeholder,
+.signup-form input[type="email"]::placeholder,
 .signup-form input[type="password"]::placeholder {
   padding-left: 20px;
   color: white;

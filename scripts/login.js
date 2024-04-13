@@ -4,7 +4,7 @@
 
         
         
-        loginForm.addEventListener('submit', (event)=>{
+        loginForm.addEventListener('submit', async(event)=>{
             event.preventDefault();
 
             const email= event.target.elements.email.value.trim();
@@ -15,18 +15,30 @@
                 return;
             }
 
-            const signedUsers= JSON.parse(localStorage.getItem('users')) || [];
-            const user= signedUsers.find(user => user.email === email);
+            const formData = {email, password};
 
-            if(!user || user.password !== password){
-                alert("Invalid credentials, Please try again");
-                return;
+            try{
+                const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/login', {
+                    method: 'POST',
+                    headers:{
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if(response.ok){
+                    const {token , role} = await response.json();
+                    localStorage.setItem('userToken', token);
+                    localStorage.setItem('userRole', role);
+                    return{token,role};
+
+                    }else{
+                       throw new Error(data.message || 'Login failed');
+                    }
+            } catch(error){
+                console.error('An error occured while logging in. Please try again later!', error);
+                throw error;
             }
 
-            localStorage.setItem('currentUserId', user.userId);
-
-            alert("logged in successfully, Welcom back!");
-            window.location.href= './blog.html';
-            loginForm.reset();
-        })
-        })
+        });
+        });
