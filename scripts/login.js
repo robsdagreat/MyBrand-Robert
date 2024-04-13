@@ -37,7 +37,7 @@
                 alert(`Login failed: ${error}`);
               }
             } catch (error) {
-              console.error('An error occurred while logging in:', error);
+              console.error('An error occurred while logging you in:', error);
               alert('An error occurred while logging in. Please try again later!');
             }
         })

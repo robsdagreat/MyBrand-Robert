@@ -4,14 +4,14 @@ articleForm.addEventListener('submit', async (e) => {
 
   const author = e.target.elements.author.value.trim();
   const title = e.target.elements.title.value.trim();
-  const content = e.target.elements.story.value.trim();
+  const story = e.target.elements.sstory.value.trim();
   const imageFile = e.target.elements.image.files[0];
 
   const article = {
     id: Date.now(),
     author,
     title,
-    content,
+    story,
     image: imageFile ? URL.createObjectURL(imageFile) : null,
     createdAt: new Date().toISOString(),
   };
@@ -42,7 +42,7 @@ articleForm.addEventListener('submit', async (e) => {
     if (response.ok) {
       const data = await response.json();
       if (data.success) {
-        alert('Blog post created successfully!');
+        alert('Blog post was created successfully!');
       } else {
         alert(`Error creating blog post: ${data.message}`);
       }
@@ -51,7 +51,7 @@ articleForm.addEventListener('submit', async (e) => {
       alert(`Error creating blog post: ${error}`);
     }
   } catch (error) {
-    alert('Error occurred while creating a blog. Please try again later');
+    alert('Error occurred while creating a blog. Please try again after some time!');
     console.error('Error:', error);
   }
 });

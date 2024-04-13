@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert(`Error during admin login: ${error}`);
       }
     } catch (error) {
-      console.error('Error during admin login:', error);
+      console.error('Error occured during logging you in:', error);
       alert('An error occurred during admin login. Please try again later.');
     }
   });
