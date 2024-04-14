@@ -26,7 +26,8 @@ articleForm.addEventListener('submit', async (e) => {
       window.location.href = 'https://mybrand-backend-s9f7.onrender.com/adminlog.html';
     }else{
       try {
-        
+        const token = localStorage.getItem('token');
+        const role = localStorage.getItem('role');
         console.log(token, role);
         if (!token) {
           alert('You must be logged in to create a blog');
