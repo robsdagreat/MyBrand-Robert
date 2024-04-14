@@ -19,7 +19,7 @@ articleForm.addEventListener('submit', async (e) => {
   try {
     const token = localStorage.getItem('token');
     const role = localStorage.getItem('role');
-
+    console.log(token, role);
     if (!token) {
       alert('You must be logged in to create a blog');
       return;
