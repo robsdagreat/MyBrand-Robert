@@ -8,11 +8,11 @@ articleForm.addEventListener('submit', async (e) => {
   const imageFile = e.target.elements.image.files[0];
 
   const article = {
-    id: Date.now(),
     author,
     title,
     story,
     image: imageFile ? URL.createObjectURL(imageFile) : null,
+    createdAt: new Date().toISOString(),
   };
 
   try {
