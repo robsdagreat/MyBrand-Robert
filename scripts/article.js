@@ -39,6 +39,8 @@ articleForm.addEventListener('submit', async (e) => {
       body: JSON.stringify(article),
     });
 
+    console.log('Response:', response);
+
     if (response.ok) {
       const data = await response.json();
       if (data.success) {
