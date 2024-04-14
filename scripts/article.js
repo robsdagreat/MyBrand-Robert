@@ -13,7 +13,6 @@ articleForm.addEventListener('submit', async (e) => {
     title,
     story,
     image: imageFile ? URL.createObjectURL(imageFile) : null,
-    createdAt: new Date().toISOString(),
   };
 
   try {
