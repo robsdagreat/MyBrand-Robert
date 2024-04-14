@@ -47,8 +47,8 @@ articleForm.addEventListener('submit', async (e) => {
         alert(`Error creating blog: ${data.message}`);
       }
     } else {
-      const error = await response.text();
-      alert(`Error creating blog post: ${error}`);
+      const error = await response.json();
+      alert(`Error creating blog: ${error.message || 'Server Error'}`);
     }
   } catch (error) {
     alert('Error occurred while creating a blog. Please try again after some time!');
