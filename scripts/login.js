@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         localStorage.setItem('role', role);
 
         alert('Logged in successfully!');
-        window.location.href = role === 'admin' ? 'https://robsdagreat.github.io/MyBrand-Backend/dashboard.html' : 'https://robsdagreat.github.io/MyBrand-Backend/blog.html';
+        window.location.href = role === 'admin' ? 'https://robsdagreat.github.io/MyBrand-Robert/dashboard.html' : 'https://robsdagreat.github.io/MyBrand-Robert/blog.html';
       } else {
         const error = await response.text();
         alert(`Login failed: ${error}`);
