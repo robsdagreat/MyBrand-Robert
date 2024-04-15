@@ -1,46 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const getCurrentUserId = () => {
-        return localStorage.getItem('currentUserId');
-    };
-
-    const likePost = (blogId) => {
-        const currentUserId = getCurrentUserId();
-
-        if (!currentUserId) {
-            alert("Please log in to like the blog.");
-            window.location.href = './login.html';
-            return;
-        }
-
-        const likeCountElement = document.getElementById(`likeCount_${blogId}`);
-
-        if (!likeCountElement) {
-            console.error(`Like count element not found for blogId: ${blogId}`);
-            return;
-        }
-
-        const currentLikes = parseInt(likeCountElement.textContent, 10) || 0;
-        const newLikes = currentLikes + 1;
-
-        likeCountElement.textContent = newLikes;
-
-        const likedBlogs = JSON.parse(localStorage.getItem('likedBlogs')) || {};
-        likedBlogs[blogId] = likedBlogs[blogId] || [];
-        likedBlogs[blogId].push(currentUserId);
-
-        localStorage.setItem('likedBlogs', JSON.stringify(likedBlogs));
-    };
-
-    const likeButtons = document.querySelectorAll('.blog .like img');
-    likeButtons.forEach((button) => {
-        button.addEventListener('click', (event) => {
-            const blogId = event.currentTarget.closest('.blog').id;
-            likePost(blogId);
-        });
-    });
-});
-
-
 const blogContainer = document.getElementById('blogContainer');
 
 const articles = JSON.parse(localStorage.getItem('articles')) || [];
@@ -65,7 +22,7 @@ function renderArticle(article) {
     </div>
     <div class="react">
       <div class="like">
-        <img src="./imgs/icon-park-twotone_like.png" alt="" />
+        <img class="blogLike" src="./imgs/icon-park-twotone_like.png" alt="" data-article-id="${article.id}" />
         <span id="likeCount_blog${article.id}">0</span>
       </div>
       <div class="comment">
@@ -88,13 +45,15 @@ function renderArticle(article) {
     <div class="line"></div>
   `;
 
-  return articleElement;
+ return articleElement; 
 }
+
+
+
 
 
 function renderArticles() {
   blogContainer.innerHTML = '';
-
   articles.forEach((article) => {
     const articleElement = renderArticle(article);
     blogContainer.appendChild(articleElement);
@@ -103,3 +62,39 @@ function renderArticles() {
 
 
 renderArticles();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const blogContainer = document.getElementById('blogContainer');
+
+  blogContainer.addEventListener('click', async (event) => {
+    if (event.target.classList.contains('blogLike')) {
+      const likeButton = event.target;
+      const articleId = likeButton.dataset.articleId;
+      const userId = localStorage.getItem('userId'); 
+
+      try {
+        const likeCountElement = document.getElementById(`likeCount_blog${articleId}`);
+        if (likeCountElement) {
+          let currentLikes = parseInt(likeCountElement.textContent);
+          likeCountElement.textContent = currentLikes + 1;
+        }
+
+        const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/:id/likes`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ userId }),
+        });
+
+        if (!response.ok) {
+          console.error('Failed to update like:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Error updating like:', error);
+      }
+    }
+  });
+});
+

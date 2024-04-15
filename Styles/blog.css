@@ -21,6 +21,10 @@ nav img{
   font-weight: bold;
 }
 
+.blogLike{
+  cursor: pointer;
+}
+
 .logo .txt1 {
   color: white;
 }

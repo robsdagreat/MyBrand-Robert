@@ -23,7 +23,7 @@ articleForm.addEventListener('submit', async (e) => {
   
   const checkAdminAuth= async () =>{
     if (!isAdminLoggedIn()) {
-      window.location.href = 'https://mybrand-backend-s9f7.onrender.com/adminlog.html';
+      window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/adminlog.html';
     }else{
       try {
         const token = localStorage.getItem('token');

@@ -3,22 +3,7 @@
     document.addEventListener('DOMContentLoaded', ()=>{
 
         const signupForm = document.getElementById("signupForm");
-        // const inputPass= document.getElementById('signPass');
-
-        // const validate= ()=>{
-        //     const regex= /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[\d]).{6,}$/;
-        //     if(inputPass.value.length < 6){
-        //         alert("Please choose a password with atleast 6 characters");
-        //         return false;
-        //     } else if(!inputPass.value.match(regex)){
-        //        alert("Your password must contain atleast a capital letter, a number and a special character");
-        //        return false;
-        //     } 
-
-        //     return true;
-            
-        // }
-
+    
 
         signupForm.addEventListener('submit', async(event)=>{
             event.preventDefault();
@@ -32,9 +17,7 @@
                 return;
             }
 
-            if(!validate()){
-                return;
-            }
+            
 
             const formData = {username, email, password};
 
@@ -47,7 +30,6 @@
                     body: JSON.stringify(formData)
                 });
 
-                // console.log('Response:', response);
 
                 if(response.ok){
                     const data= await response.json();
