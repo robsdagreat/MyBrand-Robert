@@ -1,4 +1,5 @@
 const articleForm = document.getElementById('new');
+
 articleForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
