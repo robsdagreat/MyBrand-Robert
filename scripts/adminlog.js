@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (response.ok) {
         const { token } = await response.json();
-        localStorage.setItem('token', token);
+        localStorage.setItem('adminToken', token);
         localStorage.setItem('role', 'admin'); 
         alert('Admin logged in successfully!');
         window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/dashboard.html';
