@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       } catch (error) {
         console.error('Error occurred during logging in as admin:', error);
-        adminSubmitError.textContent = 'An error occurred during admin login. Please try again later.';
+        
       }
     });
   }
