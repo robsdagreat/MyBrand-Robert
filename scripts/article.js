@@ -24,7 +24,7 @@ if (!token || !role || role.trim().toLowerCase() !== 'admin') {
 }
 
 
-      const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/articles', {
+      const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/blog/add', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
