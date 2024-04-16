@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
 
       try {
-        const email = document.getElementById("adminEmail").value.trim();
-        const password = document.getElementById("adminPassword").value.trim();
+        const email = event.target.elements.email.value.trim();
+        const password = event.target.elements.password.value.trim();
 
         const formData = {
           email: email,
