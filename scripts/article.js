@@ -9,11 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const story = document.getElementById('story').value.trim();
     const imageFile = document.getElementById('image').files[0];
 
-    const formData = new FormData();
-    formData.append('author', author);
-    formData.append('title', title);
-    formData.append('story', story);
-    formData.append('image', imageFile);
+    const formData = {author, title, story, imageFile};
+    console.log(formData)
 
     try {
       const token = localStorage.getItem('adminToken');
