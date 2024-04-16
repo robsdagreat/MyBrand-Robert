@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const adminForm = document.getElementById("adminlog");
+
 function checkAuth() {
   const userIsLoggedIn = sessionStorage.getItem("userToken");
 
