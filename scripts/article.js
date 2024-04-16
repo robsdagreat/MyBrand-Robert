@@ -11,12 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const resBox = document.getElementById('response');
     
     try {
-      const formData = new FormData();
-      formData.append('author', author);
-      formData.append('title', title);
-      formData.append('story', story);
-      formData.append('image', image);
-
+       
+      const formData = {
+        author,
+        title,
+        story,
+        image
+      }
       const token = localStorage.getItem('adminToken');
       const role = localStorage.getItem('role');
 
@@ -39,11 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         const error = await response.json();
         console.error('Error creating article:', error);
-        alert(`Error creating article: ${error.message}`);
+        resBox.textContent= `Error creating article: ${error.message}`;
       }
     } catch (error) {
       console.error('Error creating article:', error);
-      alert('An error occurred while creating the article. Please try again later.');
+      resBox.textContent= 'An error occurred while creating the article. Please try again later.';
     }
   });
 });

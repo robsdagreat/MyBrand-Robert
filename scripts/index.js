@@ -44,14 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
             resBox.textContent = data.message;
             contactForm.reset();
           } else {
-            alert('Error submitting the form');
+            resBox.textContent='Error submitting the form';
           }
         } else {
           const error = await response.text();
-          alert(`Error: ${error}`);
+          resBox.textContent= `Error: ${error}`;
         }
       } catch (error) {
-        alert('An error occurred while sending the message. Please try again later');
+        resBox.textContent= 'An error occurred while sending the message. Please try again later';
         console.error("Error:", error);
       }
     

@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/dashboard.html';
       } else {
         const error = await response.text();
-        alert(`Error during admin login: ${error}`);
+        resBox.textContent= `Error during admin login: ${error}`;
       }
     } catch (error) {
       console.error('Error occured during logging you in:', error);
-      alert('An error occurred during admin login. Please try again later.');
+      resBox.textContent= 'An error occurred during admin login. Please try again later.';
     }
   });
 });
