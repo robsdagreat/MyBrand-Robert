@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const author = document.getElementById('author').value.trim();
     const title = document.getElementById('title').value.trim();
     const story = document.getElementById('story').value.trim();
-    const imageFile = document.getElementById('image').files[0];
+    const image = document.getElementById('image').files[0];
 
-    const formData = {author, title, story, imageFile};
+    const formData = {author, title, story, image};
     console.log(formData)
 
     try {
