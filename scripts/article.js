@@ -1,24 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
   const newArticleForm = document.getElementById('new');
-
   newArticleForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const author = document.getElementById('author').value.trim();
     const title = document.getElementById('title').value.trim();
     const story = document.getElementById('story').value.trim();
-    const image = document.getElementById('image').files[0];
+    const imageInput = document.getElementById('image');
+    const image = imageInput.files[0];
+
+    
+    const base64 = await convertToBase64(image);
 
     const requestBody = {
       author: author,
       title: title,
       story: story,
-      image: image,
+      image: base64,
     };
 
     try {
       const token = localStorage.getItem('adminToken');
       const role = localStorage.getItem('role');
+
       if (!token || !role || role.trim().toLowerCase() !== 'admin') {
         alert('You must be logged in as an admin to create a blog post.');
         return;
@@ -35,11 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (response.ok) {
         alert('Article created successfully!');
-        window.location.reload(); 
+        window.location.reload();
       } else {
-        const error = await response.text();
+        const error = await response.json();
         console.error('Error creating article:', error);
-        alert(`Error creating article: ${error}`);
+        alert(`Error creating article: ${error.message}`);
       }
     } catch (error) {
       console.error('Error creating article:', error);
@@ -47,3 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+function convertToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+    fileReader.onload = () => {
+      resolve(fileReader.result);
+    };
+    fileReader.onerror = (error) => {
+      reject(error);
+    };
+  });
+}
