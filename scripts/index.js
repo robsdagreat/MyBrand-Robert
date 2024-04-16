@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     contactForm.addEventListener('submit', async (event) => {
       event.preventDefault();
+
+      const resBox = document.getElementById('response');
     
       const name = event.target.elements.name.value.trim();
       const email = event.target.elements.email.value.trim();
@@ -38,7 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (response.ok) {
           const data = await response.json();
           if (data.message) {
-            alert(data.message);
+
+            resBox.textContent = data.message;
             contactForm.reset();
           } else {
             alert('Error submitting the form');
