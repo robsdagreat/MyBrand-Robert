@@ -17,6 +17,10 @@ nav {
   font-weight: bold;
 }
 
+nav img{
+  display: none;
+}
+
 .logo .txt1 {
   color: white;
 }
