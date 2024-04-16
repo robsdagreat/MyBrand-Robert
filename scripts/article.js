@@ -9,17 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const story = document.getElementById('story').value.trim();
     const image = document.getElementById('image').files[0];
 
-    const formData = {author, title, story, image};
-    console.log(formData)
+    const formData = new FormData();
+    formData.append('author', author);
+    formData.append('title', title);
+    formData.append('story', story);
+    formData.append('image', image);
 
     try {
       const token = localStorage.getItem('adminToken');
       const role = localStorage.getItem('role');
-if (!token || !role || role.trim().toLowerCase() !== 'admin') {
-  alert('You must be logged in as an admin to create a blog post.');
-  return;
-}
-
+      if (!token || !role || role.trim().toLowerCase() !== 'admin') {
+        alert('You must be logged in as an admin to create a blog post.');
+        return;
+      }
 
       const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/blog/add', {
         method: 'POST',
