@@ -470,6 +470,15 @@
   margin-top: 50px;
 }
 
+#response{
+  margin-top: 20px;
+  background: rgb(44, 44, 44);
+  padding: 30px;
+  width: 30%;
+  margin-left: 40%;
+  color: rgb(253, 183, 53);
+}
+
 /* styling my footer */
 
 footer {

@@ -8,18 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const story = document.getElementById('story').value.trim();
     const imageInput = document.getElementById('image');
     const image = imageInput.files[0];
-
+    const resBox = document.getElementById('response');
     
-    const base64 = await convertToBase64(image);
-
-    const requestBody = {
-      author: author,
-      title: title,
-      story: story,
-      image: base64,
-    };
-
     try {
+      const formData = new FormData();
+      formData.append('author', author);
+      formData.append('title', title);
+      formData.append('story', story);
+      formData.append('image', image);
+
       const token = localStorage.getItem('adminToken');
       const role = localStorage.getItem('role');
 
@@ -32,13 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(requestBody),
+        body: formData,
       });
 
       if (response.ok) {
-        alert('Article created successfully!');
+        resBox.textContent = response.message;
         window.location.reload();
       } else {
         const error = await response.json();
@@ -51,16 +47,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-function convertToBase64(file) {
-  return new Promise((resolve, reject) => {
-    const fileReader = new FileReader();
-    fileReader.readAsDataURL(file);
-    fileReader.onload = () => {
-      resolve(fileReader.result);
-    };
-    fileReader.onerror = (error) => {
-      reject(error);
-    };
-  });
-}
