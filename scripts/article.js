@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const token = localStorage.getItem('adminToken');
       const role = localStorage.getItem('role');
+if (!token || !role || role.trim().toLowerCase() !== 'admin') {
+  alert('You must be logged in as an admin to create a blog post.');
+  return;
+}
 
-      if (!token || role !== 'admin') {
-        alert('You must be logged in as an admin to create an article.');
-        return;
-      }
 
       const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/articles', {
         method: 'POST',
