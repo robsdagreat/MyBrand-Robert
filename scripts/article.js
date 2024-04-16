@@ -9,11 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const story = document.getElementById('story').value.trim();
     const image = document.getElementById('image').files[0];
 
-    const formData = new FormData();
-    formData.append('author', author);
-    formData.append('title', title);
-    formData.append('story', story);
-    formData.append('image', image);
+    const requestBody = {
+      author: author,
+      title: title,
+      story: story,
+      image: image,
+    };
 
     try {
       const token = localStorage.getItem('adminToken');
@@ -27,8 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ author,title,story,image}),
+        body: JSON.stringify(requestBody),
       });
 
       if (response.ok) {
