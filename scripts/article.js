@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
-        body: formData,
+        body: JSON.stringify({ author,title,story,image}),
       });
 
       if (response.ok) {
