@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   newArticleForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    
+    const author = document.getElementById('author').value.trim();
     const title = document.getElementById('title').value.trim();
     const story = document.getElementById('story').value.trim();
     const imageInput = document.getElementById('image');
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
        
       const formData = {
+        author,
         title,
         story,
         image
