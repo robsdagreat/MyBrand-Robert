@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     return articleElement;
   }
 
-  function handleCommentClick(articleId) {
-    window.location.href = `https://robsdagreat.github.io/MyBrand-Robert/blogpost.html?articleId=${articleId}`;
+  function handleCommentClick(id) {
+    window.location.href = `https://robsdagreat.github.io/MyBrand-Robert/blogpost.html?articleId=${id}`;
   }
 
 
