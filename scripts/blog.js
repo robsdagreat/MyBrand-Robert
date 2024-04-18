@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const token = localStorage.getItem('accessToken');
   
       if (!token) {
-        window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/api/login';
+        window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/api/login.html';
         return;
       }
   

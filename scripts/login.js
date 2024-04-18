@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const formData = { email, password };
 
     try {
-      const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/login', {
+      const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/login.html', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
