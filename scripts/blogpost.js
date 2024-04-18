@@ -1,27 +1,28 @@
 document.addEventListener('DOMContentLoaded', async() => {
     
-const urlParams = new URLSearchParams(window.location.search);
-const articleId = urlParams.get('articleId');
-
-if (!articleId) {
-  console.error('No article ID found in the URL.');
-  return;
-}
-
-async function fetchBlogPost(articleId) {
-  try {
-    const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}`);
-    if (response.ok) {
-      const blogPost = await response.json();
-      
-      renderBlogPost(blogPost);
-    } else {
-      console.error('Error fetching blog post:', response.status);
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleId = urlParams.get('articleId');
+    
+    if (!articleId) {
+      console.error('No article ID found in the URL.');
+      return;
     }
-  } catch (error) {
-    console.error('Error fetching blog post:', error);
-  }
-}
+    
+    async function fetchBlogPost(articleId) {
+      try {
+        const response = await fetch(`/api/blog/${articleId}`);
+        if (response.ok) {
+          const blog = await response.json();
+          renderBlogPost(blog);
+        } else {
+          console.error('Error fetching blog post:', response.status);
+        }
+      } catch (error) {
+        console.error('Error fetching blog post:', error);
+      }
+    }
+    
+fetchBlogPost(articleId);
 
 function renderBlogPost(blog) {
     const blogElement = document.getElementById('blog');
@@ -69,6 +70,6 @@ function renderBlogPost(blog) {
     `;
   }
 
-fetchBlogPost(id);
+fetchBlogPost(articleId);
    
 });
