@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   async function handleLike(articleId, articleElement) {
     try {
-      const token = localStorage.getItem('accessToken');
+      const token = localStorage.getItem('token');
   
       if (!token) {
         window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/login.html';
