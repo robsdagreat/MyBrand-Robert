@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', async() => {
     
 const urlParams = new URLSearchParams(window.location.search);
-const articleId = urlParams.get('articleId');
+const id = urlParams.get('id');
 
-async function fetchBlogPost(articleId) {
+async function fetchBlogPost(id) {
   try {
-    const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}}`);
+    const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${id}`);
     if (response.ok) {
       const blogPost = await response.json();
       
@@ -64,6 +64,6 @@ function renderBlogPost(blog) {
     `;
   }
 
-fetchBlogPost(articleId);
+fetchBlogPost(id);
    
 });
