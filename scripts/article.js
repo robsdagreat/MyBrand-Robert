@@ -3,20 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
   newArticleForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const author = document.getElementById('author').value.trim();
-    const title = document.getElementById('title').value.trim();
-    const story = document.getElementById('story').value.trim();
-    const imageInput = document.getElementById('image');
-    const image = imageInput.files[0];
-    const resBox = document.getElementById('response');
+    
+    const resBox = document.querySelector('.success');
+    const resErr = document.querySelector('.error');
     
     try {
-       
+
+      const title = document.querySelector('#title').value
+      const story = document.querySelector('#story').value
+      const image = document.querySelector('#image').value
+      
+      
+      console.log(`title:${title} stroy: ${story} image: ${image}`);
+      
       const formData = {
-        author,
-        title,
-        story,
-        image
+        title: title,
+        story: story,
+        image: image
       }
       const token = localStorage.getItem('adminToken');
       const role = localStorage.getItem('role');
@@ -26,25 +29,29 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/blog/add', {
+      const response = await axios.post('https://mybrand-backend-s9f7.onrender.com/api/blog/add', formData, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
         },
-        body: formData,
       });
 
-      if (response.ok) {
-        resBox.textContent = response.message;
-        window.location.reload();
+      
+
+      if (response.status === 200) {
+        resBox.textContent = response.data.message;
       } else {
-        const error = await response.json();
-        console.error('Error creating article:', error);
-        resBox.textContent= `Error creating article: ${error.message}`;
+    
+        console.error('Error creating article:', response.data);
+        resErr.textContent= `Error creating article: ${response.data.message}`;
+
       }
     } catch (error) {
+
       console.error('Error creating article:', error);
-      resBox.textContent= 'An error occurred while creating the article. Please try again later.';
+      resErr.textContent= 'An error occurred while creating the article. Please try again later.';
+
     }
   });
 });

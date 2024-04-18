@@ -1,10 +1,27 @@
-// const blogContainer = document.getElementById('blogContainer');
+const getAllBlogs = async () => {
+  try {
+    const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/blogs');
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log('Response:', data);
+    return data;
+  } catch (error) {
+    console.error('An error occurred during getting all blogs', error);
+    return [];
+  }
+}
 
-// const articles = JSON.parse(localStorage.getItem('articles')) || [];
+
+
+// const blogContainer = document.querySelector('#blogContainer');
 
 // function renderArticle(article) {
 //   const articleElement = document.createElement('div');
 //   articleElement.classList.add('blog');
+  
+  
 //   articleElement.innerHTML = `
 //     <div class="profile">
 //       <div class="img"><img src="./imgs/et_profile-male.png" alt="" /></div>
@@ -23,7 +40,7 @@
 //     <div class="react">
 //       <div class="like">
 //         <img class="blogLike" src="./imgs/icon-park-twotone_like.png" alt="" data-article-id="${article.id}" />
-//         <span id="likeCount_blog${article.id}">0</span>
+//         <span id="likeCount_blog${article._id}">${article.likes.length}</span>
 //       </div>
 //       <div class="comment">
 //         <a href="./blogpost.html"><img src="./imgs/basil_comment-solid.png" alt="" /></a>
@@ -48,55 +65,11 @@
 //  return articleElement; 
 // }
 
-
-
-
-
-// function renderArticles() {
-//   blogContainer.innerHTML = '';
-//   articles.forEach((article) => {
-//     const articleElement = renderArticle(article);
-//     blogContainer.appendChild(articleElement);
-//   });
-// }
-
-
-// renderArticles();
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const blogContainer = document.getElementById('blogContainer');
-
-//   blogContainer.addEventListener('click', async (event) => {
-//     if (event.target.classList.contains('blogLike')) {
-//       const likeButton = event.target;
-//       const articleId = likeButton.dataset.articleId;
-//       const userId = localStorage.getItem('userId'); 
-
-//       try {
-//         const likeCountElement = document.getElementById(`likeCount_blog${articleId}`);
-//         if (likeCountElement) {
-//           let currentLikes = parseInt(likeCountElement.textContent);
-//           likeCountElement.textContent = currentLikes + 1;
-//         }
-
-//         const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/:id/likes`, {
-//           method: 'POST',
-//           headers: {
-//             'Content-Type': 'application/json',
-//           },
-//           body: JSON.stringify({ userId }),
-//         });
-
-//         if (!response.ok) {
-//           console.error('Failed to update like:', response.statusText);
-//         }
-//       } catch (error) {
-//         console.error('Error updating like:', error);
-//       }
-//     }
-//   });
-// });
-
-
+// async function renderBlogs() {
+//     const blogs = await getAllBlogs();
+//     blogs.forEach(blog => {
+//       const articleElement = renderArticle(blog);
+//       blogContainer.appendChild(articleElement);
+//     });
+//   }
 
