@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <span id="likeCount_blog${article._id}">${article.likes.length}</span>
         </div>
         <div class="comment">
-          <a href="./blogpost.html"><img src="./imgs/basil_comment-solid.png" alt="" /></a>
+          <a href="./blogpost.html"><img class="comment-link" src="./imgs/basil_comment-solid.png" alt="" /></a>
           <span>${article.comments.length}</span>
         </div>
       </div>
