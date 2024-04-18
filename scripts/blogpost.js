@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', async() => {
     
 const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get('id');
+const articleId = urlParams.get('articleId');
 
-async function fetchBlogPost(id) {
+if (!articleId) {
+  console.error('No article ID found in the URL.');
+  return;
+}
+
+async function fetchBlogPost(articleId) {
   try {
-    const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${id}`);
+    const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}`);
     if (response.ok) {
       const blogPost = await response.json();
       
