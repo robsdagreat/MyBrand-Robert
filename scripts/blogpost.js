@@ -1,116 +1,69 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // ... Your existing code ...
-
-    const addComment = (blogId) => {
-        
-        const getCurrentUserId = () => {
-            return localStorage.getItem('userId');
-        };
-        
-        const getCurrentUser = () => {
-            const signedUsers = JSON.parse(localStorage.getItem('users')) || [];
-            const currentUserId = getCurrentUserId();
-        
-            return signedUsers.find(user => user.userId === currentUserId) || null;
-        };
-        
-
-        const currentUserId = getCurrentUserId();
-
-        if (!currentUserId) {
-            alert("Please log in to add a comment.");
-            window.location.href = './login.html';
-            return;
-        }
-
-        const commentInput = document.getElementById(`commentInput_${blogId}`);
-        const commentList = document.getElementById(`commentList_${blogId}`);
-
-        if (!commentInput || !commentList) {
-            console.error(`Comment input or list not found for blogId: ${blogId}`);
-            return;
-        }
-
-        const commentText = commentInput.value.trim();
-
-        if (!commentText) {
-            alert("Please enter a comment.");
-            return;
-        }
-
-        
-        const currentUser = getCurrentUser();
-
+document.addEventListener('DOMContentLoaded', async() => {
     
-        const newComment = {
-            userId: currentUserId,
-            userName: currentUser ? currentUser.name : 'Anonymous',
-            text: commentText,
-            timestamp: new Date().toLocaleString(),
-        };
+const urlParams = new URLSearchParams(window.location.search);
+const articleId = urlParams.get('articleId');
 
-        
-        const comments = JSON.parse(localStorage.getItem(`comments_${blogId}`)) || [];
+async function fetchBlogPost(articleId) {
+  try {
+    const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}}`);
+    if (response.ok) {
+      const blogPost = await response.json();
+      
+      renderBlogPost(blogPost);
+    } else {
+      console.error('Error fetching blog post:', response.status);
+    }
+  } catch (error) {
+    console.error('Error fetching blog post:', error);
+  }
+}
 
-        
-        comments.unshift(newComment);
+function renderBlogPost(blog) {
+    const blogElement = document.getElementById('blog');
+    blogElement.innerHTML = `
+      <div class="profile">
+        <div class="img"><img src="./imgs/et_profile-male.png" alt="" /></div>
+        <div class="name"><span>@${blog.author}</span></div>
+        <div class="separate"><span>.</span></div>
+        <div class="date"><span>${new Date(blog.createdAt).toLocaleString()}</span></div>
+      </div>
+      <div class="content">
+        <div class="story">
+          <p>${blog.title}</p>
+          <p>${blog.story.slice(0, 100)}...</p>
+        </div>
+        <div class="cover"><img src="${blog.image}" alt="" /></div>
+      </div>
+      <div class="like">
+        <img class="blogLike" src="./imgs/icon-park-twotone_like.png" alt="" data-article-id="${blog._id}" />
+        <span id="likeCount_blog${blog._id}">${blog.likes.length}</span>
+      </div>
+      <div class="comment">
+        <a href="#" class="comment-link" data-article-id="${blog._id}">
+          <img src="./imgs/basil_comment-solid.png" alt="" />
+          <span>${blog.comments.length}</span>
+        </a>
+      </div>
+      <div class="line"></div>
+      <div class="reply">
+        <h2>Replies</h2>
+      </div>
+      <div id="comment">
+        <div class="profile">
+          <div class="name"><span>@Musafiri_yves</span></div>
+        </div>
+        <div class="reply">
+          <p>Note that React 19 is focused on the (awesome) features already in canary. React Compiler is more of the thing that comes next after that, so 19 != Compiler.</p>
+        </div>
+        <div class="time">
+          <div class="date2"><span>12:39 AM</span></div>
+          <div class="separate2"><span>.</span></div>
+          <div class="date3"><span>${new Date(blog.createdAt).toLocaleString()}</span></div>
+        </div>
+      </div>
+    `;
+  }
 
-        
-        localStorage.setItem(`comments_${blogId}`, JSON.stringify(comments));
-
-       
-        commentInput.value = '';
-
-        
-        displayComments(blogId);
-    };
-
-    const displayComments = (blogId) => {
-        const commentList = document.getElementById(`commentList_${blogId}`);
-
-        if (!commentList) {
-            console.error(`Comment list not found for blogId: ${blogId}`);
-            return;
-        }
-
-       
-        const comments = JSON.parse(localStorage.getItem(`comments_${blogId}`)) || [];
-
-        
-        commentList.innerHTML = '';
-
-       
-        comments.forEach((comment) => {
-            const commentItem = document.createElement('li');
-            commentItem.innerHTML = `
-                <div class="profile">
-                    <div class="img"><img src="./imgs/et_profile-male.png" alt="" /></div>
-                    <div class="name"><span>@${comment.userName}</span></div>
-                </div>
-                <div class="story">
-                    <p>${comment.text}</p>
-                </div>
-                <div class="time">
-                    <div class="date2"><span>${comment.timestamp}</span></div>
-                </div>
-            `;
-            commentList.appendChild(commentItem);
-        });
-    };
-
-    
-    const commentForms = document.querySelectorAll('.comment form');
-    commentForms.forEach((form) => {
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-            const blogId = form.getAttribute('data-blog-id');
-            addComment(blogId);
-        });
-    });
-
+fetchBlogPost(articleId);
    
-    const blogIds = ['blog1', 'blog2', 'blog3'];
-    blogIds.forEach((blogId) => {
-        displayComments(blogId);
-    });
 });

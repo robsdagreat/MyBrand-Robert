@@ -54,11 +54,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       </div>
       <div class="line"></div>
     `;
+    const commentLink = articleElement.querySelector('.comment-link');
+    commentLink.addEventListener('click', () => handleCommentClick(article._id));
 
     const likeIcon = articleElement.querySelector('.blogLike');
     likeIcon.addEventListener('click', () => handleLike(article._id, articleElement));
 
     return articleElement;
+  }
+
+  function handleCommentClick(articleId) {
+    window.location.href = `https://robsdagreat.github.io/MyBrand-Robert/blogpost.html?articleId=${articleId}`;
   }
 
 
