@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const blogContainer = document.querySelector('#blogContainer');
+  const articleIdContainer = document.querySelector('#articleIdContainer');
 
   const getAllBlogs = async () => {
     try {
@@ -54,16 +55,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     </div>
     <div class="line"></div>
   `;
-    
-  
-    const commentLink = articleElement.querySelector('.comment-link');
-    commentLink.addEventListener('click', (event) => {
-      event.preventDefault();
-      const articleId = event.currentTarget.dataset.articleId;
-      handleCommentClick(articleId);
-    });
 
   
+    const articleIdDiv = document.createElement('div');
+    articleIdDiv.dataset.articleId = article._id;
+    articleIdContainer.appendChild(articleIdDiv);
+
+  
+    const commentLink = articleElement.querySelector('.comment-link');
+    commentLink.addEventListener('click', () => handleCommentClick(articleIdDiv.dataset.articleId));
+
+    
     const likeIcon = articleElement.querySelector('.blogLike');
     likeIcon.addEventListener('click', () => handleLike(article._id, articleElement));
 
