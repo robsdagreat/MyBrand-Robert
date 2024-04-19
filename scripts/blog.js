@@ -55,7 +55,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="line"></div>
     `;
     const commentLink = articleElement.querySelector('.comment-link');
-    commentLink.addEventListener('click', () => handleCommentClick(article._id));
+  commentLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    const articleId = event.currentTarget.dataset.articleId;
+    handleCommentClick(articleId);
+  });
 
     const likeIcon = articleElement.querySelector('.blogLike');
     likeIcon.addEventListener('click', () => handleLike(article._id, articleElement));

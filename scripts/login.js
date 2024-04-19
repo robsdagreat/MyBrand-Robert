@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const loginForm = document.getElementById('loginForm');
 
+  const resBox = document.querySelector('.success');
+  const resErr = document.querySelector('.error');
+
   loginForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -28,15 +31,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         localStorage.setItem('token', token);
         localStorage.setItem('role', role);
 
-        alert('Logged in successfully!');
+        resBox.textContent= response.message;
         window.location.href = role === 'admin' ? 'https://robsdagreat.github.io/MyBrand-Robert/dashboard.html' : 'https://robsdagreat.github.io/MyBrand-Robert/blog.html';
       } else {
         const error = await response.text();
-        alert(`Login failed: ${error}`);
+        resErr.textContent= `Login failed: ${error}`;
       }
     } catch (error) {
       console.error('An error occurred while logging you in:', error);
-      alert('An error occurred while logging in. Please try again later!');
+      resErr.textContent= 'An error occurred while logging in. Please try again later!';
     }
   });
 });
