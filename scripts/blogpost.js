@@ -42,14 +42,12 @@ function renderBlogPost(blog) {
     </div>
     <div class="like">
       <img class="blogLike" src="./imgs/icon-park-twotone_like.png" alt="" data-article-id="${blog._id}" />
-      <span id="likeCount_blog${blog._id}">${blog.likes.length}</span>
+      <span id="likeCount_blog${blog._id}">${blog.likes ? blog.likes.length : 0}</span>
     </div>
     <div class="comment">
       <a href="#" class="comment-link" data-article-id="${blog._id}">
         <img src="./imgs/basil_comment-solid.png" alt="" />
-        <span>${blog.comments.length}</span>
-      </a>
-    </div>
+        <span>${blog.comments ? blog.comments.length : 0}
     <div class="line"></div>
     <div class="reply">
       <h2>Replies</h2>
