@@ -3,7 +3,9 @@
     document.addEventListener('DOMContentLoaded', ()=>{
 
         const signupForm = document.getElementById("signupForm");
-    
+        
+        const resBox = document.querySelector('.success');
+        const resErr = document.querySelector('.error');
 
         signupForm.addEventListener('submit', async(event)=>{
             event.preventDefault();
@@ -34,7 +36,7 @@
                 if(response.ok){
                     const data= await response.json();
                     if(data.success){
-                        alert(data.message);
+                        resBox.textContent= data.message;
                         signupForm.reset();
                         window.location.href = './login.html';
                     } else{
@@ -42,11 +44,11 @@
                     }
                 }else{
                     const error = await response.text();
-                    alert(`Error: ${error}`);
+                    resErr.textContent= `Error: ${error}`;
                 }
 
             } catch(error){
-             alery('An error occured during signup, Please do try agin after some time!');   
+             resErr.textContent= 'An error occured during signup, Please do try agin after some time!';   
             console.error('Error:', error);
             }
             

@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   adminForm.addEventListener('submit', async (event) => {
     event.preventDefault();
+    const resBox = document.querySelector('.success');
+    const resErr = document.querySelector('.error');
 
-    const resBox = document.getElementById('response');
     const email = event.target.elements.email.value.trim();
     const password = event.target.elements.password.value.trim();
     const formData = { email, password };
@@ -27,11 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/dashboard.html';
       } else {
         const error = await response.text();
-        resBox.textContent= `Error during admin login: ${error}`;
+        resErr.textContent= `Error during admin login: ${error}`;
       }
     } catch (error) {
       console.error('Error occured during logging you in:', error);
-      resBox.textContent= 'An error occurred during admin login. Please try again later.';
+      resErr.textContent= 'An error occurred during admin login. Please try again later.';
     }
   });
 });

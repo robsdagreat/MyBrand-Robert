@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async() => {
     
     async function fetchBlogPost(articleId) {
       try {
-        const response = await fetch(`/api/blog/${articleId}`);
+        const response = await fetch(`https://mybrand-backend-s9f7.onrender.com//api/blog/${articleId}`);
         if (response.ok) {
           const blog = await response.json();
           renderBlogPost(blog);
