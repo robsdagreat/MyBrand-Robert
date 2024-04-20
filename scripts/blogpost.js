@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}`);
       if (response.ok) {
         const blog = await response.json();
-        renderBlogPost(blog);
+        console.log('Blog:', blog);
+        renderBlogPost(blog.blog);
       } else {
         console.error('Error fetching blog post:', response.status);
       }
@@ -26,7 +27,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function renderBlogPost(blog) {
   const blogElement = document.getElementById('blog');
-   blogElement.innerHTML = `
+  if (!blog) {
+    console.error('No blog data provided.');
+    return;
+  }
+  blogElement.innerHTML = `
     <div class="profile">
       <div class="img"><img src="./imgs/et_profile-male.png" alt="" /></div>
       <div class="name"><span>@${blog.author}</span></div>
@@ -36,18 +41,20 @@ function renderBlogPost(blog) {
     <div class="content">
       <div class="story">
         <p>${blog.title}</p>
-        ${blog.story ? `<p>${blog.story.slice(0, 100)}...</p>` : ''} <!-- Check if blog.story exists before slicing -->
+        <p>${blog.story}</p>
       </div>
       <div class="cover"><img src="${blog.image}" alt="" /></div>
     </div>
     <div class="like">
       <img class="blogLike" src="./imgs/icon-park-twotone_like.png" alt="" data-article-id="${blog._id}" />
-      <span id="likeCount_blog${blog._id}">${blog.likes ? blog.likes.length : 0}</span>
+      <span id="likeCount_blog${blog._id}">${blog.likes?.length ?? 0}</span>
     </div>
     <div class="comment">
       <a href="#" class="comment-link" data-article-id="${blog._id}">
         <img src="./imgs/basil_comment-solid.png" alt="" />
-        <span>${blog.comments ? blog.comments.length : 0}
+        <span>${blog.comments?.length ?? 0}</span>
+      </a>
+    </div>
     <div class="line"></div>
     <div class="reply">
       <h2>Replies</h2>
