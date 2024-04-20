@@ -126,7 +126,7 @@ async function handleCommentSubmit(event) {
 
     if (response.ok) {
       const data = await response.json();
-      console.log('Comment added successfully:', data);
+      console.log('Comment added successfully:', data.comments);
       resBox.textContent = data.message;
       commentInput.value = '';
       updateCommentsSection(data.blog.comments);
@@ -140,7 +140,7 @@ async function handleCommentSubmit(event) {
 }
 }
 
-function updateCommentsSection(data) {
+function updateCommentsSection(comments) {
   const commentsContainer = document.querySelector('.reply');
   commentsContainer.innerHTML = '';
 
@@ -149,15 +149,15 @@ function updateCommentsSection(data) {
     commentElement.classList.add('comment-item');
     commentElement.innerHTML = `
       <div class="profile">
-        <div class="name"><span>@${data.user.username}</span></div>
+        <div class="name"><span>@${comment.user.username}</span></div>
       </div>
       <div class="reply">
-        <p>${data.comment}</p>
+        <p>${comment.comment}</p>
       </div>
       <div class="time">
-        <div class="date2"><span>${new Date(data.createdAt).toLocaleTimeString()}</span></div>
+        <div class="date2"><span>${new Date(comment.createdAt).toLocaleTimeString()}</span></div>
         <div class="separate2"><span>.</span></div>
-        <div class="date3"><span>${new Date(data.createdAt).toLocaleDateString()}</span></div>
+        <div class="date3"><span>${new Date(comment.createdAt).toLocaleDateString()}</span></div>
       </div>
     `;
     commentsContainer.appendChild(commentElement);
