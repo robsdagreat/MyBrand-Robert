@@ -146,7 +146,7 @@ ul li {
 
 #blog {
   height: auto;
-  width: 500px;
+  width: 900px;
   border: 1px solid rgb(253, 183, 53);
   margin: auto;
   margin-top: 150px;
@@ -158,25 +158,24 @@ ul li {
   flex-direction: row;
   padding: 20px 20px;
 }
-
-.cover img {
-  height: 150px;
-  margin-left: 86px;
-  margin-top: 30px;
+  
+.cover img{
+  height: 40%;
+  width: 90%;
+  margin-left:50px;
 }
 
-.img {
-  border: 2px solid white;
-  border-radius: 50%;
-  overflow: hidden;
-  background: white;
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover
 }
 
-.profile .img img {
+.image{
+  width: 50px; 
   height: 50px;
+  overflow: hidden;
   border-radius: 50%;
-  object-fit: cover;
-  color: white;
 }
 
 .profile .name,
@@ -185,6 +184,7 @@ ul li {
   color: rgba(255, 255, 255, 0.9);
   margin-top: 20px;
   margin-left: 10px;
+  display: flex;
 }
 
 .separate {
@@ -194,19 +194,18 @@ ul li {
 .profile .name {
   font-weight: bold;
 }
+ 
 
-.story p {
-  color: rgba(255, 255, 255, 0.9);
-  margin-left: 90px;
-  margin-top: -20px;
-  max-width: 35ch;
+.story2{
+  white-space: pre-wrap; 
+  -webkit-box-orient: horizontal; 
+  -webkit-line-clamp: 3
 }
 
 .story p {
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
   margin-left: 90px;
-  margin-top: -20px;
-  max-width: 35ch;
+  max-width: 70ch;
   font-size: 20px;
 }
 
@@ -250,9 +249,34 @@ ul li {
   margin-top: 20px;
 }
 
+.reaction{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.success{
+  margin-top: 20px;
+  background: rgb(44, 44, 44);
+  padding: 30px;
+  width: 30%;
+  margin-left: 40%;
+  color: rgb(253, 183, 53);
+}
+
+.error{
+  margin-top: 20px;
+  background: rgb(44, 44, 44);
+  padding: 30px;
+  width: 30%;
+  margin-left: 40%;
+  color: red;
+}
+
 .like {
-  margin-right: 50px;
-  font-size: 15px;
+  margin-top: 25px;
+  font-size: 20px;
+  color: white;
 }
 
 .like img {
@@ -271,8 +295,30 @@ ul li {
   margin-left: 50px;
 }
 
+#commentForm{
+  margin-top: 50px;
+  margin-left: 40%;
+}
+
+#commentForm input[type="text"]{
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(253, 183, 53);
+  background: #2c2c2c;
+  color: white;
+}
+
+#commentForm button{
+  padding: 10px;
+  margin-left: 20px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(253, 183, 53);
+  color: white;
+}
+
 .reply {
-  margin-left: 90px;
+  margin-left: 40%;
   margin-top: 30px;
   color: white;
 }
@@ -447,6 +493,8 @@ footer {
     padding-bottom: 20px;
   }
 }
+
+
 
 @media screen and (max-width: 700px) {
   .logo {
