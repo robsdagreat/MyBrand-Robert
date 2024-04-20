@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const articleId = urlParams.get('articleId');
-
+  localStorage.setItem('Article ID', articleId);
   if (!articleId) {
     console.error('No article ID found in the URL.');
     return;
@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   fetchBlogPost(articleId);
 });
+
+
 
 
 function renderBlogPost(blog) {
@@ -78,9 +80,16 @@ const resBox = document.querySelector('.success');
 const resErr = document.querySelector('.error');
 
 const commentForm = document.getElementById('commentForm');
-commentForm.addEventListener('submit', (event) => handleCommentSubmit(event, articleId));
+commentForm.addEventListener('submit', (event) => handleCommentSubmit(event));
 
-async function handleCommentSubmit(event, articleId) {
+async function handleCommentSubmit(event) {
+
+  const articleId = localStorage.getItem('Article ID');
+
+  if (!articleId) {
+    console.error('No article ID found in the URL.');
+    return;
+  }
   event.preventDefault();
 
   const token = localStorage.getItem('token');
