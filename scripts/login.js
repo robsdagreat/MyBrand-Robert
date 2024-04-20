@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         localStorage.setItem('token', token);
         localStorage.setItem('role', role);
 
-        resBox.textContent= response.message;
+        resBox.textContent= response.message.value;
         window.location.href = role === 'admin' ? 'https://robsdagreat.github.io/MyBrand-Robert/dashboard.html' : 'https://robsdagreat.github.io/MyBrand-Robert/blog.html';
       } else {
         const error = await response.text();
-        resErr.textContent= `Login failed: ${error}`;
+        resErr.textContent= `Login failed: ${error.message.value}`;
       }
     } catch (error) {
       console.error('An error occurred while logging you in:', error);
