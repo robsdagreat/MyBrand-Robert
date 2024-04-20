@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         localStorage.setItem('token', token);
         localStorage.setItem('role', role);
 
-        resBox.textContent= response.message.value;
+        resBox.textContent= response.message;
         window.location.href = role === 'admin' ? 'https://robsdagreat.github.io/MyBrand-Robert/dashboard.html' : 'https://robsdagreat.github.io/MyBrand-Robert/blog.html';
       } else {
         const error = await response.text();
