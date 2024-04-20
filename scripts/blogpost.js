@@ -84,15 +84,21 @@ commentForm.addEventListener('submit', (event) => handleCommentSubmit(event));
 
 async function handleCommentSubmit(event) {
 
-  const articleId = localStorage.getItem('Article ID');
+  const token = localStorage.getItem('token');
+  if (!token) {
+    window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/login.html';
+    return;
+  }
 
+  
+  const articleId = localStorage.getItem('Article ID');
   if (!articleId) {
-    console.error('No article ID found in the URL.');
+    resErr.textContent= 'No article ID found in the URL.';
     return;
   }
   event.preventDefault();
 
-  const token = localStorage.getItem('token');
+ 
   if (!token) {
     window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/login.html';
     return;
@@ -121,11 +127,12 @@ async function handleCommentSubmit(event) {
     if (response.ok) {
       const data = await response.json();
       console.log('Comment added successfully:', data);
+      resBox.textContent = data.message;
       commentInput.value = '';
       updateCommentsSection(data.blog.comments);
     } else {
       const { message } = await response.json();
-      console.error('Error adding comment:', message);
+      resErr.textContent= `Error adding comment:, ${message}`;
     }
   } catch (error) {
     console.error('Error adding comment:', error);
@@ -133,7 +140,7 @@ async function handleCommentSubmit(event) {
 }
 }
 
-function updateCommentsSection(comments) {
+function updateCommentsSection(data) {
   const commentsContainer = document.querySelector('.reply');
   commentsContainer.innerHTML = '';
 
@@ -142,15 +149,15 @@ function updateCommentsSection(comments) {
     commentElement.classList.add('comment-item');
     commentElement.innerHTML = `
       <div class="profile">
-        <div class="name"><span>@${comment.user.username}</span></div>
+        <div class="name"><span>@${data.user.username}</span></div>
       </div>
       <div class="reply">
-        <p>${comment.comment}</p>
+        <p>${data.comment}</p>
       </div>
       <div class="time">
-        <div class="date2"><span>${new Date(comment.createdAt).toLocaleTimeString()}</span></div>
+        <div class="date2"><span>${new Date(data.createdAt).toLocaleTimeString()}</span></div>
         <div class="separate2"><span>.</span></div>
-        <div class="date3"><span>${new Date(comment.createdAt).toLocaleDateString()}</span></div>
+        <div class="date3"><span>${new Date(data.createdAt).toLocaleDateString()}</span></div>
       </div>
     `;
     commentsContainer.appendChild(commentElement);
