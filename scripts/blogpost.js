@@ -89,16 +89,17 @@ async function handleCommentSubmit(event) {
     return;
   }
 
-  const commentInput = document.getElementById('comment');
-  const commentText = commentInput.value;
+  const commentInput = event.target.elements.comment.value.trim();
+  
 
-  if (!commentText) {
+  if (!commentInput) {
     resErr.textContent = "Please enter something to comment";
     return;
   }
  
   else
-  {try {
+  {
+    try {
     const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}/comment`, {
       method: 'POST',
       headers: {
