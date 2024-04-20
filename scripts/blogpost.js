@@ -78,9 +78,9 @@ const resBox = document.querySelector('.success');
 const resErr = document.querySelector('.error');
 
 const commentForm = document.getElementById('commentForm');
-commentForm.addEventListener('submit', handleCommentSubmit);
+commentForm.addEventListener('submit', (event) => handleCommentSubmit(event, articleId));
 
-async function handleCommentSubmit(event) {
+async function handleCommentSubmit(event, articleId) {
   event.preventDefault();
 
   const token = localStorage.getItem('token');
@@ -106,7 +106,7 @@ async function handleCommentSubmit(event) {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
       },
-      body: JSON.stringify({ comment: commentText }),
+      body: JSON.stringify({ comment: commentInput }),
     });
 
     if (response.ok) {
