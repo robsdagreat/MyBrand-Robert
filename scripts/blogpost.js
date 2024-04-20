@@ -89,8 +89,8 @@ async function handleCommentSubmit(event) {
     return;
   }
 
-  const commentInput = document.getElementById('comment');
-  const commentText = commentInput.value.trim();
+  const commentInput = document.getElementById('comment').value;
+  const commentText = commentInput.trim();
 
   if (!commentText) {
     resErr.textContent = "Please enter something to comment";
