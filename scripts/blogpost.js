@@ -89,15 +89,16 @@ async function handleCommentSubmit(event) {
     return;
   }
 
-  const commentInput = document.getElementById('comment').value;
-  
+  const commentInput = document.getElementById('comment');
+  const commentText = commentInput.value;
 
-  if (!commentInput) {
+  if (!commentText) {
     resErr.textContent = "Please enter something to comment";
     return;
   }
-
-  try {
+ 
+  else
+  {try {
     const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}/comment`, {
       method: 'POST',
       headers: {
@@ -119,6 +120,7 @@ async function handleCommentSubmit(event) {
   } catch (error) {
     console.error('Error adding comment:', error);
   }
+}
 }
 
 function updateCommentsSection(comments) {
