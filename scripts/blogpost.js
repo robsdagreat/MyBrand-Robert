@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}`);
       if (response.ok) {
         const blog = await response.json();
-        console.log('Blog:', blog);
         renderBlogPost(blog.blog);
       } else {
         console.error('Error fetching blog post:', response.status);
@@ -126,7 +125,7 @@ async function handleCommentSubmit(event) {
 
     if (response.ok) {
       const data = await response.json();
-      console.log('Comment added successfully:', data.comments);
+      console.log('Comment added successfully:', data);
       resBox.textContent = data.message;
       commentInput.value = '';
       updateCommentsSection(data.blog.comments);
