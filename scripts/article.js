@@ -164,23 +164,14 @@ window.addEventListener('load', async () => {
 });
 
 
-const updateIconClickHandler = (blogId, title, story, image) => {
-  const updateForm = document.querySelector('.update-form');
-  updateForm.classList.remove('hidden');
-
-  
-  title = document.querySelector('#title').value
-  story = document.querySelector('#story').value
-  image = document.querySelector('#image').value
-
-  
+const updateIconClickHandler = (blogId) => {
   const updateBlogForm = document.getElementById('new');
   updateBlogForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const updatedTitle = document.querySelector('#title').value
-    const updatedStory = document.querySelector('#story').value
-    const updatedImage = document.querySelector('#image').value
+    const updatedTitle = document.querySelector('#title').value;
+    const updatedStory = document.querySelector('#story').value;
+    const updatedImage = document.querySelector('#image').value;
     
     await updateBlog(blogId, updatedTitle, updatedStory, updatedImage);
   });
@@ -192,7 +183,7 @@ const updateBlog = async (blogId, title, story, image) => {
   try {
     const token = localStorage.getItem('adminToken');
     if (!token) {
-      resErr.textContent= 'User is not logged in';
+      resErr.textContent = 'User is not logged in';
       return;
     }
 
@@ -206,21 +197,20 @@ const updateBlog = async (blogId, title, story, image) => {
       },
     });
 
-    resBox.textContent= response.data;
+    resBox.textContent = response.data;
   } catch (error) {
-    resErr.textContent=  error.message;
+    resErr.textContent = error.message;
   }
 };
 
 window.addEventListener('load', async () => {
-
   document.querySelectorAll('.update-icon').forEach((icon) => {
     icon.addEventListener('click', () => {
+      const updateForm = document.querySelector('.update-form');
+      updateForm.classList.remove('hidden');
+
       const blogId = icon.dataset.blogId;
-      const title = icon.dataset.title;
-      const story = icon.dataset.story;
-      const image = icon.dataset.image;
-      updateIconClickHandler(blogId, title, story, image);
+      updateIconClickHandler(blogId);
     });
   });
 });
