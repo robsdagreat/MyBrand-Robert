@@ -178,6 +178,21 @@ footer {
   font-size: 20px;
 }
 
+.hidden{
+  display: none;
+}
+
+.update-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  z-index: 1000;
+}
+
 .brand .links {
   margin-top: 50px;
   font-size: 20px;
