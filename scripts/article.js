@@ -131,7 +131,7 @@ const deleteBlog = async (blogId) => {
 
       if (!token || !role || role.trim().toLowerCase() !== 'admin') {
         resErr.textContent= 'You must be logged in as an admin to delete a blog post.';
-        window.location.href= 'http://127.0.0.1:5500/adminlog.html'
+        window.location.href= 'https://robsdagreat.github.io/MyBrand-Robert/adminlog.html'
         return;
       }
 
