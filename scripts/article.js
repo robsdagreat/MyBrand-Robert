@@ -98,9 +98,9 @@ const renderBlogCard = (blog) => {
   const deleteIcon = document.createElement('img');
   deleteIcon.src = './imgs/flowbite_trash-bin-outline.svg';
   deleteIcon.alt = 'Delete';
-  deleteIcon.classList.add('delete-icon'); // Add class for event listener
-  deleteIcon.dataset.blogId = blog._id; // Set blog ID as a data attribute
-  deleteIcon.addEventListener('click', () => deleteIconClickHandler(blog._id)); // Attach click event listener
+  deleteIcon.classList.add('delete-icon'); 
+  deleteIcon.dataset.blogId = blog._id; 
+  deleteIcon.addEventListener('click', () => deleteIconClickHandler(blog._id));
   updateDiv.appendChild(deleteIcon);
 
   oneDiv.appendChild(updateDiv);
@@ -111,7 +111,7 @@ const renderBlogCard = (blog) => {
 
 const deleteBlog = async (blogId) => {
   try {
-    const token = localStorage.getItem('AdminToken'); 
+    const token = localStorage.getItem('adminToken'); 
     if (!token) {
       console.log('User is not logged in');
       return;
