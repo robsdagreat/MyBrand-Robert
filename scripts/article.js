@@ -98,9 +98,8 @@ const renderBlogCard = (blog) => {
   const deleteIcon = document.createElement('img');
   deleteIcon.src = './imgs/flowbite_trash-bin-outline.svg';
   deleteIcon.alt = 'Delete';
-  deleteIcon.classList.add('delete-icon'); 
-  deleteIcon.dataset.blogId = blog._id; 
-  deleteIcon.addEventListener('click', () => deleteIconClickHandler(blog._id));
+  deleteIcon.classList.add('delete-icon');
+  deleteIcon.dataset.blogId = blog._id;
   updateDiv.appendChild(deleteIcon);
 
   oneDiv.appendChild(updateDiv);
@@ -113,26 +112,19 @@ const deleteBlog = async (blogId) => {
   try {
     const token = localStorage.getItem('adminToken'); 
     if (!token) {
-      resErr.textContent= 'User is not logged in';
+      resErr.textContent = 'User is not logged in';
       return;
     }
 
-    if (!token) {
-      resErr.textContent= 'User is not an admin';
-      return;
-    }
-
-    const response = await axios.delete(`https://your-backend-url/blogs/${blogId}`, {
+    const response = await axios.delete(`https://mybrand-backend-s9f7.onrender.com/api/blogs/${blogId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
 
-    resBox.textContent= response.data.message;
-    
+    resBox.textContent = response.data.message;
   } catch (error) {
-    resErr.textContent=  error.message;
-    
+    resErr.textContent = error.message;
   }
 };
 
@@ -158,7 +150,6 @@ window.addEventListener('load', async () => {
     latestBlogsContainer.appendChild(blogCard);
   });
 
-  
   latestBlogsContainer.addEventListener('click', (event) => {
     if (event.target.classList.contains('delete-icon')) {
       const blogId = event.target.dataset.blogId;
