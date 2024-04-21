@@ -153,7 +153,7 @@ window.addEventListener('load', async () => {
 
   latestBlogsContainer.innerHTML = ''; 
 
-  latestBlogs.slice(-1, 3).forEach((blog) => {
+  latestBlogs.slice(1, 3).forEach((blog) => {
     const blogCard = renderBlogCard(blog);
     latestBlogsContainer.appendChild(blogCard);
   });
