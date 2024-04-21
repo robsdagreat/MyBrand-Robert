@@ -118,7 +118,7 @@ const deleteBlog = async (blogId) => {
       return;
     }
 
-    const response = await axios.delete(`https://mybrand-backend-s9f7.onrender.com/api/blogs/${blogId}`, {
+    const response = await axios.delete(`https://mybrand-backend-s9f7.onrender.com/api/blog/delete/${blogId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
