@@ -85,7 +85,7 @@ header img {
 #update {
   float: right;
   margin-right: 700px;
-  margin-top: -30px;
+  margin-top: 10px;
 }
 
 #update img {
@@ -191,6 +191,24 @@ footer {
   margin-inline: 100px;
 }
 
+.success{
+  margin-top: 20px;
+  background: rgb(44, 44, 44);
+  padding: 30px;
+  width: 30%;
+  margin-left: 40%;
+  color: rgb(253, 183, 53);
+}
+
+.error{
+  margin-top: 20px;
+  background: rgb(44, 44, 44);
+  padding: 30px;
+  width: 30%;
+  margin-left: 40%;
+  color: red;
+}
+
 .copy {
   color: white;
   font-size: 17px;
@@ -213,7 +231,7 @@ footer {
   }
 
   .blog {
-      margin-left: 10px;
+      margin-left: 100px;
       font-size: 13px;
   }
 
