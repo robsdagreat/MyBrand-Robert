@@ -109,6 +109,8 @@ const renderBlogCard = (blog) => {
 };
 
 const deleteBlog = async (blogId) => {
+  const resBox = document.querySelector('.success');
+  const resErr = document.querySelector('.error');
   try {
     const token = localStorage.getItem('adminToken'); 
     if (!token) {
@@ -145,7 +147,10 @@ window.addEventListener('load', async () => {
 
   latestBlogsContainer.innerHTML = ''; 
 
-  latestBlogs.slice(1, 3).forEach((blog) => {
+  const reversedLatestBlogs = latestBlogs.slice().reverse();
+
+  
+  reversedLatestBlogs.slice(0, 3).forEach((blog) => {
     const blogCard = renderBlogCard(blog);
     latestBlogsContainer.appendChild(blogCard);
   });
@@ -157,3 +162,4 @@ window.addEventListener('load', async () => {
     }
   });
 });
+
