@@ -98,9 +98,9 @@ const renderBlogCard = (blog) => {
   const deleteIcon = document.createElement('img');
   deleteIcon.src = './imgs/flowbite_trash-bin-outline.svg';
   deleteIcon.alt = 'Delete';
-  deleteIcon.classList.add('delete-icon'); // Add class for event listener
-  deleteIcon.dataset.blogId = blog._id; // Set blog ID as a data attribute
-  deleteIcon.addEventListener('click', () => deleteIconClickHandler(blog._id)); // Attach click event listener
+  deleteIcon.classList.add('delete-icon'); 
+  deleteIcon.dataset.blogId = blog._id; 
+  deleteIcon.addEventListener('click', () => deleteIconClickHandler(blog._id));
   updateDiv.appendChild(deleteIcon);
 
   oneDiv.appendChild(updateDiv);
@@ -111,20 +111,14 @@ const renderBlogCard = (blog) => {
 
 const deleteBlog = async (blogId) => {
   try {
-    const token = localStorage.getItem('AdminToken'); 
+    const token = localStorage.getItem('adminToken'); 
     if (!token) {
-      console.log('User is not logged in');
+      resErr.textContent= 'User is not logged in';
       return;
     }
 
-    const isAdminResponse = await axios.get('https://your-backend-url/admin', {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-
-    if (!isAdminResponse.data.isAdmin) {
-      console.log('User is not an admin');
+    if (!token) {
+      resErr.textContent= 'User is not an admin';
       return;
     }
 
@@ -134,11 +128,11 @@ const deleteBlog = async (blogId) => {
       },
     });
 
-    console.log('Blog deleted:', response.data);
-    // Optional: Display success message or update UI
+    resBox.textContent= response.data.message;
+    
   } catch (error) {
-    console.error('Error deleting blog:', error);
-    // Optional: Display error message or handle error
+    resErr.textContent=  error.message;
+    
   }
 };
 
@@ -159,12 +153,12 @@ window.addEventListener('load', async () => {
 
   latestBlogsContainer.innerHTML = ''; 
 
-  latestBlogs.slice(0, 3).forEach((blog) => {
+  latestBlogs.slice(-1, 3).forEach((blog) => {
     const blogCard = renderBlogCard(blog);
     latestBlogsContainer.appendChild(blogCard);
   });
 
-  // Event delegation for dynamically created delete icons
+  
   latestBlogsContainer.addEventListener('click', (event) => {
     if (event.target.classList.contains('delete-icon')) {
       const blogId = event.target.dataset.blogId;
