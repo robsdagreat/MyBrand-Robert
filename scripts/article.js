@@ -71,7 +71,7 @@ const renderBlogCard = (blog) => {
   oneDiv.id = 'one';
 
   const articleDiv = document.createElement('div');
-  articleDiv.id= 'article';
+  articleDiv.id = 'article';
 
   const titleDiv = document.createElement('div');
   titleDiv.classList.add('title');
@@ -98,7 +98,9 @@ const renderBlogCard = (blog) => {
   const deleteIcon = document.createElement('img');
   deleteIcon.src = './imgs/flowbite_trash-bin-outline.svg';
   deleteIcon.alt = 'Delete';
-  deleteIcon.addEventListener('click', () => deleteBlog(blog._id)); // Attach click event listener
+  deleteIcon.classList.add('delete-icon'); // Add class for event listener
+  deleteIcon.dataset.blogId = blog._id; // Set blog ID as a data attribute
+  deleteIcon.addEventListener('click', () => deleteIconClickHandler(blog._id)); // Attach click event listener
   updateDiv.appendChild(deleteIcon);
 
   oneDiv.appendChild(updateDiv);
@@ -107,8 +109,51 @@ const renderBlogCard = (blog) => {
   return oneDiv;
 };
 
+const deleteBlog = async (blogId) => {
+  try {
+    const token = localStorage.getItem('AdminToken'); 
+    if (!token) {
+      console.log('User is not logged in');
+      return;
+    }
 
-const renderLatestBlogs = async () => {
+    const isAdminResponse = await axios.get('https://your-backend-url/admin', {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    if (!isAdminResponse.data.isAdmin) {
+      console.log('User is not an admin');
+      return;
+    }
+
+    const response = await axios.delete(`https://your-backend-url/blogs/${blogId}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    console.log('Blog deleted:', response.data);
+    // Optional: Display success message or update UI
+  } catch (error) {
+    console.error('Error deleting blog:', error);
+    // Optional: Display error message or handle error
+  }
+};
+
+const handleDeleteBlog = async (blogId) => {
+  const confirmDelete = confirm('Are you sure you want to delete this blog?');
+  if (confirmDelete) {
+    await deleteBlog(blogId);
+  }
+};
+
+const deleteIconClickHandler = async (blogId) => {
+  await handleDeleteBlog(blogId);
+};
+
+window.addEventListener('load', async () => {
   const latestBlogs = await fetchLatestBlogs();
   const latestBlogsContainer = document.getElementById('latest-blogs-container');
 
@@ -118,32 +163,12 @@ const renderLatestBlogs = async () => {
     const blogCard = renderBlogCard(blog);
     latestBlogsContainer.appendChild(blogCard);
   });
-};
 
-const resBox = document.querySelector('.success');
-const resErr = document.querySelector('.error');
-
-const deleteBlog = async (blogId) => {
-  try {
-
-    const token = localStorage.getItem('adminToken');
-      const role = localStorage.getItem('role');
-
-      if (!token || !role || role.trim().toLowerCase() !== 'admin') {
-        resErr.textContent= 'You must be logged in as an admin to delete a blog post.';
-        window.location.href= 'https://robsdagreat.github.io/MyBrand-Robert/adminlog.html'
-        return;
-      }
-
-    const response = await axios.delete(`https://mybrand-backend-s9f7.onrender.com/api/blogs/${blogId}`);
-    console.log(response.data.message); 
-    resBox.textContent= response.data.message;
-    renderLatestBlogs();
-  } catch (error) {
-    console.error('Error deleting blog:', error);
-    resErr.textContent= error.message;
-  }
-};
-
-
-window.addEventListener('load', renderLatestBlogs);
+  // Event delegation for dynamically created delete icons
+  latestBlogsContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('delete-icon')) {
+      const blogId = event.target.dataset.blogId;
+      deleteIconClickHandler(blogId);
+    }
+  });
+});
