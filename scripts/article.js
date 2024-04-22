@@ -88,7 +88,8 @@ const renderBlogCard = (blog) => {
   dateDiv.innerHTML = `<span>${new Date(blog.date).toDateString()}</span>`;
   articleDiv.appendChild(dateDiv);
 
-  const updateDiv= document.createElement('div');
+  const updateDiv = document.createElement('div');
+  updateDiv.id = 'update';
   const updateIcon = document.createElement('img');
   updateIcon.classList.add('update-icon');
   updateIcon.src = './imgs/mdi_pencil-outline.svg';
@@ -105,6 +106,10 @@ const renderBlogCard = (blog) => {
   deleteIcon.classList.add('delete-icon');
   deleteIcon.dataset.blogId = blog._id;
   updateDiv.appendChild(deleteIcon);
+
+
+  oneDiv.appendChild(updateDiv);
+  oneDiv.appendChild(articleDiv);
 
   oneDiv.appendChild(updateDiv);
   oneDiv.appendChild(articleDiv);
