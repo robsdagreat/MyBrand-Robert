@@ -148,8 +148,14 @@ const deleteIconClickHandler = async (blogId) => {
 
 const handleUpdateIcon = (event) => {
   const blogId = event.target.dataset.blogId;
-  const url = `https://robsdagreat.github.io/MyBrand-Robert/updateBlog.html?id=${blogId}`;
-  window.location.href = url;
+  console.log('blogId:', blogId);
+
+  if (blogId !== undefined) {
+    const url = `https://robsdagreat.github.io/MyBrand-Robert/updateBlog.html?id=${blogId}`;
+    window.location.href = url;
+  } else {
+    console.error('Invalid blogId');
+  }
 };
 
 
@@ -173,8 +179,7 @@ window.addEventListener('load', async () => {
       const blogId = event.target.dataset.blogId;
       deleteIconClickHandler(blogId);
     } else if (event.target.classList.contains('update-icon')) {
-      const blogId = event.target.dataset.blogId;
-      handleUpdateIcon(blogId); 
+      handleUpdateIcon(event);
     }
   });
 });
