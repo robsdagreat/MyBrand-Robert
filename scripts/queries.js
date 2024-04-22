@@ -1,26 +1,36 @@
-document.addEventListener('DOMContentLoaded', ()=>{
-    const queriesData= JSON.parse(localStorage.getItem('contactForm',)) || [];
-    
-    const table= document.querySelector('table tbody');
+document.addEventListener('DOMContentLoaded', async () => {
+    const table = document.querySelector('table tbody');
+    const resBox = document.querySelector('.success');
+    const resErr = document.querySelector('.error');
 
-    queriesData.forEach(data => {
-        const newRow= table.insertRow();
-
-
-        const nameCell= newRow.insertCell(0);
-        const emailCell= newRow.insertCell(1);
-        const messageCell= newRow.insertCell(2);
-
-        nameCell.textContent= data.name;
-        emailCell.textContent= data.email;
-        messageCell.textContent= data.message;
+    try {
+      const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/contact/all');
+      if (!response.ok) {
+        resErr.textContent= 'Failed to fetch queries';
+      }
+      const { Queries } = await response.json();
+  
+      Queries.forEach(data => {
+        const newRow = table.insertRow();
+  
+        const nameCell = newRow.insertCell(0);
+        const emailCell = newRow.insertCell(1);
+        const messageCell = newRow.insertCell(2);
+  
+        nameCell.textContent = data.name;
+        emailCell.textContent = data.email;
+        messageCell.textContent = data.message;
+      });
+    } catch (error) {
+      console.error(error);
+      
+    }
+  
+    const clearButton = document.querySelector('.one1');
+  
+    clearButton.addEventListener('click', () => {
+      table.innerHTML = 'Queries deleted!!!';
+      localStorage.removeItem('contactForm');
     });
-     
-    const clearButton= document.querySelector('.one1');
-
-    clearButton.addEventListener('click', ()=>{
-        table.innerHTML= 'Queries deleted!!!';
-
-        localStorage.removeItem('contactForm');
-    });
-});
+  });
+  
