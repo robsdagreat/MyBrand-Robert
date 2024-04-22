@@ -88,13 +88,14 @@ const renderBlogCard = (blog) => {
   dateDiv.innerHTML = `<span>${new Date(blog.date).toDateString()}</span>`;
   articleDiv.appendChild(dateDiv);
 
-  const updateDiv = document.createElement('div');
-  updateDiv.id = 'update';
+  const updateDiv= document.createElement('div');
   const updateIcon = document.createElement('img');
   updateIcon.classList.add('update-icon');
   updateIcon.src = './imgs/mdi_pencil-outline.svg';
   updateIcon.alt = 'Update';
-  updateIcon.addEventListener('click', () => handleUpdateIcon(blog._id)); 
+  updateIcon.dataset.blogId = blog._id; 
+  console.log('Update Icon Element:', updateIcon); 
+  updateIcon.addEventListener('click', () => handleUpdateIcon(blog._id));
   updateDiv.appendChild(updateIcon);
 
 
