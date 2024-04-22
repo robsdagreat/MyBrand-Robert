@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         throw new Error('Authentication token not found');
       }
   
-      const response = await fetch('/api/contact/all', {
+      const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/contact/all', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
