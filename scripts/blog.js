@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     articleElement.classList.add('blog');
     articleElement.innerHTML = `
     <div class="profile">
-      <div class="img"><img src="./imgs/et_profile-male.png" alt="" /></div>
+    <div class="image">
+    <div class="img"><img src="./imgs/PXL_20231130_120837861.PORTRAIT.jpg" alt="" /></div>
+  </div>
       <div class="name"><span>@${article.author}</span></div>
       <div class="separate"><span>.</span></div>
       <div class="date"><span>${new Date(article.createdAt).toLocaleString()}</span></div>
@@ -40,23 +42,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         <span>${article.comments.length}</span>
       </div>
     </div>
-    <div id="comment">
-      <span class="com">Comments</span>
-      <div class="name"><span>@Musafiri_yves</span></div>
-    </div>
-    <div class="reply">
-      <p>Wow! I can't wait to experience it.</p>
-    </div>
-    <div class="time">
-      <div class="date2"><span>12:39 AM</span></div>
-      <div class="separate2"><span>.</span></div>
-      <div class="date3"><span>${new Date(article.createdAt).toLocaleString()}</span></div>
-    </div>
     <div class="line"></div>
   `;
     
   
-  const commentLink = articleElement.querySelector('.comment-link');
+  const commentLink = articleElement.querySelector('.cover');
   commentLink.dataset.articleId = article._id;
 
   commentLink.addEventListener('click', (event) => {
