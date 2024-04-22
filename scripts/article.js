@@ -173,10 +173,7 @@ window.addEventListener('load', async () => {
       deleteIconClickHandler(blogId);
     } else if (event.target.classList.contains('update-icon')) {
       const blogId = event.target.dataset.blogId;
-      const title = event.target.dataset.title;
-      const story = event.target.dataset.story;
-      const image = event.target.dataset.image;
-      updateIconClickHandler(blogId, title, story, image);
+      handleUpdateIcon(blogId); 
     }
   });
 });
