@@ -1,5 +1,3 @@
-console.log('updateBlogForm found');
-
 document.addEventListener('DOMContentLoaded', () => {
     const updateBlogForm = document.getElementById('updateForm');
     const titleInput = document.getElementById('update-title');
@@ -23,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
           });
           console.log('Response:', response.data);
-          resBox.textContent = response.data.message; // Update this line to handle the response correctly
+          resBox.textContent = response.data.message; 
         } catch (error) {
           console.error('Error:', error);
           resErr.textContent = error.message;
@@ -31,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };    
     if (updateBlogForm) {
         updateBlogForm.addEventListener('submit', async (event) => {
-            
+            console.log(updateBlogForm)
           event.preventDefault();
           const blogId = new URLSearchParams(window.location.search).get('id');
           const updatedTitle = titleInput.value;
