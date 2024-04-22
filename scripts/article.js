@@ -147,6 +147,11 @@ const deleteIconClickHandler = async (blogId) => {
 
 
 const handleUpdateIcon = (event) => {
+  if (!event.target) {
+    console.error('Invalid event target');
+    return;
+  }
+
   const blogId = event.target.dataset.blogId;
   console.log('blogId:', blogId);
 
@@ -180,6 +185,10 @@ window.addEventListener('load', async () => {
       deleteIconClickHandler(blogId);
     } else if (event.target.classList.contains('update-icon')) {
       handleUpdateIcon(event);
+    } else if (event.target.closest('.update-icon')) {
+      const updateIcon = event.target.closest('.update-icon');
+      const blogId = updateIcon.dataset.blogId;
+      handleUpdateIcon({ target: updateIcon });
     }
   });
 });
