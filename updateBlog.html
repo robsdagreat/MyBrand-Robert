@@ -10,14 +10,14 @@
     <div id="header">
         <span>Update Blog</span>
       </div>
-  <div class="update-form-container">
-    <form action="" id="new">
-        <input type="text" name="title" id="title" placeholder="title" />
-        <textarea name="story" id="story" cols="30" rows="10" placeholder="Story"></textarea>
-        <input type="text" name="image" id="image" placeholder="image" />
-        <button>Update</button>
+      <form id="updateForm">
+        <input type="hidden" id="blogId" name="blogId">
+        <input type="text" id="update-title" name="title" placeholder="Title">
+        <textarea id="update-story" cols="30" rows="10" name="story" placeholder="Story"></textarea>
+        <input type="text" id="update-image" name="image" placeholder="Image URL">
+        <button type="submit">Submit</button>
       </form>
-  </div>
+      
   <div class="success"></div>
   <div class="error"></div>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
