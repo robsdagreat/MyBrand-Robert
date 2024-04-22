@@ -147,7 +147,7 @@ const deleteIconClickHandler = async (blogId) => {
 
 
 const handleUpdateIcon = (blogId) => {
-  const url = `http://127.0.0.1:5500/updateBlog.html?id=${blogId}`;
+  const url = `https://robsdagreat.github.io/MyBrand-Robert/updateBlog.html?id=${blogId}`;
   window.location.href= url;
 };
 
