@@ -1,13 +1,22 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const table = document.querySelector('table tbody');
-    const resBox = document.querySelector('.success');
-    const resErr = document.querySelector('.error');
-
+  
     try {
-      const response = await fetch('https://mybrand-backend-s9f7.onrender.com/api/contact/all');
+      const token = localStorage.getItem('adminToken'); // Assuming you store the token in localStorage
+      if (!token) {
+        throw new Error('Authentication token not found');
+      }
+  
+      const response = await fetch('/api/contact/all', {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+  
       if (!response.ok) {
         resErr.textContent= 'Failed to fetch queries';
       }
+      
       const { Queries } = await response.json();
   
       Queries.forEach(data => {
@@ -30,6 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   
     clearButton.addEventListener('click', () => {
       table.innerHTML = 'Queries deleted!!!';
+      // You may want to make a request to your backend to delete all queries here
       localStorage.removeItem('contactForm');
     });
   });

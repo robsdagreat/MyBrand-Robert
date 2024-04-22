@@ -16,6 +16,22 @@
       body {
         background: #2c2c2c;
       } 
+
+      .logo {
+        margin-left: 50px;
+        margin-top: 20px;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      
+      .success{
+        margin-top: 20px;
+        background: rgb(44, 44, 44);
+        padding: 30px;
+        width: 30%;
+        margin-left: 40%;
+        color: rgb(253, 183, 53);
+      }
       
       #header {
         width: 180px;
