@@ -91,9 +91,12 @@ const renderBlogCard = (blog) => {
   const updateDiv = document.createElement('div');
   updateDiv.id = 'update';
   const updateIcon = document.createElement('img');
+  updateIcon.classList.add('update-icon');
   updateIcon.src = './imgs/mdi_pencil-outline.svg';
   updateIcon.alt = 'Update';
+  updateIcon.addEventListener('click', () => handleUpdateIcon(blog._id)); 
   updateDiv.appendChild(updateIcon);
+
 
   const deleteIcon = document.createElement('img');
   deleteIcon.src = './imgs/flowbite_trash-bin-outline.svg';
@@ -141,6 +144,16 @@ const deleteIconClickHandler = async (blogId) => {
   await handleDeleteBlog(blogId);
 };
 
+
+
+const handleUpdateIcon = (blogId) => {
+  const url = `http://127.0.0.1:5500/updateBlog.html?id=${blogId}`;
+  window.location.href= url;
+};
+
+
+
+
 window.addEventListener('load', async () => {
   const latestBlogs = await fetchLatestBlogs();
   const latestBlogsContainer = document.getElementById('latest-blogs-container');
@@ -149,7 +162,6 @@ window.addEventListener('load', async () => {
 
   const reversedLatestBlogs = latestBlogs.slice().reverse();
 
-  
   reversedLatestBlogs.slice(0, 3).forEach((blog) => {
     const blogCard = renderBlogCard(blog);
     latestBlogsContainer.appendChild(blogCard);
@@ -159,58 +171,12 @@ window.addEventListener('load', async () => {
     if (event.target.classList.contains('delete-icon')) {
       const blogId = event.target.dataset.blogId;
       deleteIconClickHandler(blogId);
+    } else if (event.target.classList.contains('update-icon')) {
+      const blogId = event.target.dataset.blogId;
+      const title = event.target.dataset.title;
+      const story = event.target.dataset.story;
+      const image = event.target.dataset.image;
+      updateIconClickHandler(blogId, title, story, image);
     }
-  });
-});
-
-
-const updateIconClickHandler = (blogId) => {
-  const updateBlogForm = document.getElementById('new');
-  updateBlogForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const updatedTitle = document.querySelector('#title').value;
-    const updatedStory = document.querySelector('#story').value;
-    const updatedImage = document.querySelector('#image').value;
-    
-    await updateBlog(blogId, updatedTitle, updatedStory, updatedImage);
-  });
-};
-
-const updateBlog = async (blogId, title, story, image) => {
-  const resBox = document.querySelector('.success');
-  const resErr = document.querySelector('.error');
-  try {
-    const token = localStorage.getItem('adminToken');
-    if (!token) {
-      resErr.textContent = 'User is not logged in';
-      return;
-    }
-
-    const response = await axios.put(`https://mybrand-backend-s9f7.onrender.com/api/blog/edit/${blogId}`, {
-      title,
-      story,
-      image
-    }, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-
-    resBox.textContent = response.data;
-  } catch (error) {
-    resErr.textContent = error.message;
-  }
-};
-
-window.addEventListener('load', async () => {
-  document.querySelectorAll('.update-icon').forEach((icon) => {
-    icon.addEventListener('click', () => {
-      const updateForm = document.querySelector('.update-form');
-      updateForm.classList.remove('hidden');
-
-      const blogId = icon.dataset.blogId;
-      updateIconClickHandler(blogId);
-    });
   });
 });

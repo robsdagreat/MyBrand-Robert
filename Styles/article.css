@@ -180,17 +180,30 @@ footer {
 
 .hidden{
   display: none;
-}
-
-.update-form {
+  background-color: white;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
   padding: 20px;
   border: 1px solid black;
   z-index: 1000;
+}
+
+.update-icon{
+  cursor: pointer;
+}
+
+.update-icon:hover{
+  opacity: 0.5;
+}
+
+.delete-icon{
+  cursor: pointer;
+}
+
+.delete-icon:hover{
+  opacity: 0.5;
 }
 
 .brand .links {

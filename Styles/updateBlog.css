@@ -1,0 +1,102 @@
+#update {
+    float: right;
+    margin-right: 700px;
+    margin-top: 10px;
+  }
+  
+  #update img {
+    height: 30px;
+    margin-left: 70px;
+  }
+  
+  #new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  #new span {
+    color: white;
+    margin-bottom: 50px;
+    font-size: 20px;
+  }
+  
+  #new input[type="text"] {
+    width: 300px;
+    padding: 15px;
+    background-color: #2c2c2c;
+    border: 1px solid rgb(253, 183, 53);
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  #new input[type="file"]{
+    width: 300px;
+    padding: 15px;
+    background-color: #2c2c2c;
+    border: 1px solid rgb(253, 183, 53);
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  #new input[type="text"]::placeholder {
+    color: white;
+    padding: 20px;
+  }
+  
+  #new button {
+    padding: 10px;
+    width: 100px;
+    background: #2c2c2c;
+    color: white;
+    border: 2px solid rgb(253, 183, 53);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  #new button:hover {
+    opacity: 0.5;
+  }
+  
+  #header {
+    width: 180px;
+    height: 15px;
+    border: 1px solid rgb(253, 183, 53);
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 120px;
+  }
+  
+  #header span {
+    font-size: 20px;
+    color: white;
+  }
+  
+  textarea {
+    width: 320px;
+    background-color: rgb(44, 44, 44);
+    border: 1px solid rgb(253, 183, 53);
+    border-radius: 5px;
+    color: white;
+  }
+  
+  textarea::placeholder {
+    color: white;
+    padding: 50px;
+  }
+  
+      .update-form-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:  #2f2f2f;
+        padding: 20px;
+        border: 1px solid rgb(253, 183, 53);
+        border-radius: 10px;
+        z-index: 1000;
+      }

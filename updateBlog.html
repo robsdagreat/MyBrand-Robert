@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Blog</title>
+  <link rel="stylesheet" href="./Styles/updateBlog.css">
+</head>
+<body style="background-color: #2f2f2f;">
+    <div id="header">
+        <span>Update Blog</span>
+      </div>
+  <div class="update-form-container">
+    <form action="" id="new">
+        <input type="text" name="title" id="title" placeholder="title" />
+        <textarea name="story" id="story" cols="30" rows="10" placeholder="Story"></textarea>
+        <input type="text" name="image" id="image" placeholder="image" />
+        <button>Update</button>
+      </form>
+  </div>
+  <div class="success"></div>
+  <div class="error"></div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./scripts/update-blog.js"></script>
+</body>
+</html>
