@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const updateBlogForm = document.querySelector('.update-form');
-    const titleInput = document.querySelector('#update-title');
-    const storyTextarea = document.querySelector('#update-story');
-    const imageInput = document.querySelector('#update-image');
+    const updateBlogForm = document.getElementById('updateForm');
+    const titleInput = document.getElementById('update-title');
+    const storyTextarea = document.getElementById('update-story');
+    const imageInput = document.getElementById('update-image');
     const resBox = document.querySelector('.success');
     const resErr = document.querySelector('.error');
   
