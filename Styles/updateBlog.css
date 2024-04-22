@@ -9,20 +9,20 @@
     margin-left: 70px;
   }
   
-  #new {
+  #updateForm {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
   }
   
-  #new span {
+  #updateForm span {
     color: white;
     margin-bottom: 50px;
     font-size: 20px;
   }
   
-  #new input[type="text"] {
+  #updateForm input[type="text"] {
     width: 300px;
     padding: 15px;
     background-color: #2c2c2c;
@@ -31,21 +31,14 @@
     margin-bottom: 20px;
   }
   
-  #new input[type="file"]{
-    width: 300px;
-    padding: 15px;
-    background-color: #2c2c2c;
-    border: 1px solid rgb(253, 183, 53);
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
+ 
   
-  #new input[type="text"]::placeholder {
+  #updateForm input[type="text"]::placeholder {
     color: white;
     padding: 20px;
   }
   
-  #new button {
+  #updateForm button {
     padding: 10px;
     width: 100px;
     background: #2c2c2c;
@@ -56,7 +49,7 @@
     margin-top: 30px;
   }
   
-  #new button:hover {
+  #updateForm button:hover {
     opacity: 0.5;
   }
   
@@ -76,7 +69,7 @@
     color: white;
   }
   
-  textarea {
+  #update-story {
     width: 320px;
     background-color: rgb(44, 44, 44);
     border: 1px solid rgb(253, 183, 53);
@@ -84,7 +77,7 @@
     color: white;
   }
   
-  textarea::placeholder {
+  #update-story::placeholder {
     color: white;
     padding: 50px;
   }
@@ -100,3 +93,85 @@
         border-radius: 10px;
         z-index: 1000;
       }
+      #updateForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      .success{
+        margin-top: 20px;
+        background: rgb(44, 44, 44);
+        padding: 30px;
+        width: 30%;
+        margin-left: 40%;
+        color: rgb(253, 183, 53);
+      }
+      
+      .error{
+        margin-top: 20px;
+        background: rgb(44, 44, 44);
+        padding: 30px;
+        width: 30%;
+        margin-left: 40%;
+        color: red;
+      } 
+      
+      #updateForm span {
+        color: white;
+        margin-bottom: 50px;
+        font-size: 20px;
+      }
+      
+      #updateForm input[type="text"] {
+        width: 300px;
+        padding: 15px;
+        background-color: #2c2c2c;
+        border: 1px solid rgb(253, 183, 53);
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      
+      #updateForm input[type="file"]{
+        width: 300px;
+        padding: 15px;
+        background-color: #2c2c2c;
+        border: 1px solid rgb(253, 183, 53);
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      
+      #updateForm input[type="text"]::placeholder {
+        color: white;
+        padding: 20px;
+      }
+      
+      #updateForm button {
+        padding: 10px;
+        width: 100px;
+        background: #2c2c2c;
+        color: white;
+        border: 2px solid rgb(253, 183, 53);
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 30px;
+      }
+      
+      #updateForm button:hover {
+        opacity: 0.5;
+      }
+      
+      textarea {
+        width: 320px;
+        background-color: rgb(44, 44, 44);
+        border: 1px solid rgb(253, 183, 53);
+        border-radius: 5px;
+        color: white;
+      }
+      
+      textarea::placeholder {
+        color: white;
+        padding: 50px;
+      }
+      
