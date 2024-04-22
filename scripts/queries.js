@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const table = document.querySelector('table tbody');
   
     try {
-      const token = localStorage.getItem('adminToken'); // Assuming you store the token in localStorage
+      const token = localStorage.getItem('adminToken');
       if (!token) {
         throw new Error('Authentication token not found');
       }
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   
     clearButton.addEventListener('click', () => {
       table.innerHTML = 'Queries deleted!!!';
-      // You may want to make a request to your backend to delete all queries here
+    
       localStorage.removeItem('contactForm');
     });
   });
