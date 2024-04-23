@@ -238,77 +238,95 @@ footer {
   padding-bottom: 30px;
 }
 
-/* Media query for min-width: 1231px */
-@media only screen and (min-width: 1231px) {
+/* Add responsive styles for smaller screens */
+@media (max-width: 768px) {
   .logo {
-    margin-left: 100px; /* Adjusting logo margin */
-  }
-
-  nav ul {
-    margin-left: 200px; /* Adjusting nav menu margin */
-  }
-}
-
-/* Media query for max-width: 1000px */
-@media only screen and (max-width: 1000px) {
-  .logo {
-    margin-left: 30px; /* Adjusting logo margin */
-  }
-
-  nav ul {
-    margin-left: 100px; /* Adjusting nav menu margin */
-  }
-}
-
-/* Media query for max-width: 800px */
-@media only screen and (max-width: 800px) {
-  .logo {
-    margin-left: 20px; /* Adjusting logo margin */
-  }
-
-  nav ul {
-    margin-left: 50px; /* Adjusting nav menu margin */
-    font-size: 16px; /* Adjusting font size of nav items */
-  }
-
-  .signup-form {
-    width: 500px; /* Adjusting form width */
-  }
-
-  .sub,
-  .sub2 {
-    width: 120px; /* Adjusting button width */
-  }
-}
-
-/* Media query for max-width: 600px */
-@media only screen and (max-width: 600px) {
-  .logo {
-    margin-left: 10px; /* Adjusting logo margin */
-  }
-
-  nav {
-    display: none; /* Hiding nav menu */
-  }
-
-  nav img {
-    display: block; /* Displaying burger menu icon */
+    margin-left: 20px;
+    font-size: 24px;
   }
 
   ul {
-    margin-left: 0; /* Resetting margin for nav menu */
-    margin-right: 20px; /* Adjusting right margin */
-    margin-top: 0; /* Resetting margin */
-    font-size: 14px; /* Adjusting font size of nav items */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  ul li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+  .success,
+  .error {
+    width: 80%;
+    margin-left: 10%;
   }
 
   .signup-form {
-    width: 300px; /* Adjusting form width */
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
-  .sub,
-  .sub2 {
-    width: 100px; /* Adjusting button width */
+  .signup-form input[type="username"],
+  .signup-form input[type="email"],
+  .signup-form input[type="password"] {
+    width: 100%;
+  }
+
+  .signup-form input[type="submit"] {
+    width: 80%;
+    margin: 40px 10%;
+  }
+
+  .brand .links {
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .brand a {
+    margin-inline: 20px;
+    margin-bottom: 20px;
   }
 }
 
+/* Add responsive styles for even smaller screens */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  ul {
+    display: none;
+  }
+
+  nav img{
+    display: block;
+    float: right;
+    margin-top: -40px;
+    margin-right: 20px
+
+  }
+
+  .signup-form input[type="username"],
+  .signup-form input[type="email"],
+  .signup-form input[type="password"] {
+    padding: 10px;
+  }
+
+  .brand h2 {
+    font-size: 16px;
+  }
+
+  .brand .links {
+    font-size: 16px;
+  }
+
+  .copy {
+    font-size: 14px;
+  }
+}

@@ -195,148 +195,148 @@
         color: rgb(255, 255, 255);
       }
 
-@media only screen and (max-width: 400px) {
-  header img {
-      margin-left: 20px;
-      margin-top: 10px;
-  }
-
-  .login, .login1, .hire, .recen, .qheader, .one1 {
-      margin-left: 20px;
-  }
-
-  .titles {
-      margin-left: 20px;
-  }
-
-  table, th, td {
-      margin-left: 20px;
-      width: 90%;
-  }
-}
-
-
-@media only screen and (max-width: 600px) {
-  header img {
-      margin-left: 30px;
-      margin-top: 20px;
-  }
-
-  .login, .login1, .hire, .recen, .qheader, .one1 {
-      margin-left: 30px;
-  }
-
-  .titles {
-      margin-left: 30px;
-  }
-
-  table, th, td {
-      margin-left: 30px;
-      width: 90%;
-  }
-}
-
-
-@media only screen and (max-width: 800px) {
-  header img {
-      margin-left: 50px;
-      margin-top: 30px;
-  }
-
-  .login, .login1, .hire, .recen, .qheader, .one1 {
-      margin-left: 50px;
-  }
-
-  .titles {
-      margin-left: 50px;
-  }
-
-  table, th, td {
-      margin-left: 50px;
-      width: 90%;
-  }
-}
-
-
-@media only screen and (max-width: 1000px) {
-  header img {
-      margin-left: 100px;
-      margin-top: 50px;
-  }
-
-  .login, .login1, .hire, .recen, .qheader, .one1 {
-      margin-left: 100px;
-  }
-
-  .titles {
-      margin-left: 100px;
-  }
-
-  table, th, td {
-      margin-left: 100px;
-      width: 90%;
-  }
-}
-
-
-@media only screen and (max-width: 1200px) {
-  header img {
-      margin-left: 150px;
-      margin-top: 70px;
-  }
-
-  .login, .login1, .hire, .recen, .qheader, .one1 {
-      margin-left: 150px;
-  }
-
-  .titles {
-      margin-left: 150px;
-  }
-
-  table, th, td {
-      margin-left: 150px;
-      width: 90%;
-  }
-}
-
-
-@media only screen and (max-width: 1400px) {
-  header img {
-      margin-left: 200px;
-      margin-top: 90px;
-  }
-
-  .login, .login1, .hire, .recen, .qheader, .one1 {
-      margin-left: 200px;
-  }
-
-  .titles {
-      margin-left: 200px;
-  }
-
-  table, th, td {
-      margin-left: 200px;
-      width: 90%;
-  }
-}
-
-
-@media only screen and (max-width: 1621px) {
-  header img {
-      margin-left: 300px;
-      margin-top: 110px;
-  }
-
-  .login, .login1, .hire, .recen, .qheader, .one1 {
-      margin-left: 300px;
-  }
-
-  .titles {
-      margin-left: 300px;
-  }
-
-  table, th, td {
-      margin-left: 300px;
-      width: 90%;
-  }
-}
+      @media (max-width: 1024px) {
+        header img {
+          margin-left: 200px;
+        }
+      
+        .recen {
+          margin-left: 640px;
+        }
+      
+        .qheader {
+          margin-left: 100px;
+        }
+      
+        .titles {
+          margin-left: 285px;
+        }
+      
+        .one1 {
+          margin-left: 700px;
+        }
+      
+        .brand .links {
+          margin-left: 380px;
+        }
+      
+        .brand a {
+          margin-inline: 50px;
+        }
+      
+        table,
+        th,
+        td {
+          width: 90%;
+          margin-left: 5%;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .logo {
+          margin-left: 20px;
+        }
+      
+        header img {
+          margin-left: 50px;
+          margin-top: 50px;
+        }
+      
+        .login {
+          margin-left: 50px;
+        }
+      
+        .login1 {
+          margin-left: 20px;
+        }
+      
+        .twotwo {
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .hire {
+          margin-left: 50px;
+          margin-top: 20px;
+        }
+      
+        .recen {
+          margin-left: 50px;
+          margin-top: 20px;
+          width: 90%;
+        }
+      
+        .qheader {
+          margin-left: 50px;
+        }
+      
+        .titles {
+          margin-left: 50px;
+          flex-wrap: wrap;
+        }
+      
+        .one1 {
+          margin-left: 50px;
+          margin-top: 20px;
+        }
+      
+        .brand .links {
+          margin-left: 50px;
+        }
+      
+        .brand a {
+          margin-inline: 30px;
+        }
+      
+        table,
+        th,
+        td {
+          width: 90%;
+          margin-left: 5%;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .logo {
+          font-size: 24px;
+        }
+      
+        header img {
+          margin-left: 20px;
+        }
+      
+        .login,
+        .login1 {
+          font-size: 16px;
+        }
+      
+        .hire {
+          width: 90%;
+          font-size: 14px;
+        }
+      
+        .recen {
+          font-size: 14px;
+        }
+      
+        .qheader {
+          font-size: 24px;
+        }
+      
+        .one1 {
+          font-size: 14px;
+        }
+      
+        .brand h2 {
+          font-size: 18px;
+        }
+      
+        .brand .links,
+        .copy {
+          font-size: 16px;
+        }
+      
+        .brand a {
+          margin-inline: 10px;
+        }
+      }
