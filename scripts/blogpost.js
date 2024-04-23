@@ -83,7 +83,9 @@ commentForm.addEventListener('submit', (event) => handleCommentSubmit(event));
 
 async function handleCommentSubmit(event) {
   const token = localStorage.getItem('token');
-  if (!token) {
+  const userId = localStorage.getItem('userId');
+
+  if (!token || !userId) {
     window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/login.html';
     return;
   }
