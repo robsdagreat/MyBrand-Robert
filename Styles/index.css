@@ -545,463 +545,282 @@ footer {
   padding: 10px;
 }
 
-@media screen and (max-width: 1621px) {
-  .brand .links {
-    transform: translateX(-12%);
-  }
-
-  .btn button {
-    margin-left: 800px;
-  }
-
-  .logo{
-    margin-left: 280px;
-  }
-
-  .login{
-    margin-left: 300px;
-  }
-
-  .middle {
-    transform: translateX(-40%);
-  }
-
-  .descript{
-    max-width: 40ch;
-  }
-
-  .profile{
-    position: absolute;
-    top: 1480px;
-  }
-
-  .right2 {
-    transform: translateX(40%);
-    margin-top: 40px;
-  }
-
-  .cards{
-    display: flex;
-    flex-wrap: nowrap;
-    margin-left: 400px;
-    margin-top: 500px;
-  }
-
-}
-
-@media screen and (max-width: 1400px){
-  .brand .links {
-    margin-left: 400px;
-  }
-
-  .hello, .name, .moto, .descript{
-    margin-left: 80px;
-  }
-
-  .qheader, .qheader2, .qheader3, .border, .border2, .border3, .talk{
-    margin-left: 80px;
-  }
-
-  .hire{
-    margin-left: 200px;
-  }
-  
-  .btn button {
-   margin-left: 700px;
-  }
-
-  .logo{
-    margin-left: 160px;
-  }
-
-  .login {
-    margin-left: 230px;
-    margin-top: 20px;
-  }
-  
-
-  .card {
-    border: 1px solid rgb(253, 183, 53);
-    width: 388px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
-    border-radius: 10px;
-  }
-
-  .cards{
-    margin-left: 300px;
-  }
-
-  .card2 {
-    transform: translateX(30%);
-    margin-top: 30px;
-  }
-
-  .card3{
-    width: 120px;
-    height: 100px;
-    overflow: hidden;
-  }
-
-  .card3 p, .card3 span{
-    font-size: 15px;
-  }
-
-  .middle {
-    position: absolute;
-    left: 750px;
-  }
-
-  .profile {
-    height: 350px;
-    width: 350px;
-    position: absolute;
-    top: 1500px;
-    left: 100px;
-  }
-
-  .right2{
-    float: left;
-    margin-left: 480px;
-  }
-
-}
-
-@media screen and (max-width: 1200px) {
-  .brand .links {
-    margin-left: 300px;
-  }
-  
-  .logo{
-    margin-left: 80px;
-  }
-
-  .login {
-    margin-left: 180px;
-    margin-top: 20px;
-  }
-  
-  .right2{
-    float: right;
-    margin-right: 300px;
-    margin-top: 20px;
-  }
-
-  .right p{
-  font-size: 15px;
-  }
-
-  .card {
-    border: 1px solid rgb(253, 183, 53);
-    width: 300px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
-    border-radius: 10px;
-  }
-
-  .cards{
-    margin-top: 500px;
-  }
-
-  .card2 {
-    border: 1px solid rgb(253, 183, 53);
-    border-radius: 8px;
-    background: rgb(44, 44, 44);
-    width: 100px;
-    padding: 30px;
-    margin-right: 30px;
-    text-align: center;
-  }
-
-  .card3{
-    width: 120px;
-    height: 100px;
-    overflow: hidden;
-    margin-left: 20px;
-  }
-
-  .card3 p, .card3 span{
-    font-size: 15px;
-  }
-
-  .middle {
-    position: absolute;
-    left: 630px;
-    height: 300px;
-    width: 300px;
-  }
-
-  .descript{
-    max-width: 35ch;
-    margin-left: 50px;
-  }
-
-  .intro h2,.name,.moto{
-    margin-left: 50px;
-  }
-
-  .profile{
-    position: absolute;
-    top: 1540px;
-    height: 300px;
-    width: 300px;
-  }
-
-  .qheader, .qheader2,.qheader3, .border, .border2,.border3, .talk{
-    margin-left: 50px;
-  }
-
-  .btn button{
-    margin-left: 580px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .hello {
-    font-size: 20px;
-  }
-  
-  .name {
-    color: rgb(253, 183, 53);
-    margin-top: 150px;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  
-  .moto {
- 
-    font-size: 15px;
-  }
-  
-  .descript {
-    font-size: 15px;
-  }
-
-  .hello, .moto, .descript, .name{
-    margin-left: 50px;
-  }
-
-  .hire{
+@media (max-width: 1024px) {
+  .logo {
     margin-left: 150px;
-    height: 35px;
-    font-size: 15px;
   }
 
-  .login{
-    margin-left: 140px;
+  .login {
+    margin-left: 150px;
   }
 
-  .login button{
-    padding: 5px;
-  }
-
-  .logo{
-    margin-left: 80px;
-    font-size: 25px;
-  }
-
-  .burger img{
-    height: 30px;
-  }
-
-  .middle{
-    position: absolute;
-    left: 510px;
-  }
-
-  .qheader, .qheader2, .qheader3, .talk{
-    margin-left: 50px;
-    font-size: 20px;
-  }
-
-  .border, .border2, .border3{
-    margin-left: 50px;
-    border-bottom: 3px solid rgb(253, 183, 53);
-  }
-
-  .cards{
-    margin-left: 200px;
-    margin-top: 500px;
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  .btn button{
-    margin-left: 450px;
-  }
-
-  .right2{
-    float: left;
-    margin-left: 380px;
-  }
-
-  .right2 p, .talk{
-    font-size: 15px;
-  }
-
-  .form h2, .brand h2{
-    font-size: 20px;
-  }
-
-  .profile{
-    height: 300px;
-    width: 300px;
-    position: absolute;
-    top: 1450px;
-    left: 60px;
-  }
-  
-  .brand .links{
-    margin-left: 180px;
-  }
-  
-  .card3{
-    margin-left: 10px;
-    padding: 25px;
-    margin-top: 0px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .login{
-    margin-left: 80px;
-  }
-
-  .brand .links{
-    margin-left: 170px;
-  }
-
-  .headers{
-    margin-left: 120px;
-  }
-  
-  .middle{
-    height: 250px;
-    width: 250px;
-    position: absolute;
-    left: 430px;
-  }
-
-  .profile{
-    height: 250px;
-    width: 250px;
-    position: absolute;
-    top: 2050px;
-  }
-
-  .right2 {
-    float: right;
-    margin-right: 200px;
-    margin-top: 60px;
-  }
-
-  .cards{
+  .hello,
+  .name,
+  .moto,
+  .descript,
+  .qheader {
     margin-left: 100px;
   }
 
-  .btn button{
-    margin-left: 338px;
+  .middle {
+    left: 650px;
   }
 
-  .card3{
-    margin-top: 100px;
+  .hire {
+    margin-left: 280px;
+  }
+
+  .headers {
+    margin-left: 100px;
+  }
+
+  .right2 {
+    margin-right: 300px;
+  }
+
+  .cards {
+    margin-left: 700px;
+  }
+
+  .btn button {
+    margin-left: 1050px;
+  }
+
+  .contact {
+    justify-content: center;
+  }
+
+  .card3 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .talk {
+    margin-left: 100px;
+  }
+
+  .brand .links {
+    margin-left: 350px;
+  }
+
+  .brand a {
+    margin-inline: 50px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 768px) {
+  .right {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 50px;
+  }
+
+  .login {
+    margin-left: 50px;
+  }
+
+  .hello,
+  .name,
+  .moto,
+  .descript,
+  .qheader {
+    margin-left: 50px;
+  }
+
+  .middle {
+    display: none;
+  }
+
+  .hire {
+    margin-left: 180px;
+  }
+
+  .headers {
+    margin-left: 50px;
+  }
+
+  .right2 {
+    margin-right: 50px;
+  }
+
+  .cards {
+    margin-left: 50px;
+  }
+
+  .btn button {
+    margin-left: 250px;
+  }
+
+  .qheader2,
+  .border2 {
+    margin-left: 50px;
+  }
+
+  .cover {
+    margin-left: 50px;
+  }
+
+  .profile {
+    left: 50px;
+  }
+
+  .qheader3,
+  .border3 {
+    margin-left: 50px;
+  }
+
+  .talk {
+    margin-left: 50px;
+  }
+
+  .brand .links {
+    margin-left: 50px;
+  }
+
+  .brand a {
+    margin-inline: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .burger img {
+    margin-left: 10px;
+  }
+
   .middle{
-    height:150px;
-    width: 150px;
-    position: absolute;
-    left: 330px;
+    display: none;
+  }
+  .logo {
+    margin-left: 25%;
+    font-size: 30px;
   }
 
-  .hire{
-   width: 90px;
-   padding: 3px;
+  .login {
+    margin-left: 25%;
   }
 
-  .descript{
-    font-size: 12px;
+  .hello,
+  .name,
+  .moto,
+  .descript,
+  .qheader {
+    margin-left: 20px;
   }
 
-  .name{
-    font-size: 25px;
-  }
-   
-  .moto{
-    font-size: 12px;
+  .name {
+    font-size: 30px;
   }
 
-  .hello{
-    font-size: 15px;
-  }
-
-  .burger img{
-    height: 20px;
-  }
-
-  .burgerMenu nav {
-    margin-top: 10px;
-    font-size: 10px;
-    color: white;
-    cursor: pointer;
-  }
-
-  .login{
-    margin-left: 50px;
-  }
- 
-  .logo{
+  .moto {
     font-size: 18px;
-    margin-left: 50px;
   }
 
-  .login button{
-    font-size: 10px;
-    width: 50px;
-  }
-  
-  .burgerShow {
-    display: block;
-    margin-top: 5px;
-    border: 2px solid rgb(253, 183, 53);
-    border-radius: 8px;
-    padding: 5px;
+  .descript {
+    font-size: 18px;
   }
 
-  .profile{
-    height:250px;
-    width: 250px;
-    position: absolute;
-    top: 1930px;
-    left: 190px;
+  .hire {
+    margin-left: 80px;
   }
 
-  .right2{
-    float: none;
-    margin-left: 120px;
-    max-width: 80ch;
-    margin-top: 300px;
+  .headers {
+    margin-left: 20px;
+    font-size: 18px;
   }
 
-  .cards{
-    margin-top: 40px;
-    margin-left: 30px;
+  .card {
+    width: 90%;
   }
 
-  .card2{
-    width: 70px;
-    margin-left: 5px;
+  .flex .card h5 {
+    font-size: 18px;
   }
 
-  .btn button{
-    margin-left: 200px;
+  .flex .card p {
+    font-size: 16px;
+  }
+
+  .right2 {
+    margin-right: 20px;
+  }
+
+  .right2 h5,
+  .right2 p {
+    font-size: 18px;
+  }
+
+  .cards {
+    margin-left: 20px;
+  }
+
+  .card2 {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .profile img{
+     display: none;
+  }
+
+  .btn button {
+    margin-left: 20px;
+    width: 90%;
+  }
+
+  .qheader2,
+  .border2 {
+    margin-left: 20px;
+  }
+
+  .cover {
+    margin-left: 20px;
+  }
+
+  .profile {
+    left: 20px;
+  }
+
+  .qheader3,
+  .border3 {
+    margin-left: 20px;
+  }
+
+  .talk {
+    margin-left: 20px;
+  }
+
+  .card3 {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .card3 span,
+  .card3 p {
+    font-size: 18px;
+  }
+
+  #contactForm input[name="name"],
+  #contactForm input[name="email"],
+  #contactForm textarea {
+    width: 90%;
+  }
+
+  #response {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .brand .links {
+    margin-left: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brand a {
+    margin-bottom: 20px;
+    margin-inline: 0;
   }
 }

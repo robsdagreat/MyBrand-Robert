@@ -255,165 +255,141 @@ footer {
   padding-bottom: 30px;
 }
 
-@media screen and (max-width: 400px) {
-  ul{
-    display: none;
-  }
-
-  nav img{
-    display: block;
-    position: absolute;
-    top: 50px;
-    left: 80px;
-    height: 30px;
-  }
-
+@media (max-width: 768px) {
   .logo {
-    position: absolute;
-    left: 700px;
-    font-size: 50px;
-    font-weight: bold;
+    margin-left: 20px;
   }
 
-  .border {
-  height: 100px;
-  width: 1600px;
-  padding-top: 30px;
+  ul {
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  ul li {
+    margin-right: 20px;
+    margin-bottom: 10px;
   }
 
   #header {
-    width: 280px;
-    height: 50px;
-    border: 1px solid rgb(253, 183, 53);
-    margin-left: 700px;
-    border-radius: 10px;  
-    font-size: 25px;
-  }
-
-  #header span{
-    font-size: 25px;
+    width: 50%;
+    margin-top: 80px;
   }
 
   #form {
-    position: relative;
-    left: 300px;
-    top: 250px;
-    height: 1000px;
-    width: 1000px;
-    font-size: 25px;
-    padding: 5%;
-  }
-  
-  h4 {
-    text-align: center;
-    color: aliceblue;
-    padding-top: 50px;
-    font-size: 25px;
-    margin-bottom: 30px;
+    width: 90%;
+    height: auto;
+    padding: 20px;
   }
 
-  h3{
-    padding-top: 30px;
-    max-width: 25ch;
-    margin: auto  ;
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
   }
 
-  .form input[type="email"],
-button {
-  margin-top: 20px;
-  padding: 20px;
-} 
+  .forget {
+    margin-top: 20px;
+  }
 
-.form input[type="password"]{
-  padding: 20px;
-}
-   footer{
-    position: absolute;
-    top: 2100px;
+  .sign p {
+    margin-top: 40px;
+  }
+
+  .subs h3 {
+    margin-bottom: 20px;
+  }
+
+  .form .sub {
+    margin-top: 20px;
+  }
+
+  .form input[type="email"] {
+    width: 80%;
+  }
+
+  .success,
+  .error {
+    width: 80%;
+    margin-left: 10%;
   }
 
   .brand .links {
-    margin-top: 50px;
-    font-size: 20px;
-    margin-left: 380px;
+    margin-left: 50px;
   }
 
-  .fline{
-    width: 1600px;
+  .brand a {
+    margin-bottom: 20px;
+    margin-inline: 10px;
   }
 
+  .copy {
+    padding-bottom: 20px;
+  }
 }
 
-@media screen and (max-width: 700px) {
-  ul {
-    display: flex;
-    margin-top: -35px;
-    font-size: 20px;
-    list-style: none;
-    position: absolute;
-    left: 700px;
-    margin-bottom: 100px;
+@media (max-width: 480px) {
+  .logo {
+    font-size: 24px;
   }
-  
-  ul li {
-    margin-right: 120px;
+
+  ul {
+    display: none;
+  }
+
+
+  nav img{
+    display: block;
+    float: right;
+    margin-top: -40px;
+    margin-right: 20px
+
+  }
+
+  ul {
+    font-size: 16px;
   }
 
   #header {
-    width: 280px;
-    height: 35px;
-    border: 1px solid rgb(253, 183, 53);
-    text-align: center;
-    margin-left: 680px;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 120px;
+    width: 150px;
+    margin-top: 60px;
   }
-  
+
   #header span {
-    font-size: 20px;
-    color: white;
+    font-size: 16px;
   }
 
-  #form{
-    height: 1000px;
-    margin-left: 480px;
-    margin-top: 150px;
-  }
-  
-  .forget{
-    margin-top: 10px;
+  h4 {
+    font-size: 18px;
   }
 
-  .sign{
-    margin-top: 50px;
-    padding-bottom: 50px;
+  input[type="password"]::placeholder,
+  input[type="email"]::placeholder {
+    padding: 15px;
   }
 
-  h3{
-    padding-bottom: 50px;
+  .forget {
+    font-size: 16px;
   }
 
-  footer{
-    position: absolute;
-    top: 1500px;
+  .sign p {
+    font-size: 16px;
   }
 
-  .brand .links {
-    margin-top: 50px;
-    font-size: 20px;
-    margin-left: 450px;
+  .subs h3 {
+    font-size: 16px;
   }
 
-  .fline {
-    padding-top: 150px;
-    border-bottom: 2px solid rgb(253, 183, 53);
-    width: 1800px;
+  .brand h2 {
+    font-size: 18px;
   }
 
-  .border {
-    padding-top: 30px;
-    width: 1800px;
-    border-bottom: 2px solid rgb(253, 183, 53);
+  .brand a{
+    margin-inline: 50px;
+  }
+
+  .brand .links,
+  .copy {
+    font-size: 16px;
   }
 }
