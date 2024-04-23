@@ -88,8 +88,6 @@ async function handleCommentSubmit(event) {
     return;
   }
 
-
-
   const articleId = localStorage.getItem('Article ID');
   if (!articleId) {
     resErr.textContent = 'No article ID found in the URL.';
@@ -97,7 +95,6 @@ async function handleCommentSubmit(event) {
   }
 
   event.preventDefault();
-
   const commentInput = event.target.elements.comment.value.trim();
 
   if (!commentInput) {
@@ -105,9 +102,8 @@ async function handleCommentSubmit(event) {
     return;
   }
 
-  
   try {
-    const userResponse = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/user/${id}`, {
+    const userResponse = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/user/${userId}  `, {
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -116,7 +112,7 @@ async function handleCommentSubmit(event) {
     if (userData) {
       const userId = userData.userId;
       const username = userData.username;
-  
+
       try {
         const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}/comment`, {
           method: 'POST',
@@ -126,7 +122,7 @@ async function handleCommentSubmit(event) {
           },
           body: JSON.stringify({ userId, username, comment: commentInput, blogId: articleId }),
         });
-  
+
         if (response.ok) {
           const data = await response.json();
           console.log('Comment added successfully:', data);
@@ -144,6 +140,7 @@ async function handleCommentSubmit(event) {
   } catch (error) {
     console.error('Error fetching user data:', error);
   }
+}
   
 
 function updateCommentsSection(comments) {
@@ -169,4 +166,4 @@ function updateCommentsSection(comments) {
     commentsContainer.appendChild(commentElement);
   });
 }
-}
+
