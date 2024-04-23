@@ -82,62 +82,69 @@ const commentForm = document.getElementById('commentForm');
 commentForm.addEventListener('submit', (event) => handleCommentSubmit(event));
 
 async function handleCommentSubmit(event) {
-
   const token = localStorage.getItem('token');
   if (!token) {
     window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/login.html';
     return;
   }
 
-  
+
+
   const articleId = localStorage.getItem('Article ID');
   if (!articleId) {
-    resErr.textContent= 'No article ID found in the URL.';
+    resErr.textContent = 'No article ID found in the URL.';
     return;
   }
+
   event.preventDefault();
 
- 
-  if (!token) {
-    window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/login.html';
-    return;
-  }
-
   const commentInput = event.target.elements.comment.value.trim();
-  
 
   if (!commentInput) {
     resErr.textContent = "Please enter something to comment";
     return;
   }
- 
-  else
-  {
-    try {
-    const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}/comment`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-      },
-      body: JSON.stringify({ comment: commentInput }),
-    });
 
-    if (response.ok) {
-      const data = await response.json();
-      console.log('Comment added successfully:', data);
-      resBox.textContent = data.message;
-      commentInput.value = '';
-      updateCommentsSection(data.blog.comments);
-    } else {
-      const { message } = await response.json();
-      resErr.textContent= `Error adding comment:, ${message}`;
+  
+  try {
+    const userResponse = await fetch('/api/user', {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+    const userData = await userResponse.json();
+    if (userData) {
+      const userId = userData.userId;
+      const username = userData.username;
+  
+      try {
+        const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}/comment`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+          },
+          body: JSON.stringify({ userId, username, comment: commentInput, blogId: articleId }),
+        });
+  
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Comment added successfully:', data);
+          resBox.textContent = data.message;
+          commentInput.value = '';
+          updateCommentsSection(data.blog.comments);
+        } else {
+          const { message } = await response.json();
+          resErr.textContent = `Error adding comment:, ${message}`;
+        }
+      } catch (error) {
+        console.error('Error adding comment:', error);
+      }
     }
   } catch (error) {
-    console.error('Error adding comment:', error);
+    console.error('Error fetching user data:', error);
   }
-}
-}
+  
 
 function updateCommentsSection(comments) {
   const commentsContainer = document.querySelector('.reply');
@@ -162,5 +169,4 @@ function updateCommentsSection(comments) {
     commentsContainer.appendChild(commentElement);
   });
 }
-
-
+}
