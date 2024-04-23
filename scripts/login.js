@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const { token, role, userId } = await response.json();
         localStorage.setItem('token', token);
         localStorage.setItem('role', role);
-        localStorage.setItem('userId', userId); // Store the userId in localStorage
+        localStorage.setItem('userId', userId.toString()); 
         resBox.textContent = response.message;
         window.location.href = role === 'admin' ? 'https://robsdagreat.github.io/MyBrand-Robert/dashboard.html' : 'https://robsdagreat.github.io/MyBrand-Robert/blog.html';
       } else {
