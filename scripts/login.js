@@ -27,7 +27,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
 
       if (response.ok) {
-        const { token, role } = await response.json();
+        const data = await response.json();
+        console.log(data);
+        const { token, role, userId } = data
         localStorage.setItem('token', token);
         localStorage.setItem('role', role);
         localStorage.setItem('userId', userId.toString());
