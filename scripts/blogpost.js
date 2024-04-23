@@ -107,7 +107,7 @@ async function handleCommentSubmit(event) {
 
   
   try {
-    const userResponse = await fetch('/api/user', {
+    const userResponse = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/user/${id}`, {
       headers: {
         'Authorization': `Bearer ${token}`
       }
