@@ -27,13 +27,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
 
       if (response.ok) {
-        const data = await response.json();
-        console.log(data);
-        const { token, role, userId, username } = data
+        const { token, role, userId } = await response.json();
         localStorage.setItem('token', token);
         localStorage.setItem('role', role);
-        localStorage.setItem('userId', userId.toString());
-        localStorage.setItem('username', username);
+        localStorage.setItem('userId', userId);
         resBox.textContent= response.message;
         window.location.href = role === 'admin' ? 'https://robsdagreat.github.io/MyBrand-Robert/dashboard.html' : 'https://robsdagreat.github.io/MyBrand-Robert/blog.html';
       } else {
