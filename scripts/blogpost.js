@@ -111,12 +111,9 @@ async function handleCommentSubmit(event) {
       }
     });
     const userData = await userResponse.json();
-    console.log(userData);
     if (userData && userData.user.userId && userData.user.username) {
-      const userId = userData.user.userId;
-      console.log(userId)
+      const userId = userData.user.userId
       const username = userData.user.username;
-      console.log(username)
       try {
         const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/${articleId}/comments/add`, {
           method: 'POST',
@@ -132,7 +129,7 @@ async function handleCommentSubmit(event) {
           console.log('Comment added successfully:', data);
           resBox.textContent = data.message;
           commentInput.value = '';
-          updateCommentsSection(data.blog.comments);
+          updateCommentsSection(data);
         } else {
           const { message } = await response.json();
           resErr.textContent = `Error adding comment:, ${message}`;
@@ -158,15 +155,15 @@ function updateCommentsSection(comments) {
     commentElement.classList.add('comment-item');
     commentElement.innerHTML = `
       <div class="profile">
-        <div class="name"><span>@${comment.user.username}</span></div>
+        <div class="name"><span>@${data.user.username}</span></div>
       </div>
       <div class="reply">
-        <p>${comment.comment}</p>
+        <p>${data.comment}</p>
       </div>
       <div class="time">
-        <div class="date2"><span>${new Date(comment.createdAt).toLocaleTimeString()}</span></div>
+        <div class="date2"><span>${new Date(data.createdAt).toLocaleTimeString()}</span></div>
         <div class="separate2"><span>.</span></div>
-        <div class="date3"><span>${new Date(comment.createdAt).toLocaleDateString()}</span></div>
+        <div class="date3"><span>${new Date(data.createdAt).toLocaleDateString()}</span></div>
       </div>
     `;
     commentsContainer.appendChild(commentElement);
