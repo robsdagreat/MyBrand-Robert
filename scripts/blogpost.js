@@ -111,6 +111,7 @@ async function handleCommentSubmit(event) {
       }
     });
     const userData = await userResponse.json();
+    console.log(userData);
     if (userData && userData.userId && userData.username) {
       const userId = userData.userId;
       const username = userData.username;

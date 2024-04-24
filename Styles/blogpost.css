@@ -458,6 +458,20 @@ footer {
 
 /* Specific styles for smaller screens */
 @media (max-width: 480px) {
+
+  ul {
+    display: none;
+  }
+
+
+  nav img{
+    display: block;
+    float: right;
+    margin-top: -40px;
+    margin-right: 20px
+
+  }
+
   .cover img {
     height: auto;
     width: 100%;

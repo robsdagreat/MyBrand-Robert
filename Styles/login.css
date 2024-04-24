@@ -329,6 +329,9 @@ footer {
 }
 
 @media (max-width: 480px) {
+  #form{
+    width: 80%;
+  }
   .logo {
     font-size: 24px;
   }

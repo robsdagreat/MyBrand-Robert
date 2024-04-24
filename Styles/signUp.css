@@ -312,6 +312,11 @@ footer {
 
   }
 
+  .signup-form{
+    width: 70%;
+    padding-bottom: 5%;
+  }
+
   .signup-form input[type="username"],
   .signup-form input[type="email"],
   .signup-form input[type="password"] {
