@@ -116,7 +116,7 @@ async function handleCommentSubmit(event) {
       const username = userData.username;
 
       try {
-        const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}/comment`, {
+        const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/${articleId}/comments/add`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
