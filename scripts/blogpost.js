@@ -112,9 +112,9 @@ async function handleCommentSubmit(event) {
     });
     const userData = await userResponse.json();
     console.log(userData);
-    if (userData && userData.userId && userData.username) {
-      const userId = userData.userId;
-      const username = userData.username;
+    if (userData && userData.user.userId && userData.user.username) {
+      const userId = userData.user.userId;
+      const username = userData.user.username;
 
       try {
         const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/${articleId}/comments/add`, {
