@@ -59,7 +59,7 @@ function renderBlogPost(blog) {
     </div>
     <div class="comment">
         <img src="./imgs/basil_comment-solid.png" alt="" />
-        <span>${blog.comments?.length ?? 0}</span>
+        <span>Loading...</span>
     </div>
     </div>
     <div class="line"></div>
@@ -125,11 +125,11 @@ async function handleCommentSubmit(event) {
         });
 
         if (response.ok) {
-          const data = await response.json();
-          console.log('Comment added successfully:', data);
-          resBox.textContent = data.message;
+          const comments = await response.json();
+          console.log('Comment added successfully:', comments);
+          resBox.textContent = comments.message;
           commentInput.value = '';
-          updateCommentsSection(data);
+          updateCommentsSection(comments);
         } else {
           const { message } = await response.json();
           resErr.textContent = `Error adding comment:, ${message}`;
@@ -146,25 +146,33 @@ async function handleCommentSubmit(event) {
 }
   
 
-function updateCommentsSection(comment) {
-  const commentsContainer = document.querySelector('.reply');
+function updateCommentCount(count) {
+  const commentCountElement = document.querySelector('.comment span');
+  commentCountElement.textContent = count;
+}
 
-  const commentElement = document.createElement('div');
-  commentElement.classList.add('comment-item');
-  commentElement.innerHTML = `
-    <div class="profile">
-      <div class="name"><span>@${comment.username}</span></div>
-    </div>
-    <div class="reply">
-      <p>${comment.comment}</p>
-    </div>
-    <div class="time">
-      <div class="date2"><span>${new Date(comment.createdAt).toLocaleTimeString()}</span></div>
-      <div class="separate2"><span>.</span></div>
-      <div class="date3"><span>${new Date(comment.createdAt).toLocaleDateString()}</span></div>
-    </div>
-  `;
-  commentsContainer.appendChild(commentElement);
+function updateCommentsSection(comments) {
+  const commentsContainer = document.querySelector('.reply');
+  commentsContainer.innerHTML = ''; 
+
+  comments.forEach(comment => {
+    const commentElement = document.createElement('div');
+    commentElement.classList.add('comment-item');
+    commentElement.innerHTML = `
+      <div class="profile">
+        <div class="name"><span>@${comment.user.username}</span></div>
+      </div>
+      <div class="reply">
+        <p>${comment.comment}</p>
+      </div>
+      <div class="time">
+        <div class="date2"><span>${new Date(comment.createdAt).toLocaleTimeString()}</span></div>
+        <div class="separate2"><span>.</span></div>
+        <div class="date3"><span>${new Date(comment.createdAt).toLocaleDateString()}</span></div>
+      </div>
+    `;
+    commentsContainer.appendChild(commentElement);
+  });
 }
 
 
