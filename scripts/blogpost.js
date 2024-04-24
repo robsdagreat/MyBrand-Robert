@@ -84,8 +84,9 @@ commentForm.addEventListener('submit', (event) => handleCommentSubmit(event));
 async function handleCommentSubmit(event) {
   const token = localStorage.getItem('token');
   const userId = localStorage.getItem('userId');
+  const username = localStorage.getItem('username');
 
-  if (!token || !userId) {
+  if (!token || !userId  || !username) {
     window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/login.html';
     return;
   }
@@ -104,20 +105,12 @@ async function handleCommentSubmit(event) {
     return;
   }
 
-  try {
-    const userResponse = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/user/${userId}`, {
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-    });
-    const userData = await userResponse.json();
-    console.log("userData:",userData);
-    if (userData && userData.user.userId && userData.user.username) {
-      const userId = userData.user.userId;
-      console.log(userId)
-      const username = userData.user.username;
-      console.log(username)
+  
       try {
+        
+        const userId = localStorage.getItem('userId');
+        const username = localStorage.getItem('username');
+
         const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/${articleId}/comments/add`, {
           method: 'POST',
           headers: {
@@ -140,12 +133,7 @@ async function handleCommentSubmit(event) {
       } catch (error) {
         console.error('Error adding comment:', error);
       }
-    } else {
-      resErr.textContent = 'Error fetching user data.';
-    }
-  } catch (error) {
-    console.error('Error fetching user data:', error);
-  }
+  
 }
   
 
