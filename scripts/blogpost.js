@@ -122,7 +122,7 @@ async function handleCommentSubmit(event) {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`,
           },
-          body: JSON.stringify({ userId, username, comment: commentInput, blogId: articleId }),
+          body: JSON.stringify({ user: { userId, username }, comment: commentInput, blogId: articleId }),
         });
 
         if (response.ok) {
