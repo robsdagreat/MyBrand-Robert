@@ -72,7 +72,7 @@ function renderBlogPost(blog) {
       
     </div>
   `;
-  updateCommentsSection(blog.comments);
+  updateCommentsSection(comments);
 }
 
 const resBox = document.querySelector('.success');
@@ -153,7 +153,7 @@ function updateCommentsSection(comment) {
   commentElement.classList.add('comment-item');
   commentElement.innerHTML = `
     <div class="profile">
-      <div class="name"><span>@${comment.user.username}</span></div>
+      <div class="name"><span>@${comment.username}</span></div>
     </div>
     <div class="reply">
       <p>${comment.comment}</p>
