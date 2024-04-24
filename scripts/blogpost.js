@@ -105,11 +105,13 @@ async function handleCommentSubmit(event) {
   }
 
   try {
-    const userResponse = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/user/${userId}  `, {
-  
+    const userResponse = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/user/${userId}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
     });
     const userData = await userResponse.json();
-    if (userData) {
+    if (userData && userData.userId && userData.username) {
       const userId = userData.userId;
       const username = userData.username;
 
@@ -136,6 +138,8 @@ async function handleCommentSubmit(event) {
       } catch (error) {
         console.error('Error adding comment:', error);
       }
+    } else {
+      resErr.textContent = 'Error fetching user data.';
     }
   } catch (error) {
     console.error('Error fetching user data:', error);
