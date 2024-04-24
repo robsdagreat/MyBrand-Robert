@@ -609,6 +609,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .success,
+  .error {
+    width: 80%;
+    margin-left: 10%;
+  }
   .right {
     display: none;
   }
