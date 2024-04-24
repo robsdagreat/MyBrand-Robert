@@ -72,7 +72,7 @@ function renderBlogPost(blog) {
       
     </div>
   `;
-  // updateCommentsSection(comments);
+  fetchCommentsForBlog(blog._id);
 }
 
 const resBox = document.querySelector('.success');
@@ -129,7 +129,7 @@ async function handleCommentSubmit(event) {
           console.log('Comment added successfully:', comments);
           resBox.textContent = comments.message;
           commentInput.value = '';
-          updateCommentsSection(comments);
+          fetchCommentsForBlog(articleId);
         } else {
           const { message } = await response.json();
           resErr.textContent = `Error adding comment:, ${message}`;
@@ -144,6 +144,21 @@ async function handleCommentSubmit(event) {
     console.error('Error fetching user data:', error);
   }
 }
+
+async function fetchCommentsForBlog(blogId) {
+  try {
+    const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/comments/${blogId}`);
+    if (response.ok) {
+      const comments = await response.json();
+      updateCommentCount(comments.length);
+      updateCommentsSection(comments);
+    } else {
+      console.error('Error fetching comments:', response.status);
+    }
+  } catch (error) {
+    console.error('Error fetching comments:', error);
+  }
+}
   
 
 function updateCommentCount(count) {
@@ -153,9 +168,7 @@ function updateCommentCount(count) {
 
 function updateCommentsSection(comments) {
   const commentsContainer = document.querySelector('.reply');
-  commentsContainer.innerHTML = ''; 
 
-  
   if (Array.isArray(comments)) {
     comments.forEach(comment => {
       const commentElement = createCommentElement(comment);
