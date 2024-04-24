@@ -72,7 +72,7 @@ function renderBlogPost(blog) {
       
     </div>
   `;
-  updateCommentsSection(comments);
+  // updateCommentsSection(comments);
 }
 
 const resBox = document.querySelector('.success');
