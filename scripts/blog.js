@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const logoutButton = document.getElementById('logoutButton');
+  const logoutButton = document.getElementById('logout');
   if (logoutButton) {
     logoutButton.addEventListener('click', logout);
   }
@@ -105,8 +105,7 @@ async function logout() {
       localStorage.removeItem('adminToken');
       localStorage.removeItem('userId');
       localStorage.removeItem('role');
-      // Redirect to the login page or main page
-      window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/login.html';
+      window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/index.html';
     } else {
       console.error('Logout failed:', response.status);
     }
