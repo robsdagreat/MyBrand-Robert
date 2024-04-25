@@ -186,17 +186,20 @@ function createCommentElement(comment) {
   const commentElement = document.createElement('div');
   commentElement.classList.add('comment-item');
   commentElement.innerHTML = `
-    <div class="profile">
-      <div class="name"><span>@${comment.user.username}</span></div>
+  
+    <div>
+      <div id="commentUser"><span>@${comment.user.username}</span></div>
     </div>
-    <div class="reply">
-      <p>${comment.comment}</p>
+    <div id="commentDiv">
+    <div>
+      <p id="commentComment">${comment.comment}</p>
     </div>
-    <div class="time">
-      <div class="date2"><span>${new Date(comment.createdAt).toLocaleTimeString()}</span></div>
-      <div class="separate2"><span>.</span></div>
-      <div class="date3"><span>${new Date(comment.createdAt).toLocaleDateString()}</span></div>
+    <div id="commentTime">
+      <div><span>${new Date(comment.createdAt).toLocaleTimeString()}</span></div>
+      <div><span>.</span></div>
+      <div><span>${new Date(comment.createdAt).toLocaleDateString()}</span></div>
     </div>
+    </div>  
   `;
   return commentElement;
 }

@@ -318,9 +318,14 @@ ul li {
 }
 
 .reply {
-  margin-left: 40%;
+  margin-left: 10%;
   margin-top: 30px;
+  margin-bottom: 10%;
   color: white;
+}
+
+.reply h2{
+  text-align: center;
 }
 
 footer {
@@ -366,7 +371,7 @@ footer {
 .comment{
   color: white;
   font-size: 20px;
-  text-align: center;
+  /* text-align: center; */
   margin-top: 20px;
   padding-bottom: 30px;
 }
@@ -381,6 +386,28 @@ footer {
   color: white;
   border: 2px solid rgb(253, 183, 53);
   border-radius: 5px;
+}
+
+#commentDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+#commentUser{
+  color: rgb(253, 183, 53);
+  font-size: 20px;
+}
+
+#commentComment{
+  font-size: 20px;
+}
+
+
+#commentTime{
+   display: flex;
+   margin-inline: 30px;
 }
 
 .comment form button{
