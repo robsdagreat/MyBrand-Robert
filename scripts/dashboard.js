@@ -1,12 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const logoutButton = document.querySelector('#logout');  
-  if (logoutButton) {
-      logoutButton.style.cursor = 'pointer';
-      logoutButton.addEventListener('click', logout);
-  } else {
-      console.log("No logout button found");
-  }
-  });
+
   
   async function logout() {
     try {
@@ -225,6 +217,14 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
       body.innerHTML = adminDashboardContent;
+      const logoutButton = document.querySelector('#logout');
+    if (logoutButton) {
+      logoutButton.style.cursor = 'pointer';
+      logoutButton.addEventListener('click', logout);
+    } else {
+      console.error('Logout button not found in the rendered dashboard');
+    }
+    
     } else {
       console.error('Body element not found');
     }
