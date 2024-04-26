@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const logoutButton = document.getElementById('logout');
+    logoutButton.style.cursor= 'pointer';
     if (logoutButton) {
-      logoutButton.addEventListener('click', logout);
+      logoutButton.addEventListener('click', logout());
     }else{
         console.log("No logout button found")
     }
