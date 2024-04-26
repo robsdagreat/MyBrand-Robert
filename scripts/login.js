@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const token = localStorage.getItem('token');
-
-  if (token) {
-    const redirectUrl = localStorage.getItem('redirectUrl') || 'https://robsdagreat.github.io/MyBrand-Robert/blog.html';
-    // Use the stored redirect URL from localStorage, defaulting to blog.html if not set
-    window.location.href = redirectUrl;
-  } else {
-    localStorage.setItem('redirectUrl', window.location.href);
-  }
+  
+    if (token) {
+      const redirectUrl = 'https://robsdagreat.github.io/MyBrand-Robert/error.html';
+      window.location.href = redirectUrl;
+   
+  };
 });
 
 const loginForm = document.getElementById('loginForm');

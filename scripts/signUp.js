@@ -2,13 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const token = localStorage.getItem('token');
   
     if (token) {
-      const redirectUrl = localStorage.getItem('redirectUrl') || './blog.html';
-      // Use the stored redirect URL from localStorage, defaulting to blog.html if not set
+      const redirectUrl = 'https://robsdagreat.github.io/MyBrand-Robert/error.html';
       window.location.href = redirectUrl;
-    } else {
-      localStorage.setItem('redirectUrl', window.location.href);
-    }
-  });
+   
+  };
   
   document.addEventListener('DOMContentLoaded', () => {
     const signupForm = document.getElementById('signupForm');
@@ -58,4 +55,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-  
+})
