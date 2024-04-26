@@ -25,7 +25,12 @@ async function handleAdminDashboardAccess() {
 }
 
 function redirectToCurrentPage() {
-  window.location.replace(window.location.href);
+  try {
+    const currentUrl = window.location.href;
+    window.location.replace(currentUrl);
+  } catch (error) {
+    console.error('Error redirecting to current page:', error);
+  }
 }
 
 function redirectToLoginPage() {
