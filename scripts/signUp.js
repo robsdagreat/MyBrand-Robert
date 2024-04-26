@@ -56,3 +56,18 @@
 
         });
     })
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const token = localStorage.getItem('token');
+        
+      
+        if (token) { 
+            window.location.href = redirectToCurrentPage();
+        }
+      
+        localStorage.setItem('redirectUrl', window.location.href);
+      });
+      
+      function redirectToCurrentPage() {
+        window.location.replace(window.location.href);
+      }
