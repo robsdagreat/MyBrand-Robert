@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   const role = localStorage.getItem('role');
 
   if (!token || !role) {
-    // Redirect to the current page if token or role is missing
+    
     redirectToCurrentPage();
   } else {
-    // Check if the user is authenticated and render the appropriate content
+  
     handleAdminDashboardAccess();
   }
 });
@@ -15,12 +15,12 @@ async function handleAdminDashboardAccess() {
   const authStatus = isAuthenticated();
 
   if (authStatus === 'admin') {
-    // User is authenticated as an admin, render the admin dashboard
+    
     renderAdminDashboard();
   } else {
-    // User is authenticated but not an admin, handle accordingly (e.g., redirect or show error)
+    
     console.error('User is not authorized to access the admin dashboard');
-    redirectToLoginPage(); // Redirect to login page or handle unauthorized access
+    redirectToLoginPage(); 
   }
 }
 
@@ -45,29 +45,29 @@ function isAuthenticated() {
   const adminToken = localStorage.getItem('adminToken');
 
   if (!userToken && !adminToken) {
-    return false; // No token found, user is not authenticated
+    return false; 
   }
 
   try {
     if (userToken) {
       const decodedUserToken = parseJwt(userToken);
       if (decodedUserToken.isAdmin === false) {
-        return 'user'; // User is authenticated as a regular user
+        return 'user'; 
       }
     }
 
     if (adminToken) {
       const decodedAdminToken = parseJwt(adminToken);
       if (decodedAdminToken.isAdmin === true) {
-        return 'admin'; // User is authenticated as an admin
+        return 'admin'; 
       }
     }
   } catch (error) {
     console.error('Error decoding JWT token:', error);
-    return false; // Token decoding error, user is not authenticated
+    return false; 
   }
 
-  return false; // Default case, user is not authenticated
+  return false;
 }
 
 function parseJwt(token) {
@@ -194,7 +194,10 @@ function renderAdminDashboard() {
     `;
     body.innerHTML = adminDashboardContent;
 
-  
+}
+  } 
+
+  if(renderAdminDashboard){
     const logoutButton = document.querySelector('#logout');
     if (logoutButton) {
       logoutButton.style.cursor = 'pointer';
@@ -202,10 +205,7 @@ function renderAdminDashboard() {
     } else {
       console.error('Logout button not found in the rendered dashboard');
     }
-  } else {
-    console.error('Body element not found');
   }
-}
 
 async function logout() {
   try {
