@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   const renderArticle = (article) => {
+
     const articleElement = document.createElement('div');
     articleElement.classList.add('blog');
     articleElement.innerHTML = `
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       </div>
       <div class="comment">
         <a href="./blogpost.html"><img class="comment-link" src="./imgs/basil_comment-solid.png" alt="" /></a>
-      <span>${comments?.length} </span>
+      <span>0</span>
       </div>
     </div>
     <div class="line"></div>
