@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       </div>
       <div class="comment">
         <a href="./blogpost.html"><img class="comment-link" src="./imgs/basil_comment-solid.png" alt="" /></a>
-      <span>0</span>
+      <span id="commentCount"></span>
       </div>
     </div>
     <div class="line"></div>
@@ -149,4 +149,26 @@ async function handleLike(articleId, articleElement) {
   } catch (error) {
     console.error('Error liking the article:', error);
   }
+}
+
+
+async function fetchCommentsForBlog(blogId) {
+  try {
+    const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/comments/${articleId}`);
+    if (response.ok) {
+      const comments = await response.json();
+      updateCommentCount(comments.length);
+      updateCommentsSection(comments);
+    } else {
+      console.error('Error fetching comments:', response.status);
+    }
+  } catch (error) {
+    console.error('Error fetching comments:', error);
+  }
+}
+
+function updateCommentCount(count) {
+  const articleElement = document.querySelector('.blog');
+  articleElement.dataset.commentCount = commentCountElement
+  commentCountElement.textContent = count;
 }
