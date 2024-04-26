@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.removeItem('adminToken');
         localStorage.removeItem('userId');
         localStorage.removeItem('role');
-        window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/login.html';
+        window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/adminlog.html';
       } else {
         console.error('Logout failed:', response.status);
       }
