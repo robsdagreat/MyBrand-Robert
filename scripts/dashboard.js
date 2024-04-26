@@ -24,14 +24,17 @@ async function handleAdminDashboardAccess() {
   }
 }
 
-function redirectToCurrentPage() {
+function redirectToCurrentPageWithDelay() {
   try {
     const currentUrl = window.location.href;
-    window.location.replace(currentUrl);
+    setTimeout(() => {
+      window.location.replace(currentUrl);
+    }, 100); 
   } catch (error) {
     console.error('Error redirecting to current page:', error);
   }
 }
+
 
 function redirectToLoginPage() {
   window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/login.html';
