@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     `;
 
     const commentCountElement = articleElement.querySelector('#commentCount');
-    commentCountElement.textContent = article.comments.length;
+    commentCountElement.textContent = renderComments(comments, articleElement);
 
     const commentLink = articleElement.querySelector('.cover a');
     commentLink.addEventListener('click', async (event) => {
