@@ -1,6 +1,15 @@
+document.addEventListener('DOMContentLoaded', async()=>{
+  const token = localStorage.getItem('token') || localStorage.getItem('adminToken');
+  const role = localStorage.getItem('role');
 
-  
-  async function logout() {
+  if (!token || !role) {
+    console.error('No token found');
+    return;
+  } else{
+    logout();
+  }
+}) 
+ async function logout() {
     try {
       const token = localStorage.getItem('token') || localStorage.getItem('adminToken');
       const role = localStorage.getItem('role');
@@ -224,7 +233,7 @@
     } else {
       console.error('Logout button not found in the rendered dashboard');
     }
-    
+
     } else {
       console.error('Body element not found');
     }
