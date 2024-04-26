@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const logoutButton = document.getElementById('logout');
-    logoutButton.style.cursor= 'pointer';
-    if (logoutButton) {
-      logoutButton.addEventListener('click', logout());
-    }else{
-        console.log("No logout button found")
-    }
+  const logoutButton = document.querySelector('#logout');  
+  if (logoutButton) {
+      logoutButton.style.cursor = 'pointer';
+      logoutButton.addEventListener('click', logout);
+  } else {
+      console.log("No logout button found");
+  }
   });
   
   async function logout() {
