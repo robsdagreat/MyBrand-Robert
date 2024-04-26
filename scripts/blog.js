@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       </div>
       <div class="comment">
         <a href="./blogpost.html"><img class="comment-link" src="./imgs/basil_comment-solid.png" alt="" /></a>
-        <span>${article.comments.length}</span>
+        <span>${comments.length}</span>
       </div>
     </div>
     <div class="line"></div>
