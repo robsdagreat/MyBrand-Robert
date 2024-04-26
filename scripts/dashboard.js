@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', async()=>{
 
   if (!token || !role) {
     console.error('No token found');
+    redirectToCurrentPage();
     return;
   } else{
-    logout();
+    isAuthenticated();
   }
 }) 
  async function logout() {
