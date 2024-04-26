@@ -12,51 +12,91 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  const renderArticle = (article) => {
+  async function fetchCommentsForBlog(blogId, articleElement) {
+    try {
+      const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/comments/${blogId}`);
+      if (response.ok) {
+        const comments = await response.json();
+        updateCommentCount(comments.length, articleElement);
+        renderComments(comments, articleElement);
+      } else {
+        console.error('Error fetching comments:', response.status);
+      }
+    } catch (error) {
+      console.error('Error fetching comments:', error);
+    }
+  }
 
+  function updateCommentCount(count, articleElement) {
+    const commentCountElement = articleElement.querySelector('#commentCount');
+    commentCountElement.textContent = count;
+  }
+
+  function renderComments(comments, articleElement) {
+    const commentsContainer = document.createElement('div');
+    commentsContainer.classList.add('comments-container');
+
+    comments.forEach(comment => {
+      const commentElement = document.createElement('div');
+      commentElement.classList.add('comment');
+      commentElement.innerHTML = `
+        <div class="comment-header">
+          <img src="${comment.author.avatar}" alt="${comment.author.username}" />
+          <span>${comment.author.username}</span>
+          <span>${new Date(comment.createdAt).toLocaleString()}</span>
+        </div>
+        <div class="comment-body">
+          ${comment.text}
+        </div>
+      `;
+      commentsContainer.appendChild(commentElement);
+    });
+
+    articleElement.appendChild(commentsContainer);
+  }
+
+  const renderArticle = (article) => {
     const articleElement = document.createElement('div');
     articleElement.classList.add('blog');
     articleElement.innerHTML = `
-    <div class="profile">
-    <div class="image">
-    <div class="img"><img src="./imgs/PXL_20231130_120837861.PORTRAIT.jpg" alt="" /></div>
-  </div>
-      <div class="name"><span>@${article.author}</span></div>
-      <div class="separate"><span>.</span></div>
-      <div class="date"><span>${new Date(article.createdAt).toLocaleString()}</span></div>
-    </div>
-    <div class="content">
-      <div class="story">
-        <p><span id="title">${article.title}</span> ${article.story.slice(0, 100)}...</p>
+      <div class="profile">
+        <div class="image">
+          <div class="img"><img src="./imgs/PXL_20231130_120837861.PORTRAIT.jpg" alt="" /></div>
+        </div>
+        <div class="name"><span>@${article.author}</span></div>
+        <div class="separate"><span>.</span></div>
+        <div class="date"><span>${new Date(article.createdAt).toLocaleString()}</span></div>
       </div>
-      <div class="cover">
-        <a href="./blogpost.html"><img src="${article.image}" alt="" /></a>
+      <div class="content">
+        <div class="story">
+          <p><span id="title">${article.title}</span> ${article.story.slice(0, 100)}...</p>
+        </div>
+        <div class="cover">
+          <a href="./blogpost.html"><img src="${article.image}" alt="" /></a>
+        </div>
       </div>
-    </div>
-    <div class="react">
-      <div class="like">
-        <img class="blogLike" src="./imgs/icon-park-twotone_like.png" alt="" data-article-id="${article._id}" />
-        <span id="likeCount_blog${article._id}">${article.likes.length}</span>
+      <div class="react">
+        <div class="like">
+          <img class="blogLike" src="./imgs/icon-park-twotone_like.png" alt="" data-article-id="${article._id}" />
+          <span id="likeCount_blog${article._id}">${article.likes.length}</span>
+        </div>
+        <div class="comment">
+          <a href="./blogpost.html"><img class="comment-link" src="./imgs/basil_comment-solid.png" alt="" /></a>
+          <span id="commentCount"></span>
+        </div>
       </div>
-      <div class="comment">
-        <a href="./blogpost.html"><img class="comment-link" src="./imgs/basil_comment-solid.png" alt="" /></a>
-      <span id="commentCount"></span>
-      </div>
-    </div>
-    <div class="line"></div>
-  `;
-    
-  
-  const commentLink = articleElement.querySelector('.cover');
-  commentLink.dataset.articleId = article._id;
+      <div class="line"></div>
+    `;
 
-  commentLink.addEventListener('click', (event) => {
-    event.preventDefault();
-    const articleId = event.currentTarget.dataset.articleId;
-    handleCommentClick(articleId);
-  });
+    const commentCountElement = articleElement.querySelector('#commentCount');
+    commentCountElement.textContent = article.comments.length;
 
-  
+    const commentLink = articleElement.querySelector('.cover a');
+    commentLink.addEventListener('click', async (event) => {
+      event.preventDefault();
+      await fetchCommentsForBlog(article._id, articleElement);
+    });
+
     const likeIcon = articleElement.querySelector('.blogLike');
     likeIcon.addEventListener('click', () => handleLike(article._id, articleElement));
 
@@ -113,62 +153,4 @@ async function logout() {
   } catch (error) {
     console.error('Logout failed:', error);
   }
-}
-
-
-function handleCommentClick(articleId) {
-  window.location.href = `https://robsdagreat.github.io/MyBrand-Robert/blogpost.html?articleId=${articleId}`;
-}
-
-
-async function handleLike(articleId, articleElement) {
-  try {
-    const token = localStorage.getItem('token');
-
-    if (!token) {
-      window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/login.html';
-      return;
-    }
-
-    const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}/likes`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
-    });
-
-    if (response.ok) {
-      const { blog } = await response.json();
-      const likeCountElement = articleElement.querySelector(`#likeCount_blog${articleId}`);
-      likeCountElement.textContent = blog.likes.length;
-    } else {
-      const { message } = await response.json();
-      console.error('Error liking the article:', message);
-    }
-  } catch (error) {
-    console.error('Error liking the article:', error);
-  }
-}
-
-
-async function fetchCommentsForBlog(blogId) {
-  try {
-    const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/comments/${articleId}`);
-    if (response.ok) {
-      const comments = await response.json();
-      updateCommentCount(comments.length);
-      updateCommentsSection(comments);
-    } else {
-      console.error('Error fetching comments:', response.status);
-    }
-  } catch (error) {
-    console.error('Error fetching comments:', error);
-  }
-}
-
-function updateCommentCount(count) {
-  const articleElement = document.querySelector('.blog');
-  articleElement.dataset.commentCount = commentCountElement
-  commentCountElement.textContent = count;
 }
