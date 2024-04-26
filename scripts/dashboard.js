@@ -61,17 +61,16 @@ function isAuthenticated() {
 
   try {
     if (userToken) {
-      const decodedUserToken = parseJwt(userToken);
-      if (decodedUserToken.isAdmin === false) {
         return 'user'; 
-      }
+      
     }
 
-    if (adminToken) {
-      const decodedAdminToken = parseJwt(adminToken);
-      if (decodedAdminToken.isAdmin === true) {
+    else if (adminToken) {
         return 'admin'; 
-      }
+      
+    } else if(userToken && adminToken){
+      localStorage.removeItem('token');
+      return 'admin';
     }
   } catch (error) {
     console.error('Error decoding JWT token:', error);
