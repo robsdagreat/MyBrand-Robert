@@ -194,18 +194,18 @@ function renderAdminDashboard() {
     `;
     body.innerHTML = adminDashboardContent;
 
-}
-  } 
-
-  if(renderAdminDashboard){
+  
     const logoutButton = document.querySelector('#logout');
     if (logoutButton) {
       logoutButton.style.cursor = 'pointer';
-      logoutButton.addEventListener('click', logout());
+      logoutButton.addEventListener('click', logout);
     } else {
       console.error('Logout button not found in the rendered dashboard');
     }
+  } else {
+    console.error('Body element not found');
   }
+}
 
 async function logout() {
   try {
