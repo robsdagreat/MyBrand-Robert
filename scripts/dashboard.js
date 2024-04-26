@@ -221,7 +221,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
   
      </main>
-     <script src="./scripts/dashboard.js"></script>
       `;
   
   
