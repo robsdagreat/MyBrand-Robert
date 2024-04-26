@@ -24,7 +24,7 @@ async function handleAdminDashboardAccess() {
   }
 }
 
-function redirectToCurrentPageWithDelay() {
+function redirectToCurrentPage() {
   try {
     const currentUrl = window.location.href;
     setTimeout(() => {
