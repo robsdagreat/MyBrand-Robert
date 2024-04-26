@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   if (!token || !role) {
     
-    redirectToCurrentPage();
+    redirectToMainPage();
   } else {
   
     handleAdminDashboardAccess();
@@ -24,11 +24,22 @@ async function handleAdminDashboardAccess() {
   }
 }
 
-function redirectToCurrentPage() {
+function redirectToMainPage(){
   try {
-    const currentUrl = window.location.href;
+    const url = 'https://robsdagreat.github.io/MyBrand-Robert/index.html';
     setTimeout(() => {
-      window.location.replace(currentUrl);
+      window.location.replace(url);
+    }, 100); 
+  } catch (error) {
+    console.error('Error redirecting to current page:', error);
+  }
+}
+
+function redirectToErrorPage() {
+  try {
+    const url = 'https://robsdagreat.github.io/MyBrand-Robert/error.html';
+    setTimeout(() => {
+      window.location.replace(url);
     }, 100); 
   } catch (error) {
     console.error('Error redirecting to current page:', error);
