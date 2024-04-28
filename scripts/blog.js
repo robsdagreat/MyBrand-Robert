@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function handleCommentClick(articleId) {
+  localStorage.setItem('articleId', articleId);
   window.location.href = `https://robsdagreat.github.io/MyBrand-Robert/blogpost.html?articleId=${articleId}`;
 }
 

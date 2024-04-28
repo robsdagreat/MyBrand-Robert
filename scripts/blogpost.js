@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const articleId = urlParams.get('articleId');
+  const articleId = urlParams.get('articleId') || localStorage.getItem('articleId'); 
   localStorage.setItem('Article ID', articleId);
   if (!articleId) {
     console.error('No article ID found in the URL.');
