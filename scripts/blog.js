@@ -33,20 +33,20 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   function renderComments(comments, articleElement) {
-    const commentsContainer = document.createElement('div');
+    const commentsContainer = articleElement.querySelector('.comments-container') || document.createElement('div');
     commentsContainer.classList.add('comments-container');
+    commentsContainer.innerHTML = '';
 
     comments.forEach(comment => {
       const commentElement = document.createElement('div');
       commentElement.classList.add('comment');
       commentElement.innerHTML = `
         <div class="comment-header">
-          <img src="${comment.author.avatar}" alt="${comment.author.username}" />
-          <span>${comment.author.username}</span>
+          <span>${comment.user.username}</span>
           <span>${new Date(comment.createdAt).toLocaleString()}</span>
         </div>
         <div class="comment-body">
-          ${comment.text}
+          ${comment.comment}
         </div>
       `;
       commentsContainer.appendChild(commentElement);
@@ -82,20 +82,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
         <div class="comment">
           <a href="./blogpost.html"><img class="comment-link" src="./imgs/basil_comment-solid.png" alt="" /></a>
-          <span id="commentCount"></span>
+          <span id="commentCount">0</span>
         </div>
       </div>
       <div class="line"></div>
     `;
 
-    const commentCountElement = articleElement.querySelector('#commentCount');
-    commentCountElement.textContent = renderComments(comments, articleElement);
-
-    const commentLink = articleElement.querySelector('.cover a');
-    commentLink.addEventListener('click', async (event) => {
+    const commentLink = articleElement.querySelector('.cover');
+    commentLink.dataset.articleId = article._id;
+  
+    commentLink.addEventListener('click', (event) => {
       event.preventDefault();
-      await fetchCommentsForBlog(article._id, articleElement);
+      const articleId = event.currentTarget.dataset.articleId;
+      handleCommentClick(articleId);
     });
+
+    fetchCommentsForBlog(article._id, articleElement);
 
     const likeIcon = articleElement.querySelector('.blogLike');
     likeIcon.addEventListener('click', () => handleLike(article._id, articleElement));
@@ -114,12 +116,39 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderBlogs();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const logoutButton = document.getElementById('logout');
-  if (logoutButton) {
-    logoutButton.addEventListener('click', logout);
+function handleCommentClick(articleId) {
+  window.location.href = `https://robsdagreat.github.io/MyBrand-Robert/blogpost.html?articleId=${articleId}`;
+}
+
+async function handleLike(articleId, articleElement) {
+  try {
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+      window.location.href = 'https://robsdagreat.github.io/MyBrand-Robert/login.html';
+      return;
+    }
+
+    const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/blog/${articleId}/likes`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+    });
+
+    if (response.ok) {
+      const { blog } = await response.json();
+      const likeCountElement = articleElement.querySelector(`#likeCount_blog${articleId}`);
+      likeCountElement.textContent = blog.likes.length;
+    } else {
+      const { message } = await response.json();
+      console.error('Error liking the article:', message);
+    }
+  } catch (error) {
+    console.error('Error liking the article:', error);
   }
-});
+}
 
 async function logout() {
   try {
