@@ -32,28 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     commentCountElement.textContent = count;
   }
 
-  function renderComments(comments, articleElement) {
-    const commentsContainer = articleElement.querySelector('.comments-container') || document.createElement('div');
-    commentsContainer.classList.add('comments-container');
-    commentsContainer.innerHTML = '';
-
-    comments.forEach(comment => {
-      const commentElement = document.createElement('div');
-      commentElement.classList.add('comment');
-      commentElement.innerHTML = `
-        <div class="comment-header">
-          <span>${comment.user.username}</span>
-          <span>${new Date(comment.createdAt).toLocaleString()}</span>
-        </div>
-        <div class="comment-body">
-          ${comment.comment}
-        </div>
-      `;
-      commentsContainer.appendChild(commentElement);
-    });
-
-    articleElement.appendChild(commentsContainer);
-  }
+  
 
   const renderArticle = (article) => {
     const articleElement = document.createElement('div');
