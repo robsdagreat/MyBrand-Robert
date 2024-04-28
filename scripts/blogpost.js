@@ -115,13 +115,19 @@ async function handleCommentSubmit(event) {
       const userId = userData.user.userId
       const username = userData.user.username;
       try {
-        const response = await fetch(`https://mybrand-backend-s9f7.onrender.com/api/${articleId}/comments/add`, {
+        const requestUrl = `https://mybrand-backend-s9f7.onrender.com/api/${articleId}/comments/add`;
+        const requestBody = JSON.stringify({ user: { userId, username }, comment: commentInput, blogId: articleId });
+  
+        console.log('Request URL:', requestUrl);
+        console.log('Request Body:', requestBody);
+  
+        const response = await fetch(requestUrl, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`,
           },
-          body: JSON.stringify({ user: { userId, username }, comment: commentInput, blogId: articleId }),
+          body: requestBody,
         });
 
         if (response.ok) {
